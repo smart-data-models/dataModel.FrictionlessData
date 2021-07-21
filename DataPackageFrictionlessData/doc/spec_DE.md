@@ -2,11 +2,16 @@ Entität: DataPackageFrictionlessData
 ====================================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Globale Beschreibung: **Datenpaket ist eine einfache Spezifikation für den Datenzugriff und die Datenbereitstellung.konvertiert für die Initiative Smart Data Models aus ursprünglichen friktionsfreien Daten**  
+Version: 0.0.1  
 
 ## Liste der Eigenschaften  
 
-Erforderliche Eigenschaften  
-- Keine erforderlichen Eigenschaften  ## Datenmodell Beschreibung der Eigenschaften  
+- `contributors`: Mitwirkende. . Die Mitwirkenden an diesem Deskriptor  - `created`: Erstellt. Die Datetime muss den String-Formaten für datetime entsprechen, wie in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6) beschrieben. Der Zeitpunkt, an dem dieser Deskriptor erstellt wurde  - `description`: Beschreibung. . Eine Textbeschreibung. Markdown wird empfohlen  - `homepage`: Home Page. . Die Homepage im Web, die sich auf dieses Datenpaket bezieht  - `id`: ID. Ein gängiges Verwendungsmuster für Datenpakete ist die Verwendung als Paketierungsformat innerhalb der Grenzen eines Systems oder einer Plattform. In diesen Fällen ist ein eindeutiger Bezeichner für ein Paket für gängige Datenverarbeitungs-Workflows erwünscht, wie z. B. das Aktualisieren eines vorhandenen Pakets. Während auf der Ebene der Spezifikation die globale Eindeutigkeit nicht validiert werden kann, können Verbraucher mit der Eigenschaft `id` sicherstellen, dass die Bezeichner global eindeutig sind. Eine Eigenschaft, die für global eindeutige Bezeichner reserviert ist. Beispiele für Bezeichner, die eindeutig sind, sind UUIDs und DOIs  - `image`: Bild. . Ein Bild zur Darstellung dieses Pakets  - `keywords`: Stichworte. . Eine Liste von Schlüsselwörtern, die dieses Paket beschreiben  - `licenses`: Lizenzen. Diese Eigenschaft ist nicht rechtsverbindlich und garantiert nicht, dass das Paket unter den hier definierten Bedingungen lizenziert ist. Die Lizenz(en), unter denen dieses Paket veröffentlicht wird  - `name`: Name. Dies ist idealerweise ein url-verwendbarer und von Menschen lesbarer Name. Der Name `SOLLTE` invariant sein, d. h. er `SOLLTE` sich NICHT ändern, wenn der übergeordnete Deskriptor aktualisiert wird. Eine Bezeichner-Zeichenkette. Kleinbuchstaben mit `.`, `_`, `-` und `/` sind erlaubt  - `profile`: Profil. Jeder Paket- und Resource-Deskriptor hat ein Profil. Das Standardprofil, wenn keines deklariert ist, ist `data-package` für Package und `data-resource` für Resource. Das Profil dieses Deskriptors  - `resources`: Daten-Ressourcen. . Ein "Array" von Datenressourcen-Objekten, die jeweils der Spezifikation [Datenressource](/data-resource/) entsprechen.  - `sources`: Quellen. . Die Rohquellen für diese Ressource  - `title`: Titel. . Ein von Menschen lesbarer Titel  - `type`: Es muss DataPackageFrictionlessData sein. NGSI-Entitätstyp    
+Erforderliche Eigenschaften  
+- `id`  - `resources`  - `type`    
+Dieses Datenmodell stammt von den ursprünglichen reibungslosen Daten, die unter https://frictionlessdata.io/ zu finden sind. Es gibt eine Reihe von Änderungen. 1) id und type wurden obligatorisch gemacht 2) die Struktur des json-Schemas wurde an das offizielle Format der Smart Data Models angepasst. Siehe Beitrag Handbuch [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -96,9 +101,305 @@ DataPackageFrictionlessData:
 ## Beispiel-Nutzlasten  
 #### DataPackageFrictionlessData NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "uri:ngsi-ld:datapackage:001",  
+  "type": "DataPackageFrictionlessData",  
+  "name": "cpi",  
+  "title": "Annual Consumer Price Index (CPI)",  
+  "description": "Annual Consumer Price Index (CPI) for most countries in the world. Reference year is 2005.",  
+  "profile": "tabular-data-package",  
+  "licenses": [  
+    {  
+      "name": "CC-BY-4.0",  
+      "title": "Creative Commons Attribution 4.0",  
+      "path": "https://creativecommons.org/licenses/by/4.0/"  
+    }  
+  ],  
+  "keywords": [  
+    "CPI",  
+    "World",  
+    "Consumer Price Index",  
+    "Annual Data",  
+    "The World Bank"  
+  ],  
+  "version": "2.0.0",  
+  "sources": [  
+    {  
+      "title": "The World Bank",  
+      "path": "http://data.worldbank.org/indicator/FP.CPI.TOTL"  
+    }  
+  ],  
+  "resources": [  
+    {  
+      "path": "data/cpi.csv",  
+      "name": "cpi",  
+      "profile": "tabular-data-resource",  
+      "schema": {  
+        "fields": [  
+          {  
+            "name": "Country Name",  
+            "type": "string"  
+          },  
+          {  
+            "name": "Country Code",  
+            "type": "string"  
+          },  
+          {  
+            "name": "Year",  
+            "type": "year"  
+          },  
+          {  
+            "name": "CPI",  
+            "description": "CPI (where 2005=100)",  
+            "type": "number"  
+          }  
+        ]  
+      }  
+    }  
+  ]  
+}  
+```  
 #### DataPackageFrictionlessData NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "uri:ngsi-ld:datapackage:001",  
+  "type": "DataPackageFrictionlessData",  
+  "name": {  
+    "type": "string",  
+    "value": "cpi"  
+  },  
+  "title": {  
+    "type": "string",  
+    "value": "Annual Consumer Price Index (CPI)"  
+  },  
+  "description": {  
+    "type": "string",  
+    "value": "Annual Consumer Price Index (CPI) for most countries in the world. Reference year is 2005."  
+  },  
+  "profile": {  
+    "type": "string",  
+    "value": "tabular-data-package"  
+  },  
+  "licenses": {  
+    "type": "array",  
+    "value": [  
+      {  
+        "name": "CC-BY-4.0",  
+        "title": "Creative Commons Attribution 4.0",  
+        "path": "https://creativecommons.org/licenses/by/4.0/"  
+      }  
+    ]  
+  },  
+  "keywords": {  
+    "type": "array",  
+    "value": [  
+      "CPI",  
+      "World",  
+      "Consumer Price Index",  
+      "Annual Data",  
+      "The World Bank"  
+    ]  
+  },  
+  "version": {  
+    "type": "string",  
+    "value": "2.0.0"  
+  },  
+  "sources": {  
+    "type": "array",  
+    "value": [  
+      {  
+        "title": "The World Bank",  
+        "path": "http://data.worldbank.org/indicator/FP.CPI.TOTL"  
+      }  
+    ]  
+  },  
+  "resources": {  
+    "type": "array",  
+    "value": [  
+      {  
+        "path": "data/cpi.csv",  
+        "name": "cpi",  
+        "profile": "tabular-data-resource",  
+        "schema": {  
+          "fields": [  
+            {  
+              "name": "Country Name",  
+              "type": "string"  
+            },  
+            {  
+              "name": "Country Code",  
+              "type": "string"  
+            },  
+            {  
+              "name": "Year",  
+              "type": "year"  
+            },  
+            {  
+              "name": "CPI",  
+              "description": "CPI (where 2005=100)",  
+              "type": "number"  
+            }  
+          ]  
+        }  
+      }  
+    ]  
+  }  
+}  
+```  
 #### DataPackageFrictionlessData NGSI-LD key-values Beispiel  
 Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format als Key-Values. Dieses ist bei Verwendung von `options=keyValues` kompatibel mit NGSI-LD und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "uri:ngsi-ld:datapackage:001",  
+  "type": "DataPackageFrictionlessData",  
+  "name": "cpi",  
+  "title": "Annual Consumer Price Index (CPI)",  
+  "description": "Annual Consumer Price Index (CPI) for most countries in the world. Reference year is 2005.",  
+  "profile": "tabular-data-package",  
+  "licenses": [  
+    {  
+      "name": "CC-BY-4.0",  
+      "title": "Creative Commons Attribution 4.0",  
+      "path": "https://creativecommons.org/licenses/by/4.0/"  
+    }  
+  ],  
+  "keywords": [  
+    "CPI",  
+    "World",  
+    "Consumer Price Index",  
+    "Annual Data",  
+    "The World Bank"  
+  ],  
+  "version": "2.0.0",  
+  "sources": [  
+    {  
+      "title": "The World Bank",  
+      "path": "http://data.worldbank.org/indicator/FP.CPI.TOTL"  
+    }  
+  ],  
+  "resources": [  
+    {  
+      "path": "data/cpi.csv",  
+      "name": "cpi",  
+      "profile": "tabular-data-resource",  
+      "schema": {  
+        "fields": [  
+          {  
+            "name": "Country Name",  
+            "type": "string"  
+          },  
+          {  
+            "name": "Country Code",  
+            "type": "string"  
+          },  
+          {  
+            "name": "Year",  
+            "type": "year"  
+          },  
+          {  
+            "name": "CPI",  
+            "description": "CPI (where 2005=100)",  
+            "type": "number"  
+          }  
+        ]  
+      }  
+    }  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
 #### DataPackageFrictionlessData NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "uri:ngsi-ld:datapackage:001",  
+  "type": "DataPackageFrictionlessData",  
+  "name": {  
+    "type": "Property",  
+    "value": "cpi"  
+  },  
+  "title": {  
+    "type": "Property",  
+    "value": "Annual Consumer Price Index (CPI)"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Annual Consumer Price Index (CPI) for most countries in the world. Reference year is 2005."  
+  },  
+  "profile": {  
+    "type": "Property",  
+    "value": "tabular-data-package"  
+  },  
+  "licenses": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "name": "CC-BY-4.0",  
+        "title": "Creative Commons Attribution 4.0",  
+        "path": "https://creativecommons.org/licenses/by/4.0/"  
+      }  
+    ]  
+  },  
+  "keywords": {  
+    "type": "Property",  
+    "value": [  
+      "CPI",  
+      "World",  
+      "Consumer Price Index",  
+      "Annual Data",  
+      "The World Bank"  
+    ]  
+  },  
+  "version": {  
+    "type": "Property",  
+    "value": "2.0.0"  
+  },  
+  "sources": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "title": "The World Bank",  
+        "path": "http://data.worldbank.org/indicator/FP.CPI.TOTL"  
+      }  
+    ]  
+  },  
+  "resources": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "path": "data/cpi.csv",  
+        "name": "cpi",  
+        "profile": "tabular-data-resource",  
+        "schema": {  
+          "fields": [  
+            {  
+              "name": "Country Name",  
+              "type": "string"  
+            },  
+            {  
+              "name": "Country Code",  
+              "type": "string"  
+            },  
+            {  
+              "name": "Year",  
+              "type": "year"  
+            },  
+            {  
+              "name": "CPI",  
+              "description": "CPI (where 2005=100)",  
+              "type": "number"  
+            }  
+          ]  
+        }  
+      }  
+    ]  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
