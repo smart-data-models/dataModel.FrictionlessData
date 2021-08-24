@@ -1,0 +1,2 @@
+"id_", "type_", "fields__0__name_", "fields__0__type_", "fields__0__constraints__required_", "fields__1__name_", "fields__1__type_", "primaryKey__0_"
+"urn:ngsi-ld:TableSchemaFrictionlessData:XVFE:0034", "TableSchemaFrictionlessData", "first_name", "string", "True", "age", "integer", "name"
