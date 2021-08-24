@@ -4,6 +4,8 @@ This data model comes from the original frictionless data that can be found at h
 ### List of data models
 
 The following entity types are available:
+- [CSVDialectFrictionlessData](https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/CSVDialectFrictionlessData/README.md). The CSV dialect descriptor.Converted for Smart Data Models initiative from original frictionless data
+
 - [DataPackageFrictionlessData](https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/README.md). Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data
 
 - [DataResourceFrictionlessData](https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/README.md). Data Resource.Converted for Smart Data Models initiative from original frictionless data
