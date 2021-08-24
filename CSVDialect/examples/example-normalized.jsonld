@@ -1,0 +1,101 @@
+{
+  "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",
+  "type": "CSVDialectFrictionlessData",
+  "dateCreated": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "1986-03-01T17:11:28Z"
+    }
+  },
+  "dateModified": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2017-04-29T03:29:41Z"
+    }
+  },
+  "source": {
+    "type": "Property",
+    "value": ""
+  },
+  "name": {
+    "type": "Property",
+    "value": ""
+  },
+  "alternateName": {
+    "type": "Property",
+    "value": ""
+  },
+  "description": {
+    "type": "Property",
+    "value": ""
+  },
+  "dataProvider": {
+    "type": "Property",
+    "value": ""
+  },
+  "owner": {
+    "type": "Property",
+    "value": [
+      "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",
+      "urn:ngsi-ld:CSVDialect:items:MABG:25535507"
+    ]
+  },
+  "seeAlso": {
+    "type": "Property",
+    "value": [
+      "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",
+      "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"
+    ]
+  },
+  "csvddfVersion": {
+    "type": "Property",
+    "value": 1.2
+  },
+  "delimiter": {
+    "type": "Property",
+    "value": ";"
+  },
+  "doubleQuote": {
+    "type": "Property",
+    "value": true
+  },
+  "lineTerminator": {
+    "type": "Property",
+    "value": ""
+  },
+  "nullSequence": {
+    "type": "Property",
+    "value": "\\N"
+  },
+  "quoteChar": {
+    "type": "Property",
+    "value": "'"
+  },
+  "escapeChar": {
+    "type": "Property",
+    "value": "\\"
+  },
+  "skipInitialSpace": {
+    "type": "Property",
+    "value": false
+  },
+  "header": {
+    "type": "Property",
+    "value": false
+  },
+  "commentChar": {
+    "type": "Property",
+    "value": "#"
+  },
+  "caseSensitiveHeader": {
+    "type": "Property",
+    "value": true
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
+}
+
+
