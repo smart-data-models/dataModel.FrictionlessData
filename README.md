@@ -6,6 +6,10 @@ This data model comes from the original frictionless data that can be found at h
 The following entity types are available:
 - [DataPackageFrictionlessData](https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/README.md). Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data
 
+- [DataResourceFrictionlessData](https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/README.md). Data Resource.Converted for Smart Data Models initiative from original frictionless data
+
+- [TableSchemaFrictionlessData](https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/TableSchemaFrictionlessData/README.md). A Table Schema for this resource, compliant with the Table Schema specification. Converted for Smart Data Models initiative from original frictionless data
+
 
 
 ### Contributors
