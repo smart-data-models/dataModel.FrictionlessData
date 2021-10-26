@@ -8,7 +8,7 @@ A Table Schema for this resource, compliant with the Table Schema specification.
 This data model comes from the original frictionless data that can be found at https://frictionlessdata.io/
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/TableSchemaFrictionlessData/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/TableSchemaFrictionlessData/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/TableSchemaFrictionlessData/doc/spec.md)
 
