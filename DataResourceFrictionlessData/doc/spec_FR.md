@@ -530,7 +530,7 @@ DataResourceFrictionlessData:
   "@context": "https://smartdatamodels.org/context.jsonld"  
 }  
 ```  
-#### DataResourceFrictionlessData NGSI-LD normalisée Exemple  
+#### DataResourceFrictionlessData NGSI-LD normalisé Exemple  
 Voici un exemple de DataResourceFrictionlessData au format JSON-LD tel que normalisé. Ceci est compatible avec NGSI-LD lorsqu'on n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
