@@ -2,15 +2,15 @@ Entität: DataPackageFrictionlessData
 ====================================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Datenpaket ist eine einfache Spezifikation für den Datenzugriff und die Datenbereitstellung.konvertiert für die Initiative Smart Data Models aus ursprünglichen friktionsfreien Daten**  
+Globale Beschreibung: **Datenpaket ist eine einfache Spezifikation für den Zugang zu und die Bereitstellung von Daten, die für die Initiative Smart Data Models aus den ursprünglichen friktionsfreien Daten umgewandelt wurde**  
 Version: 0.0.1  
 
 ## Liste der Eigenschaften  
 
-- `contributors`: Mitwirkende. . Die Mitwirkenden an diesem Deskriptor  - `created`: Erstellt. Die Datetime muss den String-Formaten für datetime entsprechen, wie in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6) beschrieben. Der Zeitpunkt, an dem dieser Deskriptor erstellt wurde  - `description`: Beschreibung. . Eine Textbeschreibung. Markdown wird empfohlen  - `homepage`: Home Page. . Die Homepage im Web, die sich auf dieses Datenpaket bezieht  - `id`: ID. Ein gängiges Verwendungsmuster für Datenpakete ist die Verwendung als Paketierungsformat innerhalb der Grenzen eines Systems oder einer Plattform. In diesen Fällen ist ein eindeutiger Bezeichner für ein Paket für gängige Datenverarbeitungs-Workflows erwünscht, wie z. B. das Aktualisieren eines vorhandenen Pakets. Während auf der Ebene der Spezifikation die globale Eindeutigkeit nicht validiert werden kann, können Verbraucher mit der Eigenschaft `id` sicherstellen, dass die Bezeichner global eindeutig sind. Eine Eigenschaft, die für global eindeutige Bezeichner reserviert ist. Beispiele für Bezeichner, die eindeutig sind, sind UUIDs und DOIs  - `image`: Bild. . Ein Bild zur Darstellung dieses Pakets  - `keywords`: Stichworte. . Eine Liste von Schlüsselwörtern, die dieses Paket beschreiben  - `licenses`: Lizenzen. Diese Eigenschaft ist nicht rechtsverbindlich und garantiert nicht, dass das Paket unter den hier definierten Bedingungen lizenziert ist. Die Lizenz(en), unter denen dieses Paket veröffentlicht wird  - `name`: Name. Dies ist idealerweise ein url-verwendbarer und von Menschen lesbarer Name. Der Name `SOLLTE` invariant sein, d. h. er `SOLLTE` sich NICHT ändern, wenn der übergeordnete Deskriptor aktualisiert wird. Eine Bezeichner-Zeichenkette. Kleinbuchstaben mit `.`, `_`, `-` und `/` sind erlaubt  - `profile`: Profil. Jeder Paket- und Resource-Deskriptor hat ein Profil. Das Standardprofil, wenn keines deklariert ist, ist `data-package` für Package und `data-resource` für Resource. Das Profil dieses Deskriptors  - `resources`: Daten-Ressourcen. . Ein "Array" von Datenressourcen-Objekten, die jeweils der Spezifikation [Datenressource](/data-resource/) entsprechen.  - `sources`: Quellen. . Die Rohquellen für diese Ressource  - `title`: Titel. . Ein von Menschen lesbarer Titel  - `type`: Es muss DataPackageFrictionlessData sein. NGSI-Entitätstyp    
+- `contributors`: Mitwirkende. . Die Mitwirkenden an diesem Deskriptor  - `created`: Erstellt. Die Datetime muss den in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6) beschriebenen String-Formaten für datetime entsprechen. Der Zeitpunkt, zu dem dieser Deskriptor erstellt wurde  - `description`: Beschreibung. . Eine Textbeschreibung. Markdown wird empfohlen  - `homepage`: Home Page. . Die Homepage im Web, die sich auf dieses Datenpaket bezieht  - `id`: ID. Ein gängiges Verwendungsmuster für Datenpakete ist die Verwendung als Paketierungsformat innerhalb der Grenzen eines Systems oder einer Plattform. In diesen Fällen ist ein eindeutiger Identifikator für ein Paket für allgemeine Datenverarbeitungsabläufe, wie z. B. die Aktualisierung eines bestehenden Pakets, erwünscht. Während auf der Ebene der Spezifikation die globale Eindeutigkeit nicht validiert werden kann, müssen Verbraucher, die die Eigenschaft `id` verwenden, sicherstellen, dass die Bezeichner global eindeutig sind. Eine Eigenschaft, die für global eindeutige Bezeichner reserviert ist. Beispiele für eindeutige Bezeichner sind UUIDs und DOIs.  - `image`: Bild. . Ein Bild zur Darstellung dieses Pakets  - `keywords`: Schlüsselwörter. . Eine Liste von Schlüsselwörtern, die dieses Paket beschreiben  - `licenses`: Lizenzen. Diese Eigenschaft ist nicht rechtsverbindlich und garantiert nicht, dass das Paket unter den hier definierten Bedingungen lizenziert ist. Die Lizenz(en), unter denen dieses Paket veröffentlicht wird  - `name`: Name. Dies ist idealerweise ein url-verwendbarer und von Menschen lesbarer Name. Der Name `SOLLTE` invariant sein, d.h. er `SOLLTE` sich NICHT ändern, wenn der übergeordnete Deskriptor aktualisiert wird. Ein Bezeichner-String. Kleinbuchstaben mit `.`, `_`, `-` und `/` sind erlaubt.  - `profile`: Profil. Jeder Package- und Resource-Deskriptor hat ein Profil. Das Standardprofil, wenn keines deklariert ist, ist `data-package` für Package und `data-resource` für Resource. Das Profil für diesen Deskriptor  - `resources`: Daten-Ressourcen. . Ein "Array" von Datenressourcen-Objekten, die jeweils der [Datenressource](/data-resource/)-Spezifikation entsprechen  - `sources`: Quellen. . Die Rohquellen für diese Ressource  - `title`: Titel. . Ein von Menschen lesbarer Titel  - `type`: Es muss DataPackageFrictionlessData sein. NGSI-Entitätstyp    
 Erforderliche Eigenschaften  
 - `id`  - `resources`  - `type`    
-Dieses Datenmodell stammt von den ursprünglichen reibungslosen Daten, die unter https://frictionlessdata.io/ zu finden sind. Es gibt eine Reihe von Änderungen. 1) id und type wurden obligatorisch gemacht 2) die Struktur des json-Schemas wurde an das offizielle Format der Smart Data Models angepasst. Siehe Beitrag Handbuch [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)  
+Dieses Datenmodell stammt von den ursprünglichen reibungslosen Daten, die unter https://frictionlessdata.io/ zu finden sind. Es gibt eine Reihe von Änderungen. 1) id und type wurden obligatorisch gemacht 2) die Struktur des json Schemas wurde an das offizielle Format der Smart Data Models angepasst. Siehe Beitrag Handbuch [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -100,7 +100,7 @@ DataPackageFrictionlessData:
 </details>    
 ## Beispiel-Nutzlasten  
 #### DataPackageFrictionlessData NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "uri:ngsi-ld:datapackage:001",  
@@ -161,7 +161,7 @@ DataPackageFrictionlessData:
 }  
 ```  
 #### DataPackageFrictionlessData NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "uri:ngsi-ld:datapackage:001",  
@@ -249,7 +249,7 @@ DataPackageFrictionlessData:
 }  
 ```  
 #### DataPackageFrictionlessData NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format als Key-Values. Dieses ist bei Verwendung von `options=keyValues` kompatibel mit NGSI-LD und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "uri:ngsi-ld:datapackage:001",  
@@ -312,8 +312,8 @@ DataPackageFrictionlessData:
   ]  
 }  
 ```  
-#### DataPackageFrictionlessData NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden und liefert die Kontextdaten einer einzelnen Entität.  
+#### DataPackageFrictionlessData NGSI-LD normalized Beispiel  
+Hier ist ein Beispiel für ein DataPackageFrictionlessData im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "uri:ngsi-ld:datapackage:001",  
