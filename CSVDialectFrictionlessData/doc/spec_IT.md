@@ -161,7 +161,7 @@ CSVDialectFrictionlessData:
 </details>    
 ## Esempio di payloads  
 #### CSVDialectFrictionlessData Valori chiave NGSI-v2 Esempio  
-Ecco un esempio di CSVDialectFrictionlessData in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di CSVDialectFrictionlessData in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
