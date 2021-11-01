@@ -479,7 +479,7 @@ DataResourceFrictionlessData:
 }  
 ```  
 #### DataResourceFrictionlessData NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un DataResourceFrictionlessData en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de un DataResourceFrictionlessData en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:dataresource:AECS:1234",  
