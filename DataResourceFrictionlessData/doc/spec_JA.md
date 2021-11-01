@@ -10,7 +10,7 @@
 - `address`: 郵送先住所  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `bytes`: バイト数です。このリソースのサイズをバイトで表したもの  - `data`: データです。このリソースのインラインデータ  - `description`: 説明。テキストの説明です。Markdownを推奨します。  - `encoding`: エンコーディング。このリソースのファイルエンコーディング  - `format`: フォーマットです。csv」、「xls」、「json」は一般的なフォーマットの例です。このリソースのファイル形式  - `hash`: ハッシュ。このリソースのMD5ハッシュ。他のハッシュアルゴリズムを{algorithm}:{hash}の形式で示します。  - `homepage`: ホームページです。このデータパッケージに関連するウェブ上のホーム  - `id`: エンティティのユニークな識別子  - `licenses`: ライセンスについてこのプロパティは法的拘束力を持たず、パッケージがここで定義された条件でライセンスされていることを保証するものではありません。リソースが公開されているライセンス(複数可)  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `mediatype`: メディアタイプ。このリソースのメディアタイプ。IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)に記載されている有効なメディアタイプであれば何でも構いません。  - `name`: 名前です。これは理想的には、URLで使用可能で人間が読める名前です。名前は不変であるべきです。つまり、親ディスクリプターが更新されても変更されるべきではありません。識別子の文字列です。小文字で '.'、'_'、'-'、'/'が使用できます。  - `path`: パス。path'で参照される各データソースの参照解除された値は、リソースが記述するデータのネイティブで参照解除された表現に見合ったものでなければならない(MUST)。例えば、*Tabular*データリソースでは、'path'の参照される値は配列でなければならない(MUST)ことを意味する。このリソースのデータへの参照で、文字列としてのパス、または文字列としてのパスの配列のいずれかです。 有効なURIの種類  - `profile`: プロファイルすべてのPackageとResourceの記述子は、プロファイルを持っています。デフォルトのプロファイルは、何も宣言されていなければ、パッケージの場合は'data-package'、リソースの場合は'data-resource'です。この記述子のプロファイル  - `schema`: スキーマこのリソースのスキーマ  - `sources`: ソース.このリソースの生のソースは  - `title`: タイトル人間が読めるタイトル  - `type`: NGSI Entity type- DataResourceFrictionlessDataでなければならない。    
 必須項目  
 - `id`  - `name`  - `type`    
-このデータモデルは、https://frictionlessdata.io/ に掲載されているオリジナルのフリクションレスデータから来ています。いくつかの変更点があります。1) NGSI-LD規格で要求されているように、idとtypeが必須になりました。 2)jsonスキーマの構造は、スマートデータモデルの公式フォーマットに合わせてあります。貢献マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。互換性を持たせるために、データプロパティとソースプロパティはオブジェクトの配列として定義されています。また、タイプも含まれています。  
+このデータモデルは、https://frictionlessdata.io/ に掲載されているオリジナルのフリクションレスデータから来ています。いくつかの変更点があります。1) NGSI-LD規格で要求されているように、idとtypeが必須になりました。 2)jsonスキーマの構造が、スマートデータモデルの公式フォーマットに合わせられました。貢献マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。互換性を持たせるために、データプロパティとソースプロパティはオブジェクトの配列として定義されています。また、タイプも含まれています。  
 ## データモデルによるプロパティの記述  
 アルファベット順（クリックすると詳細が表示されます  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -531,7 +531,7 @@ DataResourceFrictionlessData:
 }  
 ```  
 #### DataResourceFrictionlessData NGSI-LD normalized Example  
-ここでは、正規化されたJSON-LD形式のDataResourceFrictionlessDataの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキスト・データを返します。  
+ここでは、正規化されたJSON-LD形式のDataResourceFrictionlessDataの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:dataresource:AECS:1234",  
