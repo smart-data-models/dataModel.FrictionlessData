@@ -7,7 +7,7 @@ Entity:TableSchemaFrictionlessData
 
 ## プロパティのリスト  
 
-- `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `fields`: Table Schema Fieldオブジェクトの配列  - `foreignKeys`:   - `id`: エンティティのユニークな識別子  - `missingValues`: 多くのデータセットでは、値が収集されていなかったり、存在していなかったりして、データ値が欠落しています。欠損値は、単に値が空であることで示される場合もあれば、'-'、'NaN'、'0'、'-9999'などの特殊な値が使用されている場合もあります。'missingValues'プロパティは、これらの値をnullと同等に解釈すべきであることを示す方法を提供します。missingValues」は、特定のフィールドのデータ型ではなく、文字列です。これにより、キャストする前に比較することができ、また、例えば、「number」フィールドに「-」で示される欠損値があるように、フィールドがそのタイプではない欠損値を持つことができます。文字列型のフィールドの場合、「missingValue」のデフォルト値はありません（文字列型のフィールドの場合、空文字列「'」は有効な値であり、nullを示す必要はありません）。ソースで見つかった場合、「null」、「not present」、または「blank」の値として考慮されるべき値  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `primaryKey`: primaryKeyのフィールド名は、一意でなければならず（MUST）、関連するテーブルのフィールド名と一致しなければならない（MUST）。1つのフィールドの値が主キーであることを示す、1つの値を持つ配列があっても構いません。プライマリキーはフィールド名またはフィールド名の配列で、その値はテーブルの各行を一意に識別しなければならない(MUST)  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: は、TableSchemaFrictionlessDataでなければなりません。NGSIエンティティタイプ    
+- `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `fields`: Table Schema Fieldオブジェクトの配列  - `foreignKeys`:   - `id`: エンティティのユニークな識別子  - `missingValues`: 多くのデータセットでは、値が収集されていなかったり、存在していなかったりして、データ値が欠落しています。欠損値は、単に値が空であることで示される場合もあれば、'-'、'NaN'、'0'、'-9999'などの特殊な値が使用されている場合もあります。'missingValues'プロパティは、これらの値をnullと同等に解釈すべきであることを示す方法を提供します。missingValues」は、特定のフィールドのデータ型ではなく、文字列です。これにより、キャストする前に比較することができ、また、例えば、「number」フィールドに「-」で示される欠損値があるように、フィールドがそのタイプではない欠損値を持つことができます。文字列型のフィールドの場合、「missingValue」のデフォルト値はありません（文字列型のフィールドの場合、空文字列「'」は有効な値であり、nullを示す必要はありません）。ソースで見つかった場合、「null」、「not present」、または「blank」の値として考慮されるべき値  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `primaryKey`: primaryKeyのフィールド名は一意でなければならず（MUST）、関連するテーブルのフィールド名と一致しなければならない（MUST）。1つのフィールドの値が主キーであることを示す、1つの値を持つ配列があっても構いません。主キーはフィールド名またはフィールド名の配列であり，その値はテーブルの各行を一意に識別しなければならない(MUST)  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: は、TableSchemaFrictionlessDataでなければなりません。NGSIエンティティタイプ    
 必須項目  
 - `fields`  - `id`  - `type`    
 このデータモデルは、https://frictionlessdata.io/ に掲載されているオリジナルのフリクションレスデータから来ています。いくつかの変更点があります。1) NGSI規格で必須とされているidとtypeを必須にしました 2) jsonスキーマの構造をスマートデータモデルの公式フォーマットに合わせました。コントリビューションマニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)をご覧ください。  
@@ -182,7 +182,7 @@ TableSchemaFrictionlessData:
 }  
 ```  
 #### TableSchemaFrictionlessData NGSI-LD key-valuesの例。  
-TableSchemaFrictionlessDataをkey-valuesとしてJSON-LD形式で記述した例を示します。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+TableSchemaFrictionlessDataをkey-valuesとしてJSON-LD形式で記述した例を示します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:TableSchemaFrictionlessData:XVFE:0034",  
@@ -209,7 +209,7 @@ TableSchemaFrictionlessData:
 }  
 ```  
 #### TableSchemaFrictionlessData NGSI-LD 正規化された例。  
-ここでは、正規化されたJSON-LD形式のTableSchemaFrictionlessDataの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+ここでは、正規化されたJSON-LD形式のTableSchemaFrictionlessDataの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:TableSchemaFrictionlessData:XVFE:0034",  
