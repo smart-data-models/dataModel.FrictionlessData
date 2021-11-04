@@ -33,6 +33,7 @@
         "mediatype": "https://smartdatamodels.org/dataModel.FrictionlessData/mediatype",
         "missingValues": "https://smartdatamodels.org/dataModel.FrictionlessData/missingValues",
         "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "nullSequence": "https://smartdatamodels.org/dataModel.FrictionlessData/nullSequence",
         "owner": "https://smartdatamodels.org/owner",
         "path": "https://smartdatamodels.org/dataModel.FrictionlessData/path",
