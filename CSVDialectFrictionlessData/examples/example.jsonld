@@ -1,31 +1,31 @@
 {
-    "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",
-    "type": "CSVDialectFrictionlessData",
-    "alternateName": "",
-    "caseSensitiveHeader": true,
-    "commentChar": "#",
-    "csvddfVersion": 1.2,
-    "dataProvider": "",
-    "dateCreated": "1986-03-01T17:11:28Z",
-    "dateModified": "2017-04-29T03:29:41Z",
-    "delimiter": ";",
-    "description": "",
-    "doubleQuote": true,
-    "escapeChar": "\\",
-    "header": false,
-    "name": "",
-    "owner": [
-        "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",
-        "urn:ngsi-ld:CSVDialect:items:MABG:25535507"
-    ],
-    "quoteChar": "'",
-    "seeAlso": [
-        "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",
-        "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"
-    ],
-    "skipInitialSpace": false,
-    "source": "",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",
+  "type": "CSVDialectFrictionlessData",
+  "alternateName": "",
+  "caseSensitiveHeader": true,
+  "commentChar": "#",
+  "csvddfVersion": 1.2,
+  "dataProvider": "",
+  "dateCreated": "1986-03-01T17:11:28Z",
+  "dateModified": "2017-04-29T03:29:41Z",
+  "delimiter": "%3B",
+  "description": "",
+  "doubleQuote": true,
+  "escapeChar": "\\",
+  "header": false,
+  "name": "",
+  "owner": [
+    "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",
+    "urn:ngsi-ld:CSVDialect:items:MABG:25535507"
+  ],
+  "quoteChar": "'",
+  "seeAlso": [
+    "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",
+    "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"
+  ],
+  "skipInitialSpace": false,
+  "source": "",
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
 }

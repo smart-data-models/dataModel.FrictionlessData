@@ -49,7 +49,7 @@
   },
   "delimiter": {
     "type": "Text",
-    "value": ";"
+    "value": "%3B"
   },
   "doubleQuote": {
     "type": "boolean",
