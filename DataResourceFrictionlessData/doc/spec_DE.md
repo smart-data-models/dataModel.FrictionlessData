@@ -1,16 +1,17 @@
-Entität: DataResourceFrictionlessData  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: DataResourceFrictionlessData  
 =====================================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Daten-Ressource.Konvertiert für die Initiative "Intelligente Datenmodelle" aus ursprünglichen reibungslosen Daten**  
-Version: 0.0.1  
+Version: 0.0.2  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `bytes`: Bytes. Die Größe dieser Ressource in Bytes  - `data`: Daten. Inline-Daten für diese Ressource  - `description`: Beschreibung. Eine Textbeschreibung. Markdown wird empfohlen  - `encoding`: Kodierung. Die Dateikodierung dieser Ressource  - `format`: Format. csv", "xls", "json" sind Beispiele für gängige Formate. Das Dateiformat dieser Ressource  - `hash`: Hash. Der MD5-Hash für diese Ressource. Geben Sie andere Hash-Algorithmen mit dem Format {Algorithmus}:{Hash} an.  - `homepage`: Hauptseite. Die Homepage im Web, die sich auf dieses Datenpaket bezieht  - `id`: Eindeutiger Bezeichner der Entität  - `licenses`: Lizenzen. Diese Eigenschaft ist nicht rechtsverbindlich und garantiert nicht, dass das Paket unter den hier definierten Bedingungen lizenziert ist. Die Lizenz(en), unter denen die Ressource veröffentlicht wird  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mediatype`: Medientyp. Der Medientyp dieser Ressource. Kann jeder gültige Medientyp sein, der bei [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml) aufgeführt ist.  - `name`: Name. Idealerweise ist dies ein url-verwendbarer und von Menschen lesbarer Name. Der Name "SOLLTE" unveränderlich sein, d. h. er "SOLLTE" sich NICHT ändern, wenn der übergeordnete Deskriptor aktualisiert wird. Ein Bezeichner-String. Kleinbuchstaben mit '.', '_', '-' und '/' sind zulässig.  - `path`: Pfad. Der dereferenzierte Wert jeder referenzierten Datenquelle in "path" "MUSS" einer nativen, dereferenzierten Darstellung der Daten entsprechen, die die Ressource beschreibt. Bei einer *Tabellen*-Datenressource bedeutet dies beispielsweise, dass der dereferenzierte Wert von "path" ein Array sein "MUSS". Ein Verweis auf die Daten für diese Ressource, entweder als Pfad als String oder als Array von Pfaden als Strings. von gültigen URIs  - `profile`: Profil. Jeder Paket- und Resource-Deskriptor hat ein Profil. Das Standardprofil, wenn keines deklariert ist, ist "data-package" für Package und "data-resource" für Resource. Das Profil für diesen Deskriptor  - `schema`: Schema. Ein Schema für diese Ressource  - `sources`: Quellen. . Die Rohquellen für diese Ressource  - `title`: Titel. Ein von Menschen lesbarer Titel  - `type`: NGSI-Entitätstyp - Es muss DataResourceFrictionlessData sein    
+- `address`: Die Postanschrift  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `bytes`: Bytes. Die Größe dieser Ressource in Bytes  - `data`: Daten. Inline-Daten für diese Ressource  - `description`: Beschreibung. Eine Textbeschreibung. Markdown wird empfohlen  - `encoding`: Kodierung. Die Dateikodierung dieser Ressource  - `format`: Format. csv", "xls", "json" sind Beispiele für gängige Formate. Das Dateiformat dieser Ressource  - `hash`: Hash. Der MD5-Hash für diese Ressource. Geben Sie andere Hash-Algorithmen mit dem Format {Algorithmus}:{Hash} an.  - `homepage`: Hauptseite. Die Homepage im Web, die sich auf dieses Datenpaket bezieht  - `id`: Eindeutiger Bezeichner der Entität  - `licenses`: Lizenzen. Diese Eigenschaft ist nicht rechtsverbindlich und garantiert nicht, dass das Paket unter den hier definierten Bedingungen lizenziert ist. Die Lizenz(en), unter denen die Ressource veröffentlicht wird  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mediatype`: Medientyp. Der Medientyp dieser Ressource. Kann jeder gültige Medientyp sein, der bei [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml) aufgeführt ist.  - `name`: Name. Idealerweise ist dies ein url-verwendbarer und von Menschen lesbarer Name. Der Name "SOLLTE" unveränderlich sein, d. h. er "SOLLTE" sich NICHT ändern, wenn der übergeordnete Deskriptor aktualisiert wird. Ein Bezeichner-String. Kleinbuchstaben mit '.', '_', '-' und '/' sind zulässig.  - `path`: Pfad. Der dereferenzierte Wert jeder referenzierten Datenquelle in "path" "MUSS" einer nativen, dereferenzierten Darstellung der Daten entsprechen, die die Ressource beschreibt. Bei einer *Tabellen*-Datenressource bedeutet dies beispielsweise, dass der dereferenzierte Wert von "path" ein Array sein "MUSS". Ein Verweis auf die Daten für diese Ressource, entweder als Pfad als String oder als Array von Pfaden als Strings. von gültigen URIs  - `profile`: Profil. Jeder Paket- und Resource-Deskriptor hat ein Profil. Das Standardprofil, wenn keines deklariert ist, ist "data-package" für Package und "data-resource" für Resource. Das Profil für diesen Deskriptor  - `schema`: Schema. Ein Schema für diese Ressource  - `sources`: Quellen. . Die Rohquellen für diese Ressource  - `title`: Titel. Ein von Menschen lesbarer Titel  - `type`: NGSI-Entitätstyp. Es muss DataResourceFrictionlessData sein    
 Erforderliche Eigenschaften  
 - `id`  - `name`  - `type`    
-Dieses Datenmodell stammt von den ursprünglichen reibungslosen Daten, die unter https://frictionlessdata.io/ zu finden sind. Es gibt eine Reihe von Änderungen. 1) id und type wurden obligatorisch gemacht, wie vom NGSI-LD-Standard gefordert. 2) Die Struktur des json-Schemas wurde an das offizielle Format der Smart Data Models angepasst. Siehe Beitrag Handbuch [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual). Um es kompatibel zu machen, wurden die Dateneigenschaft und die Quelleneigenschaft als ein Array von Objekten definiert. Auch der Typ wurde eingefügt.  
+Dieses Datenmodell stammt von den ursprünglichen reibungslosen Daten, die unter https://frictionlessdata.io/ zu finden sind. Es gibt eine Reihe von Änderungen. 1) id und type wurden obligatorisch gemacht, wie vom NGSI-LD-Standard gefordert. 2) Die Struktur des json-Schemas wurde an das offizielle Format der Smart Data Models angepasst. Siehe Beitrag Handbuch [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual). Um es kompatibel zu machen, wurden die Dateneigenschaft und die Quelleigenschaft als Array von Objekten definiert. Auch der Typ wurde eingefügt.  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -317,7 +318,7 @@ DataResourceFrictionlessData:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type· It has to be DataResourceFrictionlessData'    
+      description: 'NGSI Entity type. It has to be DataResourceFrictionlessData'    
       enum:    
         - DataResourceFrictionlessData    
       type: string    
@@ -328,7 +329,12 @@ DataResourceFrictionlessData:
     - id    
     - type    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md    
+  x-model-schema: ""    
+  x-model-tags: SDG    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
@@ -628,4 +634,4 @@ DataResourceFrictionlessData:
   ]  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
