@@ -1,16 +1,17 @@
-Entidad: DataResourceFrictionlessData  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: DataResourceFrictionlessData  
 =====================================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Recurso de datos convertido para la iniciativa de modelos de datos inteligentes a partir de datos originales sin fricción**.  
-versión: 0.0.1  
+versión: 0.0.2  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `bytes`: Bytes. El tamaño de este recurso en bytes  - `data`: Datos. Datos en línea para este recurso  - `description`: Descripción. Una descripción de texto. Se recomienda el uso de Markdown  - `encoding`: Codificación. La codificación del archivo de este recurso  - `format`: El formato. csv', 'xls', 'json' son ejemplos de formatos comunes. El formato de archivo de este recurso  - `hash`: Hash. El hash MD5 de este recurso. Indique otros algoritmos de hash con el formato {algoritmo}:{hash}  - `homepage`: Página de inicio. El hogar en la web que está relacionado con este paquete de datos  - `id`: Identificador único de la entidad  - `licenses`: Licencias. Esta propiedad no es legalmente vinculante y no garantiza que el paquete tenga una licencia en los términos aquí definidos. La(s) licencia(s) bajo la(s) cual(es) se publica el recurso  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mediatype`: Tipo de medio. El tipo de medio de este recurso. Puede ser cualquier tipo de medio válido enumerado en [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)  - `name`: Nombre. Lo ideal es que sea un nombre utilizable en la url y legible para los humanos. El nombre 'DEBERÍA' ser invariable, lo que significa que 'NO DEBERÍA' cambiar cuando se actualiza su descriptor padre. Una cadena de identificación. Se permiten caracteres en minúsculas con '.', '_', '-' y '/'.  - `path`: Ruta. El valor dereferenciado de cada fuente de datos referenciada en 'path' 'DEBE' ser acorde con una representación nativa y dereferenciada de los datos que el recurso describe. Por ejemplo, en un recurso de datos *Tabular*, esto significa que el valor dereferenciado de "path" "DEBE" ser una matriz. Una referencia a los datos de este recurso, ya sea como una ruta de acceso en forma de cadena, o como una matriz de rutas de acceso en forma de cadenas. de URIs válidos  - `profile`: Perfil. Cada descriptor de Paquete y Recurso tiene un perfil. El perfil por defecto, si no se declara ninguno, es 'data-package' para Package y 'data-resource' para Resource. El perfil de este descriptor  - `schema`: Esquema. Un esquema para este recurso  - `sources`: Fuentes. . Las fuentes brutas de este recurso  - `title`: Título. Un título legible para el ser humano  - `type`: Tipo de entidad NGSI- Debe ser DataResourceFrictionlessData    
+- `address`: La dirección postal  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `bytes`: Bytes. El tamaño de este recurso en bytes  - `data`: Datos. Datos en línea para este recurso  - `description`: Descripción. Una descripción de texto. Se recomienda el uso de Markdown  - `encoding`: Codificación. La codificación del archivo de este recurso  - `format`: Formato. csv', 'xls', 'json' son ejemplos de formatos comunes. El formato de archivo de este recurso  - `hash`: Hash. El hash MD5 de este recurso. Indique otros algoritmos de hash con el formato {algoritmo}:{hash}  - `homepage`: Página de inicio. El hogar en la web que está relacionado con este paquete de datos  - `id`: Identificador único de la entidad  - `licenses`: Licencias. Esta propiedad no es legalmente vinculante y no garantiza que el paquete tenga una licencia en los términos aquí definidos. La(s) licencia(s) bajo la(s) cual(es) se publica el recurso  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mediatype`: Tipo de medio. El tipo de medio de este recurso. Puede ser cualquier tipo de medio válido enumerado en [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)  - `name`: Nombre. Lo ideal es que sea un nombre utilizable en la url y legible para los humanos. El nombre 'DEBERÍA' ser invariable, lo que significa que 'NO DEBERÍA' cambiar cuando se actualiza su descriptor padre. Una cadena de identificación. Se permiten caracteres en minúsculas con '.', '_', '-' y '/'.  - `path`: Ruta. El valor dereferenciado de cada fuente de datos referenciada en 'path' 'DEBE' ser acorde con una representación nativa y dereferenciada de los datos que el recurso describe. Por ejemplo, en un recurso de datos *Tabular*, esto significa que el valor dereferenciado de "path" "DEBE" ser una matriz. Una referencia a los datos de este recurso, ya sea como una ruta de acceso como cadena, o como una matriz de rutas de acceso como cadenas. de URIs válidos  - `profile`: Perfil. Cada descriptor de Paquete y Recurso tiene un perfil. El perfil por defecto, si no se declara ninguno, es 'data-package' para Package y 'data-resource' para Resource. El perfil de este descriptor  - `schema`: Esquema. Un esquema para este recurso  - `sources`: Fuentes. . Las fuentes brutas de este recurso  - `title`: Título. Un título legible para el ser humano  - `type`: Tipo de entidad NGSI. Tiene que ser DataResourceFrictionlessData    
 Propiedades requeridas  
 - `id`  - `name`  - `type`    
-Este modelo de datos procede de los datos originales sin fricción que se pueden encontrar en https://frictionlessdata.io/. Hay un par de cambios. 1) el id y el tipo se han hecho obligatorios, tal y como exige el estándar NGSI-LD 2)la estructura del esquema json se ha adaptado al formato oficial de los modelos de datos inteligentes. Véase el manual de contribución [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual). Para hacerlo compatible se ha definido la propiedad data y la propiedad source como un array de objetos. También se ha incluido el tipo.  
+Este modelo de datos procede de los datos originales sin fricción que se pueden encontrar en https://frictionlessdata.io/. Hay un par de cambios. 1) el id y el tipo se han hecho obligatorios tal y como requiere el estándar NGSI-LD 2)la estructura del esquema json se ha adaptado al formato oficial de los modelos de datos inteligentes. Véase el manual de contribución [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual). Para hacerlo compatible se ha definido la propiedad data y la propiedad source como un array de objetos. También se ha incluido el tipo.  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -317,7 +318,7 @@ DataResourceFrictionlessData:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type· It has to be DataResourceFrictionlessData'    
+      description: 'NGSI Entity type. It has to be DataResourceFrictionlessData'    
       enum:    
         - DataResourceFrictionlessData    
       type: string    
@@ -328,7 +329,12 @@ DataResourceFrictionlessData:
     - id    
     - type    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md    
+  x-model-schema: ""    
+  x-model-tags: SDG    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Ejemplo de carga útil  
@@ -628,4 +634,4 @@ DataResourceFrictionlessData:
   ]  
 }  
 ```  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
