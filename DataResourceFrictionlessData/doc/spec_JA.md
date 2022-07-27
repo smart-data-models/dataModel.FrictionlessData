@@ -1,18 +1,19 @@
-エンティティDataResourceFrictionlessData  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティDataResourceFrictionlessData  
 ==================================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明です。**Data Resource.Converted for Smart Data Models initiative from Original frictionless data**。  
-バージョン: 0.0.1  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな説明**データリソース.スマートデータモデル構想のために、オリジナルのフリクションレスデータから変換されたもの**。  
+バージョン: 0.0.2  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `bytes`: バイト数です。このリソースのサイズをバイトで表したもの  - `data`: データです。このリソースのインラインデータ  - `description`: 説明。テキストの説明です。Markdownを推奨します。  - `encoding`: エンコーディング。このリソースのファイルエンコーディング  - `format`: フォーマットです。csv」、「xls」、「json」は一般的なフォーマットの例です。このリソースのファイル形式  - `hash`: ハッシュ。このリソースのMD5ハッシュ。他のハッシュアルゴリズムを{algorithm}:{hash}の形式で示します。  - `homepage`: ホームページです。このデータパッケージに関連するウェブ上のホーム  - `id`: エンティティのユニークな識別子  - `licenses`: ライセンスについてこのプロパティは法的拘束力を持たず、パッケージがここで定義された条件でライセンスされていることを保証するものではありません。リソースが公開されているライセンス(複数可)  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `mediatype`: メディアタイプ。このリソースのメディアタイプ。IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)に記載されている有効なメディアタイプであれば何でも構いません。  - `name`: 名前です。これは理想的には、URLで使用可能で人間が読める名前です。名前は不変であるべきです。つまり、親ディスクリプターが更新されても変更されるべきではありません。識別子の文字列です。小文字で '.'、'_'、'-'、'/'が使用できます。  - `path`: パス。path'で参照される各データソースの参照解除された値は、リソースが記述するデータのネイティブで参照解除された表現に見合ったものでなければならない(MUST)。例えば、*Tabular*データリソースでは、'path'の参照される値は配列でなければならない(MUST)ことを意味する。このリソースのデータへの参照で、文字列としてのパス、または文字列としてのパスの配列のいずれかです。 有効なURIの種類  - `profile`: プロファイルすべてのPackageとResourceの記述子は、プロファイルを持っています。デフォルトのプロファイルは、何も宣言されていなければ、パッケージの場合は'data-package'、リソースの場合は'data-resource'です。この記述子のプロファイル  - `schema`: スキーマこのリソースのスキーマ  - `sources`: ソース.このリソースの生のソースは  - `title`: タイトル人間が読めるタイトル  - `type`: NGSI Entity type- DataResourceFrictionlessDataでなければならない。    
-必須項目  
+- `address`: 郵送先住所  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `bytes`: バイト。このリソースのサイズ（バイト単位  - `data`: データこのリソースのインラインデータ  - `description`: 説明文。テキストの説明文です。Markdownを推奨します。  - `encoding`: エンコードこのリソースのファイルエンコーディング  - `format`: フォーマット。'csv', 'xls', 'json' は一般的なフォーマットの例である。このリソースのファイル形式  - `hash`: ハッシュ。このリソースのMD5ハッシュ。他のハッシュアルゴリズムを{algorithm}:{hash}の形式で指定します。  - `homepage`: ホームページです。このデータパッケージに関連するウェブ上のホーム  - `id`: エンティティの一意な識別子  - `licenses`: ライセンスこのプロパティは法的拘束力を持たず、パッケージがここで定義された条件の下でライセンスされていることを保証するものではありません。リソースが公開されているライセンス(複数可)  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `mediatype`: メディアタイプ。このリソースのメディアタイプ。IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)にリストされている有効なメディアタイプであれば、どれでも可能です。  - `name`: 名前。これは、理想的には、URLで使用可能な、人間が読める名前である。名前は不変であるべきで、親ディスクリプタが更新されたときに変更されるべきではありません（SHOULD NOT）。識別子の文字列。小文字の'.'、'_'、'-'、'/'が使用可能です。  - `path`: パスpath' で参照される各データソースの再参照値は、そのリソースが記述するデータのネイティブな再参照表現に相応したものでなければならない(MUST)。例えば、*Tabular* データリソースでは、'path' の再参照値は配列でなければならない (MUST)ことを意味する。このリソースのデータへの参照で、文字列としてのパス、または文字列としてのパスの配列のいずれかです。  - `profile`: プロファイル。すべてのPackageとResource記述子はプロファイルを持ちます。プロファイルが宣言されていない場合、デフォルトのプロファイルは、Packageの場合は'data-package'、Resourceの場合は'data-resource'です。このディスクリプタのプロファイル  - `schema`: スキーマこのリソースのスキーマ  - `sources`: ソースはこちら.このリソースの生のソース  - `title`: タイトル。人間が読みやすいタイトル  - `type`: NGSI エンティティタイプ。DataResourceFrictionlessDataである必要があります。    
+必要なプロパティ  
 - `id`  - `name`  - `type`    
-このデータモデルは、https://frictionlessdata.io/ に掲載されているオリジナルのフリクションレスデータから来ています。いくつかの変更点があります。1) NGSI-LD規格で要求されているように、idとtypeが必須になりました。 2)jsonスキーマの構造が、スマートデータモデルの公式フォーマットに合わせられました。貢献マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。互換性を持たせるために、データプロパティとソースプロパティはオブジェクトの配列として定義されています。また、タイプも含まれています。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+このデータモデルは、https://frictionlessdata.io/ にあるオリジナルのfrictionlessデータから来ています。いくつかの変更点があります。1) NGSI-LD規格で要求されているように、idとtypeが必須になりました 2) jsonスキーマの構造がスマートデータモデルの公式フォーマットに合わせられました。寄稿マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。互換性を持たせるために、dataプロパティとsourceプロパティはオブジェクトの配列として定義されています。また、型も含まれるようになりました。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 DataResourceFrictionlessData:    
@@ -317,7 +318,7 @@ DataResourceFrictionlessData:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type· It has to be DataResourceFrictionlessData'    
+      description: 'NGSI Entity type. It has to be DataResourceFrictionlessData'    
       enum:    
         - DataResourceFrictionlessData    
       type: string    
@@ -328,12 +329,17 @@ DataResourceFrictionlessData:
     - id    
     - type    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md    
+  x-model-schema: ""    
+  x-model-tags: SDG    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## ペイロードの例  
-#### DataResourceFrictionlessData NGSI-v2 key-valuesの例。  
-ここでは、DataResourceFrictionlessDataをJSON-LD形式でkey-valuesにした例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### DataResourceFrictionlessData NGSI-v2 key-value の例  
+ここでは、DataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "urn:ngsi-ld:dataresource:AECS:1234",  
@@ -383,8 +389,8 @@ DataResourceFrictionlessData:
   "title": "The Solar System"  
 }  
 ```  
-#### DataResourceFrictionlessData NGSI-v2 normalized Example  
-ここでは、正規化されたJSON-LD形式のDataResourceFrictionlessDataの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキスト・データを返します。  
+#### DataResourceFrictionlessData NGSI-v2 正規化例  
+以下は、DataResourceFrictionlessDataをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
   "id": "urn:ngsi-ld:dataresource:AECS:1234",  
@@ -478,8 +484,8 @@ DataResourceFrictionlessData:
   }  
 }  
 ```  
-#### DataResourceFrictionlessData NGSI-LD key-valuesの例。  
-ここでは、DataResourceFrictionlessDataをJSON-LD形式でkey-valuesにした例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### DataResourceFrictionlessData NGSI-LD key-value の例  
+ここでは、DataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
   "id": "urn:ngsi-ld:dataresource:AECS:1234",  
@@ -530,8 +536,8 @@ DataResourceFrictionlessData:
   "@context": "https://smartdatamodels.org/context.jsonld"  
 }  
 ```  
-#### DataResourceFrictionlessData NGSI-LD normalized Example  
-ここでは、正規化されたJSON-LD形式のDataResourceFrictionlessDataの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### DataResourceFrictionlessData NGSI-LD 正規化例  
+以下は、DataResourceFrictionlessDataをJSON-LD形式で正規化した場合の例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:dataresource:AECS:1234",  
@@ -628,4 +634,4 @@ DataResourceFrictionlessData:
   ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
