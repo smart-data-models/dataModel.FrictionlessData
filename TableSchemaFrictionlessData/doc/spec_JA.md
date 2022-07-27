@@ -1,18 +1,19 @@
-Entity:TableSchemaFrictionlessData  
-==================================  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティTableSchemaFrictionlessData  
+=================================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/TableSchemaFrictionlessData/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**Table Schema仕様に準拠した、このリソースのTable Schema。オリジナルのFrictionless DataからSmart Data Modelsイニシアティブのために変換されたものです。  
-バージョン: 0.0.1  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**テーブルスキーマ仕様に準拠した、このリソースのテーブルスキーマ。オリジナルのフリクションレスデータからスマートデータモデル構想のために変換された**。  
+バージョン: 0.0.2  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `fields`: Table Schema Fieldオブジェクトの配列  - `foreignKeys`:   - `id`: エンティティのユニークな識別子  - `missingValues`: 多くのデータセットでは、値が収集されていなかったり、存在していなかったりして、データ値が欠落しています。欠損値は、単に値が空であることで示される場合もあれば、'-'、'NaN'、'0'、'-9999'などの特殊な値が使用されている場合もあります。'missingValues'プロパティは、これらの値をnullと同等に解釈すべきであることを示す方法を提供します。missingValues」は、特定のフィールドのデータ型ではなく、文字列です。これにより、キャストする前に比較することができ、また、例えば、「number」フィールドに「-」で示される欠損値があるように、フィールドがそのタイプではない欠損値を持つことができます。文字列型のフィールドの場合、「missingValue」のデフォルト値はありません（文字列型のフィールドの場合、空文字列「'」は有効な値であり、nullを示す必要はありません）。ソースで見つかった場合、「null」、「not present」、または「blank」の値として考慮されるべき値  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `primaryKey`: primaryKeyのフィールド名は一意でなければならず（MUST）、関連するテーブルのフィールド名と一致しなければならない（MUST）。1つのフィールドの値が主キーであることを示す、1つの値を持つ配列があっても構いません。主キーはフィールド名またはフィールド名の配列であり，その値はテーブルの各行を一意に識別しなければならない(MUST)  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: は、TableSchemaFrictionlessDataでなければなりません。NGSIエンティティタイプ    
-必須項目  
+- `alternateName`: この項目の別称  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `fields`: テーブルスキーマフィールドオブジェクトの配列  - `foreignKeys`:   - `id`: エンティティの一意な識別子  - `missingValues`: 多くのデータセットでは、値が欠落しています。欠落している値を表すには、単に値が空である場合と '-'、'NaN'、'0'、'-9999' などの特殊な値を使用する場合があります。missingValues' は、特定のフィールドのデータ型ではなく文字列です。これにより、キャストする前に比較したり、フィールドのデータ型とは異なる値が欠落している場合、例えば 'number' フィールドでは '-' で示される値が欠落していることになります。文字列型フィールドの場合、'missingValue' のデフォルト値はありません (文字列フィールドの場合、空文字列 '' は有効な値であり、NULL を示す必要はありません)。ソースで遭遇したときに 'null'、'not present'、または 'blank' 値として考慮される必要がある値  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `primaryKey`: primaryKey のフィールド名は一意でなければならず (MUST)、関連するテーブルのフィールド名と 'MUST' 一致しなければならない (訳注: 「一意でなければならない」)。一つの値を持つ配列があってもかまいません。これは、一つのフィールドの値が主キーであることを示すものです。主キーとは、フィールド名またはフィールド名の配列のことで、 その値はテーブルの各行を一意に識別するものでなければなりません (MUST)。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: は，TableSchemaFrictionlessDataでなければならない。NGSIエンティティタイプ    
+必要なプロパティ  
 - `fields`  - `id`  - `type`    
-このデータモデルは、https://frictionlessdata.io/ に掲載されているオリジナルのフリクションレスデータから来ています。いくつかの変更点があります。1) NGSI規格で必須とされているidとtypeを必須にしました 2) jsonスキーマの構造をスマートデータモデルの公式フォーマットに合わせました。コントリビューションマニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)をご覧ください。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+このデータモデルは、https://frictionlessdata.io/ にあるオリジナルのfrictionlessデータに由来しています。いくつかの変更点があります。1)idとtypeはNGSI規格で必須である以上、必須としました。 2)jsonスキーマの構造はスマートデータモデルの公式フォーマットに合わせました。寄稿マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 TableSchemaFrictionlessData:    
@@ -54,6 +55,8 @@ TableSchemaFrictionlessData:
         type: Property    
     foreignKeys:    
       description: ""    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -72,6 +75,8 @@ TableSchemaFrictionlessData:
         type: Property    
     missingValues:    
       description: 'Many datasets arrive with missing data values, either because a value was not collected or it never existed. Missing values may be indicated simply by the value being empty in other cases a special value may have been used e.g. ''-'', ''NaN'', ''0'', ''-9999'' etc.The ''missingValues'' property provides a way to indicate that these values should be interpreted as equivalent to null. The ''missingValues'' are strings rather than being the data type of the particular field. This allows for comparison prior to casting and for fields to have missing value which are not of their type, for example a ''number'' field to have missing values indicated by ''-''.The default value of ''missingValue'' for a non-string type field is the empty string ''''. For string type fields there is no default for ''missingValue'' (for string fields the empty string '''' is a valid value and need not indicate null). Values that when encountered in the source, should be considered as ''null'', ''not present'', or ''blank'' values'    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -123,12 +128,17 @@ TableSchemaFrictionlessData:
     - id    
     - type    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/TableSchemaFrictionlessData/LICENSE.md    
+  x-model-schema: ""    
+  x-model-tags: SDG    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## ペイロードの例  
-#### TableSchemaFrictionlessData NGSI-v2 key-values の例。  
-TableSchemaFrictionlessDataをkey-valuesとしてJSON-LD形式で記述した例を示します。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### TableSchemaFrictionlessData NGSI-v2 key-value 例  
+ここでは、TableSchemaFrictionlessDataをJSON-LD形式でkey-valueとした場合の例を示す。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "urn:ngsi-ld:TableSchemaFrictionlessData:XVFE:0034",  
@@ -151,8 +161,8 @@ TableSchemaFrictionlessData:
   ]  
 }  
 ```  
-#### TableSchemaFrictionlessData NGSI-v2 normalized Example  
-ここでは、正規化されたJSON-LD形式のTableSchemaFrictionlessDataの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### TableSchemaFrictionlessData NGSI-v2 正規化例  
+TableSchemaFrictionlessData を JSON-LD 形式で正規化した例を示す。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
   "id": "urn:ngsi-ld:TableSchemaFrictionlessData:XVFE:0034",  
@@ -181,8 +191,8 @@ TableSchemaFrictionlessData:
   }  
 }  
 ```  
-#### TableSchemaFrictionlessData NGSI-LD key-valuesの例。  
-TableSchemaFrictionlessDataをkey-valuesとしてJSON-LD形式で記述した例を示します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### TableSchemaFrictionlessData NGSI-LD キー値の例  
+TableSchemaFrictionlessDataをJSON-LD形式でkey-valueとした例である。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
   "id": "urn:ngsi-ld:TableSchemaFrictionlessData:XVFE:0034",  
@@ -208,8 +218,8 @@ TableSchemaFrictionlessData:
   ]  
 }  
 ```  
-#### TableSchemaFrictionlessData NGSI-LD 正規化された例。  
-ここでは、正規化されたJSON-LD形式のTableSchemaFrictionlessDataの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### TableSchemaFrictionlessData NGSI-LD 正規化例  
+TableSchemaFrictionlessData を JSON-LD 形式で正規化した例を示す。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
   "id": "urn:ngsi-ld:TableSchemaFrictionlessData:XVFE:0034",  
@@ -238,4 +248,4 @@ TableSchemaFrictionlessData:
   }  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
