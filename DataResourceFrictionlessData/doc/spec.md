@@ -1,13 +1,14 @@
-Entity: DataResourceFrictionlessData  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: DataResourceFrictionlessData  
 ====================================  
 [Open License](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **Data Resource.Converted for Smart Data Models initiative from original frictionless data**  
-version: 0.0.1  
+version: 0.0.2  
 
 ## List of properties  
 
-- `address`: The mailing address  - `areaServed`: The geographic area where a service or offered item is provided  - `bytes`: Bytes. The size of this resource in bytes  - `data`: Data. Inline data for this resource  - `description`: Description. A text description. Markdown is encouraged  - `encoding`: Encoding. The file encoding of this resource  - `format`: Format. 'csv', 'xls', 'json' are examples of common formats. The file format of this resource  - `hash`: Hash. The MD5 hash of this resource. Indicate other hashing algorithms with the {algorithm}:{hash} format  - `homepage`: Home Page. The home on the web that is related to this data package  - `id`: Unique identifier of the entity  - `licenses`: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `mediatype`: Media Type. The media type of this resource. Can be any valid media type listed with [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)  - `name`: Name. This is ideally a url-usable and human-readable name. Name 'SHOULD' be invariant, meaning it 'SHOULD NOT' change when its parent descriptor is updated. An identifier string. Lower case characters with '.', '_', '-' and '/' are allowed  - `path`: Path. The dereferenced value of each referenced data source in 'path' 'MUST' be commensurate with a native, dereferenced representation of the data the resource describes. For example, in a *Tabular* Data Resource, this means that the dereferenced value of 'path' 'MUST' be an array. A reference to the data for this resource, as either a path as a string, or an array of paths as strings. of valid URIs  - `profile`: Profile. Every Package and Resource descriptor has a profile. The default profile, if none is declared, is 'data-package' for Package and 'data-resource' for Resource. The profile of this descriptor  - `schema`: Schema. A schema for this resource  - `sources`: Sources. . The raw sources for this resource  - `title`: Title. A human-readable title  - `type`: NGSI Entity type· It has to be DataResourceFrictionlessData    
+- `address`: The mailing address  - `areaServed`: The geographic area where a service or offered item is provided  - `bytes`: Bytes. The size of this resource in bytes  - `data`: Data. Inline data for this resource  - `description`: Description. A text description. Markdown is encouraged  - `encoding`: Encoding. The file encoding of this resource  - `format`: Format. 'csv', 'xls', 'json' are examples of common formats. The file format of this resource  - `hash`: Hash. The MD5 hash of this resource. Indicate other hashing algorithms with the {algorithm}:{hash} format  - `homepage`: Home Page. The home on the web that is related to this data package  - `id`: Unique identifier of the entity  - `licenses`: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `mediatype`: Media Type. The media type of this resource. Can be any valid media type listed with [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)  - `name`: Name. This is ideally a url-usable and human-readable name. Name 'SHOULD' be invariant, meaning it 'SHOULD NOT' change when its parent descriptor is updated. An identifier string. Lower case characters with '.', '_', '-' and '/' are allowed  - `path`: Path. The dereferenced value of each referenced data source in 'path' 'MUST' be commensurate with a native, dereferenced representation of the data the resource describes. For example, in a *Tabular* Data Resource, this means that the dereferenced value of 'path' 'MUST' be an array. A reference to the data for this resource, as either a path as a string, or an array of paths as strings. of valid URIs  - `profile`: Profile. Every Package and Resource descriptor has a profile. The default profile, if none is declared, is 'data-package' for Package and 'data-resource' for Resource. The profile of this descriptor  - `schema`: Schema. A schema for this resource  - `sources`: Sources. . The raw sources for this resource  - `title`: Title. A human-readable title  - `type`: NGSI Entity type. It has to be DataResourceFrictionlessData    
 Required properties  
 - `id`  - `name`  - `type`    
 This data model comes from the original frictionless data that can be found at https://frictionlessdata.io/. There are a couple of changes. 1) id and type has been made compulsory as required by the NGSI-LD standard 2)structure of the json schema has been adapted to the official format of the Smart Data Models. See contribution manual [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual). In order to make it compatible the data property and the source property have been defined as an array of objects. Also the type has been included.  
@@ -317,7 +318,7 @@ DataResourceFrictionlessData:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type· It has to be DataResourceFrictionlessData'    
+      description: 'NGSI Entity type. It has to be DataResourceFrictionlessData'    
       enum:    
         - DataResourceFrictionlessData    
       type: string    
@@ -328,7 +329,12 @@ DataResourceFrictionlessData:
     - id    
     - type    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md    
+  x-model-schema: ""    
+  x-model-tags: SDG    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Example payloads    
@@ -628,4 +634,4 @@ DataResourceFrictionlessData:
   ]  
 }  
 ```  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
