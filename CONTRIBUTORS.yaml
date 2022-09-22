@@ -6,9 +6,11 @@ contributors:
   organization: Datopian & Open Knowledge Foundation
   project: Frictionless Data
   comments: There were multiple contributors over the years and we are only listing the lead editor. You find a fuller list of contributors on https://specs.frictionlessdata.io/
+  year: 2022
 - name: Paul
   surname: Walsh
   mail: paul@walsh.co.il
   organization: While True Industries (https://whiletrue.industries/)
-  project:
-  comments:
+  project: 
+  comments: 
+  year: 2022
