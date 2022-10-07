@@ -22,5 +22,8 @@
     "value": [
       "name"
     ]
-  }
+  },
+  "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"
+    ]
 }

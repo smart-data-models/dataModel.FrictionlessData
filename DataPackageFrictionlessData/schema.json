@@ -1,7 +1,7 @@
 {
   "title": "Smart Data Models - Data Package",
   "description": "Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data",
-  "$schemaVersion": "0.0.2",
+  "$schemaVersion": "0.0.3",
   "$schema": "http://json-schema.org/schema",
   "id": "https://smart-data-models.github.io/dataModel.FrictionlessData/DataPackageFrictionlessData/schema.json",
   "type": "object",
@@ -44,11 +44,17 @@
     },
     "contributors": {
       "type": "array",
-      "description": "Property. Contributors. . The contributors to this descriptor"
+      "description": "Property. Contributors. The contributors to this descriptor",
+      "items": {
+        "type": "string"
+      }
     },
     "keywords": {
       "type": "array",
-      "description": "Property. Keywords. . A list of keywords that describe this package"
+      "description": "Property. Keywords. . A list of keywords that describe this package",
+      "items": {
+        "type": "string"
+      }
     },
     "image": {
       "type": "string",
@@ -56,15 +62,24 @@
     },
     "licenses": {
       "type": "array",
-      "description": "Property. Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published"
+      "description": "Property. Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published",
+      "items": {
+        "type": "string"
+      }
     },
     "resources": {
       "type": "array",
-      "description": "Property. Data Resources. . An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification"
+      "description": "Property. Data Resources. An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification",
+      "items": {
+        "type": "string"
+      }
     },
     "sources": {
       "type": "array",
-      "description": "Property. Sources. . The raw sources for this resource"
+      "description": "Property. Sources. The raw sources for this resource",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "required": [

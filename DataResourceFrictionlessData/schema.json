@@ -1,7 +1,7 @@
 {
   "title": "Smart Data Models - Data Resource",
   "description": "Data Resource.Converted for Smart Data Models initiative from original frictionless data",
-  "$schemaVersion": "0.0.2",
+  "$schemaVersion": "0.0.3",
   "$schema": "http://json-schema.org/schema",
   "id": "https://smart-data-models.github.io/dataModel.FrictionlessData/DataResourceFrictionlessData/schema.json",
   "type": "object",
