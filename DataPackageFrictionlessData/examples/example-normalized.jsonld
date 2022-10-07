@@ -81,5 +81,7 @@
         "type": "Property",
         "value": "2.0.0"
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"
+    ]
 }
