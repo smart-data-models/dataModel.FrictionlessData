@@ -1,18 +1,32 @@
-Entidad: CSVDialectFrictionlessData  
-===================================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: CSVDialectFrictionlessData  
+===================================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/CSVDialectFrictionlessData/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **El descriptor del dialecto CSV.Convertido para la iniciativa Smart Data Models a partir de los datos originales sin fricción**  
-versión: 0.0.1  
+versión: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `alternateName`: Un nombre alternativo para este artículo  - `caseSensitiveHeader`: Encabezado con mayúsculas y minúsculas. El uso de mayúsculas y minúsculas en los archivos CSV de origen no siempre es una decisión intencionada. Por ejemplo, ¿se debe considerar que 'CAT' y 'Cat' tienen el mismo significado? Especifica si el uso de mayúsculas y minúsculas en las cabeceras tiene sentido  - `commentChar`: Carácter de comentario. Especifica que cualquier fila que comience con esta cadena de un carácter, sin espacio en blanco precedente, hace que se ignore toda la línea  - `csvddfVersion`: Versión del esquema de CSV Dialect. Un número que indica la versión del esquema de CSV Dialect. La versión 1.0 se denominaba CSV Dialect Description Format y utilizaba diferentes nombres de campo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `delimiter`: Delimitador. Una secuencia de caracteres que se utilizará como separador de campos  - `description`: Una descripción de este artículo  - `doubleQuote`: Comillas dobles. Si el valor de las comillas dobles es verdadero, dos comillas consecutivas se interpretarán como una sola. Especifica el manejo de las comillas dentro de los campos  - `escapeChar`: Carácter de escape. Especifica una cadena de un carácter para usar como carácter de escape  - `header`: Encabezado. Especifica si el archivo incluye una fila de cabecera, siempre como la primera fila del archivo  - `id`: Identificador único de la entidad  - `lineTerminator`: Terminación de línea. Especifica la secuencia de caracteres que debe utilizarse para terminar las líneas  - `name`: El nombre de este artículo.  - `nullSequence`: Secuencia nula. Especifica la secuencia nula, por ejemplo, \ y luego 'N'  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `quoteChar`: Carácter de cita. Especifica una cadena de un solo carácter que se utilizará como carácter de entrecomillado  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `skipInitialSpace`: Omitir espacio inicial. Especifica la interpretación de los espacios en blanco que siguen inmediatamente a un delimitador. Si es falso, el espacio en blanco que sigue a un delimitador debe tratarse como parte del campo posterior  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tiene que ser CSVDialectFrictionlessData. Tipo de entidad NGSI    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `alternateName[string]`: Un nombre alternativo para este artículo  - `caseSensitiveHeader[boolean]`: Encabezado con mayúsculas y minúsculas. El uso de mayúsculas y minúsculas en los archivos CSV de origen no siempre es una decisión intencionada. Por ejemplo, ¿se debe considerar que 'CAT' y 'Cat' tienen el mismo significado? Especifica si el uso de mayúsculas y minúsculas en las cabeceras tiene sentido  - `commentChar[string]`: Carácter de comentario. Especifica que cualquier fila que comience con esta cadena de un carácter, sin espacio en blanco precedente, hace que se ignore toda la línea  - `csvddfVersion[number]`: Versión del esquema de CSV Dialect. Un número que indica la versión del esquema de CSV Dialect. La versión 1.0 se denominaba CSV Dialect Description Format y utilizaba diferentes nombres de campo  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `delimiter[string]`: Delimitador. Una secuencia de caracteres que se utilizará como separador de campos  - `description[string]`: Una descripción de este artículo  - `doubleQuote[boolean]`: Comillas dobles. Si el valor de las comillas dobles es verdadero, dos comillas consecutivas se interpretarán como una sola. Especifica el manejo de las comillas dentro de los campos  - `escapeChar[string]`: Carácter de escape. Especifica una cadena de un carácter para usar como carácter de escape  - `header[boolean]`: Encabezado. Especifica si el archivo incluye una fila de cabecera, siempre como la primera fila del archivo  - `id[*]`: Identificador único de la entidad  - `lineTerminator[string]`: Terminación de línea. Especifica la secuencia de caracteres que debe utilizarse para terminar las líneas  - `name[string]`: El nombre de este artículo.  - `nullSequence[string]`: Secuencia nula. Especifica la secuencia nula, por ejemplo, \ y luego 'N'  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `quoteChar[string]`: Carácter de cita. Especifica una cadena de un solo carácter que se utilizará como carácter de entrecomillado  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `skipInitialSpace[boolean]`: Omitir espacio inicial. Especifica la interpretación de los espacios en blanco que siguen inmediatamente a un delimitador. Si es falso, el espacio en blanco que sigue a un delimitador debe tratarse como parte del campo posterior  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: Tiene que ser CSVDialectFrictionlessData. Tipo de entidad NGSI  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `delimiter`  - `doubleQuote`  - `id`  - `type`    
+- `delimiter`  - `doubleQuote`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Este modelo de datos procede de los datos originales sin fricción que se pueden encontrar en https://frictionlessdata.io/. Hay varios cambios menores. 1) el id y el tipo se han hecho obligatorios 2)la estructura del esquema json se ha adaptado al formato oficial de los modelos de datos inteligentes. Véase el manual de contribución [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual). 3) Se han añadido algunas propiedades adicionales por razones de compatibilidad  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CSVDialectFrictionlessData:    
@@ -156,12 +170,22 @@ CSVDialectFrictionlessData:
     - doubleQuote    
     - type    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/CSVDialectFrictionlessData/LICENSE.md    
+  x-model-schema: ""    
+  x-model-tags: SDG    
+  x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### CSVDialectFrictionlessData NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de un CSVDialectFrictionlessData en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
@@ -173,7 +197,7 @@ CSVDialectFrictionlessData:
   "dataProvider": "",  
   "dateCreated": "1986-03-01T17:11:28Z",  
   "dateModified": "2017-04-29T03:29:41Z",  
-  "delimiter": ";",  
+  "delimiter": "",  
   "description": "",  
   "doubleQuote": true,  
   "escapeChar": "\\",  
@@ -192,8 +216,10 @@ CSVDialectFrictionlessData:
   "source": ""  
 }  
 ```  
+</details>  
 #### CSVDialectFrictionlessData NGSI-v2 normalizado Ejemplo  
 Aquí hay un ejemplo de un CSVDialectFrictionlessData en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
@@ -246,7 +272,7 @@ CSVDialectFrictionlessData:
   },  
   "delimiter": {  
     "type": "Text",  
-    "value": ";"  
+    "value": "%3B"  
   },  
   "doubleQuote": {  
     "type": "boolean",  
@@ -286,142 +312,156 @@ CSVDialectFrictionlessData:
   }  
 }  
 ```  
+</details>  
 #### CSVDialectFrictionlessData NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un CSVDialectFrictionlessData en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
-  "type": "CSVDialectFrictionlessData",  
-  "alternateName": "",  
-  "caseSensitiveHeader": true,  
-  "commentChar": "#",  
-  "csvddfVersion": 1.2,  
-  "dataProvider": "",  
-  "dateCreated": "1986-03-01T17:11:28Z",  
-  "dateModified": "2017-04-29T03:29:41Z",  
-  "delimiter": ";",  
-  "description": "",  
-  "doubleQuote": true,  
-  "escapeChar": "\\",  
-  "header": false,  
-  "name": "",  
-  "owner": [  
-    "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",  
-    "urn:ngsi-ld:CSVDialect:items:MABG:25535507"  
-  ],  
-  "quoteChar": "'",  
-  "seeAlso": [  
-    "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",  
-    "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"  
-  ],  
-  "skipInitialSpace": false,  
-  "source": "",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
+    "type": "CSVDialectFrictionlessData",  
+    "alternateName": "",  
+    "caseSensitiveHeader": true,  
+    "commentChar": "#",  
+    "csvddfVersion": 1.2,  
+    "dataProvider": "",  
+    "dateCreated": "1986-03-01T17:11:28Z",  
+    "dateModified": "2017-04-29T03:29:41Z",  
+    "delimiter": "%3B",  
+    "description": "",  
+    "doubleQuote": true,  
+    "escapeChar": "\\",  
+    "header": false,  
+    "name": "",  
+    "owner": [  
+        "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",  
+        "urn:ngsi-ld:CSVDialect:items:MABG:25535507"  
+    ],  
+    "quoteChar": "'",  
+    "seeAlso": [  
+        "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",  
+        "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"  
+    ],  
+    "skipInitialSpace": false,  
+    "source": "",  
+    "@context": [  
+        "https://smartdatamodels.org/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### CSVDialectFrictionlessData NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de un CSVDialectFrictionlessData en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
-  "type": "CSVDialectFrictionlessData",  
-  "dateCreated": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "1986-03-01T17:11:28Z"  
-    }  
-  },  
-  "dateModified": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-04-29T03:29:41Z"  
-    }  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "owner": {  
-    "type": "Property",  
-    "value": [  
-      "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",  
-      "urn:ngsi-ld:CSVDialect:items:MABG:25535507"  
+    "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
+    "type": "CSVDialectFrictionlessData",  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "1986-03-01T17:11:28Z"  
+        }  
+    },  
+    "dateModified": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-04-29T03:29:41Z"  
+        }  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "owner": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",  
+            "urn:ngsi-ld:CSVDialect:items:MABG:25535507"  
+        ]  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",  
+            "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"  
+        ]  
+    },  
+    "csvddfVersion": {  
+        "type": "Property",  
+        "value": 1.2  
+    },  
+    "delimiter": {  
+        "type": "Property",  
+        "value": "%3B"  
+    },  
+    "doubleQuote": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "lineTerminator": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "nullSequence": {  
+        "type": "Property",  
+        "value": "\\N"  
+    },  
+    "quoteChar": {  
+        "type": "Property",  
+        "value": "'"  
+    },  
+    "escapeChar": {  
+        "type": "Property",  
+        "value": "\\"  
+    },  
+    "skipInitialSpace": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "header": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "commentChar": {  
+        "type": "Property",  
+        "value": "#"  
+    },  
+    "caseSensitiveHeader": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "@context": [  
+        "https://smartdatamodels.org/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"  
     ]  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",  
-      "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"  
-    ]  
-  },  
-  "csvddfVersion": {  
-    "type": "Property",  
-    "value": 1.2  
-  },  
-  "delimiter": {  
-    "type": "Property",  
-    "value": ";"  
-  },  
-  "doubleQuote": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "lineTerminator": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "nullSequence": {  
-    "type": "Property",  
-    "value": "\\N"  
-  },  
-  "quoteChar": {  
-    "type": "Property",  
-    "value": "'"  
-  },  
-  "escapeChar": {  
-    "type": "Property",  
-    "value": "\\"  
-  },  
-  "skipInitialSpace": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "header": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "commentChar": {  
-    "type": "Property",  
-    "value": "#"  
-  },  
-  "caseSensitiveHeader": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
