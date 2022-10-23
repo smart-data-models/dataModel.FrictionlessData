@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティDataResourceFrictionlessData  
-==================================  
+==================================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな説明**データリソース.スマートデータモデル構想のために、オリジナルのフリクションレスデータから変換されたもの**。  
 バージョン: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `bytes`: バイト。このリソースのサイズ（バイト単位  - `data`: データこのリソースのインラインデータ  - `description`: 説明文。テキストの説明文です。Markdownを推奨します。  - `encoding`: エンコードこのリソースのファイルエンコーディング  - `format`: フォーマット。'csv', 'xls', 'json' は一般的なフォーマットの例である。このリソースのファイル形式  - `hash`: ハッシュ。このリソースのMD5ハッシュ。他のハッシュアルゴリズムを{algorithm}:{hash}の形式で指定します。  - `homepage`: ホームページです。このデータパッケージに関連するウェブ上のホーム  - `id`: エンティティの一意な識別子  - `licenses`: ライセンスこのプロパティは法的拘束力を持たず、パッケージがここで定義された条件の下でライセンスされていることを保証するものではありません。リソースが公開されているライセンス(複数可)  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `mediatype`: メディアタイプ。このリソースのメディアタイプ。IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)にリストされている有効なメディアタイプであれば、どれでも可能です。  - `name`: 名前。これは、理想的には、URLで使用可能な、人間が読める名前である。名前は不変であるべきで、親ディスクリプタが更新されたときに変更されるべきではありません（SHOULD NOT）。識別子の文字列。小文字の'.'、'_'、'-'、'/'が使用可能です。  - `path`: パスpath' で参照される各データソースの再参照値は、そのリソースが記述するデータのネイティブな再参照表現に相応したものでなければならない(MUST)。例えば、*Tabular* データリソースでは、'path' の再参照値は配列でなければならない (MUST)ことを意味する。このリソースのデータへの参照で、文字列としてのパス、または文字列としてのパスの配列のいずれかです。  - `profile`: プロファイル。すべてのPackageとResource記述子はプロファイルを持ちます。プロファイルが宣言されていない場合、デフォルトのプロファイルは、Packageの場合は'data-package'、Resourceの場合は'data-resource'です。このディスクリプタのプロファイル  - `schema`: スキーマこのリソースのスキーマ  - `sources`: ソースはこちら.このリソースの生のソース  - `title`: タイトル。人間が読みやすいタイトル  - `type`: NGSI エンティティタイプ。DataResourceFrictionlessDataである必要があります。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `bytes[integer]`: バイト。このリソースのサイズ（バイト単位  - `data[array]`: データこのリソースのインラインデータ  - `description[string]`: 説明文。テキストの説明文です。Markdownを推奨します。  - `encoding[string]`: エンコードこのリソースのファイルエンコーディング  - `format[string]`: フォーマット。'csv', 'xls', 'json' は一般的なフォーマットの例である。このリソースのファイル形式  - `hash[string]`: ハッシュ。このリソースのMD5ハッシュ。他のハッシュアルゴリズムを{algorithm}:{hash}の形式で指定します。  - `homepage[string]`: ホームページです。このデータパッケージに関連するウェブ上のホーム  - `id[*]`: エンティティの一意な識別子  - `licenses[array]`: ライセンスこのプロパティは法的拘束力を持たず、パッケージがここで定義された条件の下でライセンスされていることを保証するものではありません。リソースが公開されているライセンス(複数可)  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `mediatype[string]`: メディアタイプ。このリソースのメディアタイプ。IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)にリストされている有効なメディアタイプであれば、どれでも可能です。  - `name[string]`: 名前。これは、理想的には、URLで使用可能な、人間が読める名前である。名前は不変であるべきで、親ディスクリプタが更新されたときに変更されるべきではありません（SHOULD NOT）。識別子の文字列。小文字の'.'、'_'、'-'、'/'が使用可能です。  - `path[array]`: パスpath' で参照される各データソースの再参照値は、そのリソースが記述するデータのネイティブな再参照表現に相応したものでなければならない(MUST)。例えば、*Tabular* データリソースでは、'path' の再参照値は配列でなければならない (MUST)ことを意味する。このリソースのデータへの参照で、文字列としてのパス、または文字列としてのパスの配列のいずれかである。  - `profile[string]`: プロファイル。すべてのPackageとResource記述子はプロファイルを持ちます。プロファイルが宣言されていない場合、デフォルトのプロファイルは、Packageの場合は'data-package'、Resourceの場合は'data-resource'です。このディスクリプタのプロファイル  - `schema[object]`: スキーマこのリソースのスキーマ  - `sources[array]`: ソースはこちら.このリソースの生のソース  - `title[string]`: タイトル。人間が読みやすいタイトル  - `type[string]`: NGSI エンティティタイプ。DataResourceFrictionlessDataである必要があります。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `id`  - `name`  - `type`    
-このデータモデルは、https://frictionlessdata.io/ にあるオリジナルのfrictionlessデータから来ています。いくつかの変更点があります。1) NGSI-LD規格で要求されているように、idとtypeが必須になりました 2) jsonスキーマの構造がスマートデータモデルの公式フォーマットに合わせられました。寄稿マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。互換性を持たせるために、dataプロパティとsourceプロパティはオブジェクトの配列として定義されています。また、型も含まれるようになりました。  
+- `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+このデータモデルは、https://frictionlessdata.io/ にあるオリジナルのfrictionlessデータから来ています。いくつかの変更点があります。1) NGSI-LD標準の要求に従い、idとtypeを必須としました。 2) jsonスキーマの構造を、スマートデータモデルの公式フォーマットに合わせました。寄稿マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。互換性を持たせるために、dataプロパティとsourceプロパティはオブジェクトの配列として定義されています。また、型も含まれるようになりました。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 DataResourceFrictionlessData:    
@@ -337,9 +350,14 @@ DataResourceFrictionlessData:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### DataResourceFrictionlessData NGSI-v2 key-value の例  
-ここでは、DataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+ここでは、DataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした例を示す。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:dataresource:AECS:1234",  
@@ -389,8 +407,10 @@ DataResourceFrictionlessData:
   "title": "The Solar System"  
 }  
 ```  
+</details>  
 #### DataResourceFrictionlessData NGSI-v2 正規化例  
 以下は、DataResourceFrictionlessDataをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返す。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:dataresource:AECS:1234",  
@@ -484,154 +504,169 @@ DataResourceFrictionlessData:
   }  
 }  
 ```  
+</details>  
 #### DataResourceFrictionlessData NGSI-LD key-value の例  
 ここでは、DataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:dataresource:AECS:1234",  
-  "type": "DataResourceFrictionlessData",  
-  "bytes": 2082,  
-  "data": [  
-    {},  
-    {}  
-  ],  
-  "description": "My favourite data about the solar system.",  
-  "encoding": "utf-8",  
-  "format": "csv",  
-  "hash": "SHA256:5262f12512590031bbcc9a430452bfd75c2791ad6771320bb4b5728bfb78c4d0",  
-  "homepage": "https://smartdatamodels.org",  
-  "licenses": [  
-    {  
-      "name": "CC-BY",  
-      "title": "creative commons attribution",  
-      "path": "https://creativecommons.org/licenses/by/4.0/deed.en"  
-    },  
-    {  
-      "name": "odc-pddl-1.0",  
-      "path": "http://opendatacommons.org/licenses/pddl/",  
-      "title": "Open Data Commons Public Domain Dedication and License v1.0"  
-    }  
-  ],  
-  "mediatype": "text/csv",  
-  "name": "solar-system",  
-  "path": [  
-    "http://example.com/solar-system.csv"  
-  ],  
-  "profile": "tabular-data-package",  
-  "schema": {  
-  },  
-  "sources": [  
-    {  
-      "title": "Venus",  
-      "path": "https://smartdatamodels.org/venus",  
-      "email": "venus@smartdatamodels.org"  
-    },  
-    {  
-      "title": "Jupiter",  
-      "path": "https://smartdatamodels.org/jupiter",  
-      "email": "jupiter@smartdatamodels.org"  
-    }  
-  ],  
-  "title": "The Solar System",  
-  "@context": "https://smartdatamodels.org/context.jsonld"  
+    "id": "urn:ngsi-ld:dataresource:AECS:1234",  
+    "type": "DataResourceFrictionlessData",  
+    "bytes": 2082,  
+    "data": [  
+        {},  
+        {}  
+    ],  
+    "description": "My favourite data about the solar system.",  
+    "encoding": "utf-8",  
+    "format": "csv",  
+    "hash": "SHA256:5262f12512590031bbcc9a430452bfd75c2791ad6771320bb4b5728bfb78c4d0",  
+    "homepage": "https://smartdatamodels.org",  
+    "licenses": [  
+        {  
+            "name": "CC-BY",  
+            "title": "creative commons attribution",  
+            "path": "https://creativecommons.org/licenses/by/4.0/deed.en"  
+        },  
+        {  
+            "name": "odc-pddl-1.0",  
+            "path": "http://opendatacommons.org/licenses/pddl/",  
+            "title": "Open Data Commons Public Domain Dedication and License v1.0"  
+        }  
+    ],  
+    "mediatype": "text/csv",  
+    "name": "solar-system",  
+    "path": [  
+        "http://example.com/solar-system.csv"  
+    ],  
+    "profile": "tabular-data-package",  
+    "schema": {},  
+    "sources": [  
+        {  
+            "title": "Venus",  
+            "path": "https://smartdatamodels.org/venus",  
+            "email": "venus@smartdatamodels.org"  
+        },  
+        {  
+            "title": "Jupiter",  
+            "path": "https://smartdatamodels.org/jupiter",  
+            "email": "jupiter@smartdatamodels.org"  
+        }  
+    ],  
+    "title": "The Solar System",  
+    "@context": [  
+        "https://smartdatamodels.org/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### DataResourceFrictionlessData NGSI-LD 正規化例  
 以下は、DataResourceFrictionlessDataをJSON-LD形式で正規化した場合の例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:dataresource:AECS:1234",  
-  "type": "DataResourceFrictionlessData",  
-  "bytes": {  
-    "type": "Property",  
-    "value": 2082  
-  },  
-  "data": {  
-    "type": "Property",  
-    "value": [  
-      {},  
-      {}  
+    "id": "urn:ngsi-ld:dataresource:AECS:1234",  
+    "type": "DataResourceFrictionlessData",  
+    "bytes": {  
+        "type": "Property",  
+        "value": 2082  
+    },  
+    "data": {  
+        "type": "Property",  
+        "value": [  
+            {},  
+            {}  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "My favourite data about the solar system."  
+    },  
+    "encoding": {  
+        "type": "Property",  
+        "value": "utf-8"  
+    },  
+    "format": {  
+        "type": "Property",  
+        "value": "csv"  
+    },  
+    "hash": {  
+        "type": "Property",  
+        "value": "SHA256:5262f12512590031bbcc9a430452bfd75c2791ad6771320bb4b5728bfb78c4d0"  
+    },  
+    "homepage": {  
+        "type": "Property",  
+        "value": "https://smartdatamodels.org"  
+    },  
+    "licenses": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "name": "CC-BY",  
+                "title": "creative commons attribution",  
+                "path": "https://creativecommons.org/licenses/by/4.0/deed.en"  
+            },  
+            {  
+                "name": "odc-pddl-1.0",  
+                "path": "http://opendatacommons.org/licenses/pddl/",  
+                "title": "Open Data Commons Public Domain Dedication and License v1.0"  
+            }  
+        ]  
+    },  
+    "mediatype": {  
+        "type": "Property",  
+        "value": "text/csv"  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "solar-system"  
+    },  
+    "path": {  
+        "type": "Property",  
+        "value": [  
+            "http://example.com/solar-system.csv"  
+        ]  
+    },  
+    "profile": {  
+        "type": "Property",  
+        "value": "tabular-data-package"  
+    },  
+    "schema": {  
+        "type": "Property",  
+        "value": {}  
+    },  
+    "sources": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "title": "Venus",  
+                "path": "https://smartdatamodels.org/venus",  
+                "email": "venus@smartdatamodels.org"  
+            },  
+            {  
+                "title": "Jupiter",  
+                "path": "https://smartdatamodels.org/jupiter",  
+                "email": "jupiter@smartdatamodels.org"  
+            }  
+        ]  
+    },  
+    "title": {  
+        "type": "Property",  
+        "value": "The Solar System"  
+    },  
+    "@context": [  
+        "https://smartdatamodels.org/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"  
     ]  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "My favourite data about the solar system."  
-  },  
-  "encoding": {  
-    "type": "Property",  
-    "value": "utf-8"  
-  },  
-  "format": {  
-    "type": "Property",  
-    "value": "csv"  
-  },  
-  "hash": {  
-    "type": "Property",  
-    "value": "SHA256:5262f12512590031bbcc9a430452bfd75c2791ad6771320bb4b5728bfb78c4d0"  
-  },  
-  "homepage": {  
-    "type": "Property",  
-    "value": "https://smartdatamodels.org"  
-  },  
-  "licenses": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "name": "CC-BY",  
-        "title": "creative commons attribution",  
-        "path": "https://creativecommons.org/licenses/by/4.0/deed.en"  
-      },  
-      {  
-        "name": "odc-pddl-1.0",  
-        "path": "http://opendatacommons.org/licenses/pddl/",  
-        "title": "Open Data Commons Public Domain Dedication and License v1.0"  
-      }  
-    ]  
-  },  
-  "mediatype": {  
-    "type": "Property",  
-    "value": "text/csv"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "solar-system"  
-  },  
-  "path": {  
-    "type": "Property",  
-    "value": [  
-      "http://example.com/solar-system.csv"  
-    ]  
-  },  
-  "profile": {  
-    "type": "Property",  
-    "value": "tabular-data-package"  
-  },  
-  "schema": {  
-    "type": "Property",  
-    "value": {}  
-  },  
-  "sources": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "title": "Venus",  
-        "path": "https://smartdatamodels.org/venus",  
-        "email": "venus@smartdatamodels.org"  
-      },  
-      {  
-        "title": "Jupiter",  
-        "path": "https://smartdatamodels.org/jupiter",  
-        "email": "jupiter@smartdatamodels.org"  
-      }  
-    ]  
-  },  
-  "title": {  
-    "type": "Property",  
-    "value": "The Solar System"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
