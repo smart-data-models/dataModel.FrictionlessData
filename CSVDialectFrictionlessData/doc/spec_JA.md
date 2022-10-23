@@ -1,18 +1,32 @@
-エンティティCSVDialectFrictionlessData  
-================================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティCSVDialectFrictionlessData  
+================================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/CSVDialectFrictionlessData/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**オリジナルのFrictionless DataからSmart Data Modelsイニシアティブのために変換されたものです。  
-バージョン: 0.0.1  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**CSVの方言記述子。スマートデータモデル構想のために、オリジナルのフリクションレスデータから変換されたもの**。  
+バージョン: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `alternateName`: このアイテムの別称  - `caseSensitiveHeader`: 大文字小文字を区別するヘッダー。ソースCSVファイルでの大文字・小文字の使い分けは、必ずしも意図的なものではありません。例えば、「CAT」と「猫」は同じ意味と考えるべきでしょう。ヘッダーの大文字小文字に意味があるかどうかを指定する  - `commentChar`: コメント文字。この1文字の文字列で始まる行は、先行するホワイトスペースを除いて、その行全体が無視されることを指定します。  - `csvddfVersion`: CSV Dialectのスキーマバージョン。CSV Dialectのスキーマバージョンを示す番号です。バージョン1.0はCSV Dialect Description Formatという名前で、異なるフィールド名を使用していました。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `delimiter`: デリミター。フィールドの区切り文字として使用する文字列  - `description`: このアイテムの説明  - `doubleQuote`: ダブルクォートDouble Quoteがtrueに設定されている場合、2つの連続した引用符は1つとして解釈されなければなりません。フィールド内の引用符の扱いを指定します。  - `escapeChar`: エスケープ文字。エスケープ文字として使用する1文字の文字列を指定します。  - `header`: ヘッダーファイルにヘッダー行を含めるかどうかを指定します。  - `id`: エンティティのユニークな識別子  - `lineTerminator`: 行終端記号。行を終了させるために使用しなければならない文字列を指定します。  - `name`: このアイテムの名前です。  - `nullSequence`: Null Sequence。Null Sequenceを指定します。例えば、「\」の後に「N」を指定します。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `quoteChar`: 引用文字。クォート文字として使用する1文字の文字列を指定します。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `skipInitialSpace`: 最初のスペースをスキップする。区切り文字の直後にあるホワイトスペースの解釈を指定します。falseの場合、デリミタ直後のホワイトスペースは、後続のフィールドの一部として扱われます。  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: CSVDialectFrictionlessDataである必要があります。NGSIエンティティタイプ    
-必須項目  
-- `delimiter`  - `doubleQuote`  - `id`  - `type`    
-このデータモデルは、https://frictionlessdata.io/ に掲載されているオリジナルのフリクションレスデータから来ています。いくつかのマイナーな変更点があります。1)idとtypeが必須になった 2)jsonスキーマの構造がスマートデータモデルの公式フォーマットに合わせられた。コントリビューションマニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。3) 互換性のため、いくつかのプロパティが追加されました。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `alternateName[string]`: この項目の別称  - `caseSensitiveHeader[boolean]`: 大文字小文字を区別するヘッダ。ソースCSVファイルでの大文字・小文字の使い分けは、必ずしも意図的に決定されたものではありません。例えば、'CAT' と 'Cat' は同じ意味を持つと考えるべきでしょう。ヘッダーの大文字小文字を区別することに意味があるかどうかを指定する  - `commentChar[string]`: コメント文字。この1文字の文字列で始まる行は、その前に空白がない場合、行全体が無視されることを指定します。  - `csvddfVersion[number]`: CSV Dialect スキーマバージョン。CSV Dialectのスキーマバージョンを示す数値。バージョン1.0はCSV Dialect Description Formatという名前で、異なるフィールド名を使用していた  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `delimiter[string]`: デリミタ。フィールドの区切り文字として使用する文字列。  - `description[string]`: このアイテムの説明  - `doubleQuote[boolean]`: ダブルクォートDouble Quoteをtrueに設定すると、連続する2つの引用符は1つとして解釈されなければならない。フィールド内の引用符の扱いを指定する  - `escapeChar[string]`: エスケープ文字。エスケープ文字として使用する一文字の文字列を指定します。  - `header[boolean]`: ヘッダー。ファイルにヘッダ行が含まれるかどうかを指定する。常にファイルの最初の行となる  - `id[*]`: エンティティの一意な識別子  - `lineTerminator[string]`: 行終端文字。行を終了させるための文字列を指定する。  - `name[string]`: このアイテムの名称です。  - `nullSequence[string]`: Null Sequence（ヌルシークエンス）。nullシーケンスを指定します。例えば、'N'の後に'N'を指定します。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `quoteChar[string]`: 引用文字。引用文字として使用する一文字の文字列を指定します。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `skipInitialSpace[boolean]`: 初期スペースをスキップする。デリミタに続く空白の解釈を指定する。falseの場合、デリミタ直後の空白は、後続のフィールドの一部として扱われる。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: CSVDialectFrictionlessDataである必要があります。NGSIエンティティタイプ  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `delimiter`  - `doubleQuote`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+このデータモデルは、https://frictionlessdata.io/ にあるオリジナルのfrictionlessデータに由来しています。いくつかの細かい変更があります。1) idとtypeが必須となった 2) jsonスキーマの構造がSmart Data Modelsの公式フォーマットに合わせられた。コントリビューションマニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。3) 互換性のために、いくつかのプロパティを追加しました。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CSVDialectFrictionlessData:    
@@ -156,12 +170,22 @@ CSVDialectFrictionlessData:
     - doubleQuote    
     - type    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/CSVDialectFrictionlessData/LICENSE.md    
+  x-model-schema: ""    
+  x-model-tags: SDG    
+  x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### CSVDialectFrictionlessData NGSI-v2 key-values 例  
-CSVDialectFrictionlessDataをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### CSVDialectFrictionlessData NGSI-v2 key-value 例．  
+CSVDialectFrictionlessDataをJSON-LD形式でkey-valueとした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
@@ -173,7 +197,7 @@ CSVDialectFrictionlessData:
   "dataProvider": "",  
   "dateCreated": "1986-03-01T17:11:28Z",  
   "dateModified": "2017-04-29T03:29:41Z",  
-  "delimiter": ";",  
+  "delimiter": "",  
   "description": "",  
   "doubleQuote": true,  
   "escapeChar": "\\",  
@@ -192,8 +216,10 @@ CSVDialectFrictionlessData:
   "source": ""  
 }  
 ```  
-#### CSVDialectFrictionlessData NGSI-v2 正規化された例。  
-CSVDialectFrictionlessDataをJSON-LD形式で正規化した例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### CSVDialectFrictionlessData NGSI-v2 正規化例  
+CSVDialectFrictionlessData を JSON-LD 形式で正規化した例を示す。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
@@ -246,7 +272,7 @@ CSVDialectFrictionlessData:
   },  
   "delimiter": {  
     "type": "Text",  
-    "value": ";"  
+    "value": "%3B"  
   },  
   "doubleQuote": {  
     "type": "boolean",  
@@ -286,142 +312,156 @@ CSVDialectFrictionlessData:
   }  
 }  
 ```  
-#### CSVDialectFrictionlessData NGSI-LDのキーバリューの例  
-CSVDialectFrictionlessDataをkey-valuesとしてJSON-LD形式にした例を示します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### CSVDialectFrictionlessData NGSI-LD key-value Example  
+CSVDialectFrictionlessDataをJSON-LD形式でkey-valueとした例である。これは `options=keyValues` を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
-  "type": "CSVDialectFrictionlessData",  
-  "alternateName": "",  
-  "caseSensitiveHeader": true,  
-  "commentChar": "#",  
-  "csvddfVersion": 1.2,  
-  "dataProvider": "",  
-  "dateCreated": "1986-03-01T17:11:28Z",  
-  "dateModified": "2017-04-29T03:29:41Z",  
-  "delimiter": ";",  
-  "description": "",  
-  "doubleQuote": true,  
-  "escapeChar": "\\",  
-  "header": false,  
-  "name": "",  
-  "owner": [  
-    "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",  
-    "urn:ngsi-ld:CSVDialect:items:MABG:25535507"  
-  ],  
-  "quoteChar": "'",  
-  "seeAlso": [  
-    "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",  
-    "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"  
-  ],  
-  "skipInitialSpace": false,  
-  "source": "",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
+    "type": "CSVDialectFrictionlessData",  
+    "alternateName": "",  
+    "caseSensitiveHeader": true,  
+    "commentChar": "#",  
+    "csvddfVersion": 1.2,  
+    "dataProvider": "",  
+    "dateCreated": "1986-03-01T17:11:28Z",  
+    "dateModified": "2017-04-29T03:29:41Z",  
+    "delimiter": "%3B",  
+    "description": "",  
+    "doubleQuote": true,  
+    "escapeChar": "\\",  
+    "header": false,  
+    "name": "",  
+    "owner": [  
+        "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",  
+        "urn:ngsi-ld:CSVDialect:items:MABG:25535507"  
+    ],  
+    "quoteChar": "'",  
+    "seeAlso": [  
+        "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",  
+        "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"  
+    ],  
+    "skipInitialSpace": false,  
+    "source": "",  
+    "@context": [  
+        "https://smartdatamodels.org/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### CSVDialectFrictionlessData NGSI-LDの正規化例  
-CSVDialectFrictionlessDataをJSON-LD形式で正規化した例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### CSVDialectFrictionlessData NGSI-LD 正規化例  
+CSVDialectFrictionlessData を JSON-LD 形式で正規化した例を示す。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
-  "type": "CSVDialectFrictionlessData",  
-  "dateCreated": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "1986-03-01T17:11:28Z"  
-    }  
-  },  
-  "dateModified": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-04-29T03:29:41Z"  
-    }  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "owner": {  
-    "type": "Property",  
-    "value": [  
-      "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",  
-      "urn:ngsi-ld:CSVDialect:items:MABG:25535507"  
+    "id": "urn:ngsi-ld:CSVDialect:id:OAPS:03889914",  
+    "type": "CSVDialectFrictionlessData",  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "1986-03-01T17:11:28Z"  
+        }  
+    },  
+    "dateModified": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-04-29T03:29:41Z"  
+        }  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "owner": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",  
+            "urn:ngsi-ld:CSVDialect:items:MABG:25535507"  
+        ]  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",  
+            "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"  
+        ]  
+    },  
+    "csvddfVersion": {  
+        "type": "Property",  
+        "value": 1.2  
+    },  
+    "delimiter": {  
+        "type": "Property",  
+        "value": "%3B"  
+    },  
+    "doubleQuote": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "lineTerminator": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "nullSequence": {  
+        "type": "Property",  
+        "value": "\\N"  
+    },  
+    "quoteChar": {  
+        "type": "Property",  
+        "value": "'"  
+    },  
+    "escapeChar": {  
+        "type": "Property",  
+        "value": "\\"  
+    },  
+    "skipInitialSpace": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "header": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "commentChar": {  
+        "type": "Property",  
+        "value": "#"  
+    },  
+    "caseSensitiveHeader": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "@context": [  
+        "https://smartdatamodels.org/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"  
     ]  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",  
-      "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"  
-    ]  
-  },  
-  "csvddfVersion": {  
-    "type": "Property",  
-    "value": 1.2  
-  },  
-  "delimiter": {  
-    "type": "Property",  
-    "value": ";"  
-  },  
-  "doubleQuote": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "lineTerminator": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "nullSequence": {  
-    "type": "Property",  
-    "value": "\\N"  
-  },  
-  "quoteChar": {  
-    "type": "Property",  
-    "value": "'"  
-  },  
-  "escapeChar": {  
-    "type": "Property",  
-    "value": "\\"  
-  },  
-  "skipInitialSpace": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "header": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "commentChar": {  
-    "type": "Property",  
-    "value": "#"  
-  },  
-  "caseSensitiveHeader": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
