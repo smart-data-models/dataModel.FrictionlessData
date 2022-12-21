@@ -1,0 +1,3 @@
+/* (Beta) Export of data model CSVDialectFrictionlessData of the subject dataModel.FrictionlessData for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE CSVDialectFrictionlessData_type AS ENUM ('CSVDialectFrictionlessData');
+CREATE TABLE CSVDialectFrictionlessData (alternateName text, caseSensitiveHeader text, commentChar text, csvddfVersion text, dataProvider text, dateCreated timestamp, dateModified timestamp, delimiter text, description text, doubleQuote text, escapeChar text, header text, id text, lineTerminator text, name text, nullSequence text, owner json, quoteChar text, seeAlso json, skipInitialSpace text, source text, type CSVDialectFrictionlessData_type);
