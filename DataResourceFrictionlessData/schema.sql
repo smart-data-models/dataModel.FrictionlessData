@@ -1,0 +1,3 @@
+/* (Beta) Export of data model DataResourceFrictionlessData of the subject dataModel.FrictionlessData for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE DataResourceFrictionlessData_type AS ENUM ('DataResourceFrictionlessData');
+CREATE TABLE DataResourceFrictionlessData (address json, areaServed text, bytes integer, data json, description text, encoding text, format text, hash text, homepage text, id text, licenses json, location json, mediatype text, name text, path json, profile text, schema json, sources json, title text, type DataResourceFrictionlessData_type);
