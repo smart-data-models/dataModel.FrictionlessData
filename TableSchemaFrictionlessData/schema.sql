@@ -1,0 +1,3 @@
+/* (Beta) Export of data model TableSchemaFrictionlessData of the subject dataModel.FrictionlessData for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+
+CREATE TABLE TableSchemaFrictionlessData (alternateName text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, fields json, foreignKeys json, id text, missingValues json, name text, owner json, primaryKey json, seeAlso json, source text, type text);
