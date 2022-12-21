@@ -1,0 +1,3 @@
+/* (Beta) Export of data model DataPackageFrictionlessData of the subject dataModel.FrictionlessData for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE DataPackageFrictionlessData_type AS ENUM ('DataPackageFrictionlessData');
+CREATE TABLE DataPackageFrictionlessData (contributors json, created text, description text, homepage text, id text, image text, keywords json, licenses json, name text, profile text, resources json, sources json, title text, type DataPackageFrictionlessData_type);
