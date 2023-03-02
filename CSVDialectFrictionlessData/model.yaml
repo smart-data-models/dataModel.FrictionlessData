@@ -1,8 +1,8 @@
 CSVDialectFrictionlessData:
-  description: 'The CSV dialect descriptor.Converted for Smart Data Models initiative from original frictionless data'
+  description: The CSV dialect descriptor.Converted for Smart Data Models initiative from original frictionless data
   properties:
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
@@ -17,34 +17,34 @@ CSVDialectFrictionlessData:
       x-ngsi:
         type: Property
     csvddfVersion:
-      description: 'CSV Dialect schema version. A number to indicate the schema version of CSV Dialect. Version 1.0 was named CSV Dialect Description Format and used different field names'
+      description: CSV Dialect schema version. A number to indicate the schema version of CSV Dialect. Version 1.0 was named CSV Dialect Description Format and used different field names
       type: number
       x-ngsi:
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     delimiter:
-      description: 'Delimiter. A character sequence to use as the field separator'
+      description: Delimiter. A character sequence to use as the field separator
       type: string
       x-ngsi:
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
@@ -54,7 +54,7 @@ CSVDialectFrictionlessData:
       x-ngsi:
         type: Property
     escapeChar:
-      description: 'Escape Character. Specifies a one-character string to use as the escape character'
+      description: Escape Character. Specifies a one-character string to use as the escape character
       type: string
       x-ngsi:
         type: Property
@@ -65,24 +65,24 @@ CSVDialectFrictionlessData:
         type: Property
     id:
       anyOf: &csvdialectfrictionlessdata_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     lineTerminator:
-      description: 'Line Terminator. Specifies the character sequence that must be used to terminate rows'
+      description: Line Terminator. Specifies the character sequence that must be used to terminate rows
       type: string
       x-ngsi:
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
@@ -92,20 +92,20 @@ CSVDialectFrictionlessData:
       x-ngsi:
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *csvdialectfrictionlessdata_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
     quoteChar:
-      description: 'Quote Character. Specifies a one-character string to use as the quoting character'
+      description: Quote Character. Specifies a one-character string to use as the quoting character
       type: string
       x-ngsi:
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -127,7 +127,7 @@ CSVDialectFrictionlessData:
       x-ngsi:
         type: Property
     type:
-      description: 'It has to be CSVDialectFrictionlessData. NGSI entity type'
+      description: It has to be CSVDialectFrictionlessData. NGSI entity type
       enum:
         - CSVDialectFrictionlessData
       type: string
@@ -140,7 +140,7 @@ CSVDialectFrictionlessData:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/CSVDialectFrictionlessData/LICENSE.md
   x-model-schema: ""
   x-model-tags: SDG
