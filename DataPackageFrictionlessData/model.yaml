@@ -1,8 +1,10 @@
 DataPackageFrictionlessData:
-  description: 'Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data'
+  description: Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data
   properties:
     contributors:
-      description: 'Contributors. . The contributors to this descriptor'
+      description: Contributors. The contributors to this descriptor
+      items:
+        type: string
       type: array
       x-ngsi:
         type: Property
@@ -12,12 +14,12 @@ DataPackageFrictionlessData:
       x-ngsi:
         type: Property
     description:
-      description: 'Description. . A text description. Markdown is encouraged'
+      description: Description. . A text description. Markdown is encouraged
       type: string
       x-ngsi:
         type: Property
     homepage:
-      description: 'Home Page. . The home on the web that is related to this data package'
+      description: Home Page. . The home on the web that is related to this data package
       type: string
       x-ngsi:
         type: Property
@@ -27,17 +29,21 @@ DataPackageFrictionlessData:
       x-ngsi:
         type: Property
     image:
-      description: 'Image. . A image to represent this package'
+      description: Image. . A image to represent this package
       type: string
       x-ngsi:
         type: Property
     keywords:
-      description: 'Keywords. . A list of keywords that describe this package'
+      description: Keywords. . A list of keywords that describe this package
+      items:
+        type: string
       type: array
       x-ngsi:
         type: Property
     licenses:
-      description: 'Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published'
+      description: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published
+      items:
+        type: string
       type: array
       x-ngsi:
         type: Property
@@ -52,22 +58,26 @@ DataPackageFrictionlessData:
       x-ngsi:
         type: Property
     resources:
-      description: 'Data Resources. . An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification'
+      description: 'Data Resources. An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification'
+      items:
+        type: string
       type: array
       x-ngsi:
         type: Property
     sources:
-      description: 'Sources. . The raw sources for this resource'
+      description: Sources. The raw sources for this resource
+      items:
+        type: string
       type: array
       x-ngsi:
         type: Property
     title:
-      description: 'Title. . A human-readable title'
+      description: Title. . A human-readable title
       type: string
       x-ngsi:
         type: Property
     type:
-      description: 'It has to be DataPackageFrictionlessData. NGSI entity type'
+      description: It has to be DataPackageFrictionlessData. NGSI entity type
       enum:
         - DataPackageFrictionlessData
       type: string
@@ -79,8 +89,8 @@ DataPackageFrictionlessData:
     - resources
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/LICENSE.md
   x-model-schema: ""
   x-model-tags: SDG
-  x-version: 0.0.2
+  x-version: 0.0.3
