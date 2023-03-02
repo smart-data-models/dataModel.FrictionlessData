@@ -1,5 +1,9 @@
 {
     "@context": {
+        "CSVDialectFrictionlessData": "https://smartdatamodels.org/dataModel.FrictionlessData/CSVDialectFrictionlessData",
+        "DataPackageFrictionlessData": "https://smartdatamodels.org/dataModel.FrictionlessData/DataPackageFrictionlessData",
+        "DataResourceFrictionlessData": "https://smartdatamodels.org/dataModel.FrictionlessData/DataResourceFrictionlessData",
+        "TableSchemaFrictionlessData": "https://smartdatamodels.org/dataModel.FrictionlessData/TableSchemaFrictionlessData",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
