@@ -1,8 +1,8 @@
 DataResourceFrictionlessData:
-  description: 'Data Resource.Converted for Smart Data Models initiative from original frictionless data'
+  description: Data Resource.Converted for Smart Data Models initiative from original frictionless data
   properties:
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -13,6 +13,9 @@ DataResourceFrictionlessData:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -22,35 +25,38 @@ DataResourceFrictionlessData:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     bytes:
-      description: 'Bytes. The size of this resource in bytes'
-      type: integer
+      description: Bytes. The size of this resource in bytes
+      type: number
       x-ngsi:
         type: Property
     data:
-      description: 'Data. Inline data for this resource'
+      description: Data. Inline data for this resource
       items:
         type: object
       type: array
       x-ngsi:
         type: Property
     description:
-      description: 'Description. A text description. Markdown is encouraged'
+      description: Description. A text description. Markdown is encouraged
       type: string
       x-ngsi:
         type: Property
     encoding:
-      description: 'Encoding. The file encoding of this resource'
+      description: Encoding. The file encoding of this resource
       type: string
       x-ngsi:
         type: Property
@@ -66,25 +72,25 @@ DataResourceFrictionlessData:
       x-ngsi:
         type: Property
     homepage:
-      description: 'Home Page. The home on the web that is related to this data package'
+      description: Home Page. The home on the web that is related to this data package
       type: string
       x-ngsi:
         type: Property
     id:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     licenses:
-      description: 'Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published'
+      description: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published
       items:
         properties:
           name:
@@ -101,7 +107,7 @@ DataResourceFrictionlessData:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -120,9 +126,9 @@ DataResourceFrictionlessData:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -144,9 +150,9 @@ DataResourceFrictionlessData:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -170,9 +176,9 @@ DataResourceFrictionlessData:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -193,9 +199,9 @@ DataResourceFrictionlessData:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -219,9 +225,9 @@ DataResourceFrictionlessData:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -247,10 +253,10 @@ DataResourceFrictionlessData:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     mediatype:
       description: 'Media Type. The media type of this resource. Can be any valid media type listed with [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)'
       type: string
@@ -275,12 +281,12 @@ DataResourceFrictionlessData:
       x-ngsi:
         type: Property
     schema:
-      description: 'Schema. A schema for this resource'
+      description: Schema. A schema for this resource
       type: object
       x-ngsi:
         type: Property
     sources:
-      description: 'Sources. . The raw sources for this resource'
+      description: Sources. . The raw sources for this resource
       items:
         properties:
           email:
@@ -295,12 +301,12 @@ DataResourceFrictionlessData:
       x-ngsi:
         type: Property
     title:
-      description: 'Title. A human-readable title'
+      description: Title. A human-readable title
       type: string
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity type. It has to be DataResourceFrictionlessData'
+      description: NGSI Entity type. It has to be DataResourceFrictionlessData
       enum:
         - DataResourceFrictionlessData
       type: string
@@ -312,8 +318,8 @@ DataResourceFrictionlessData:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md
   x-model-schema: ""
   x-model-tags: SDG
-  x-version: 0.0.2
+  x-version: 0.0.3
