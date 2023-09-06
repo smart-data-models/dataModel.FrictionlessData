@@ -1,39 +1,39 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-实体。CSVDialectFrictionlessData  
-=============================<!-- /10-Header -->  
+实体CSVDialectFrictionlessData  
+============================<!-- /10-Header -->  
 <!-- 15-License -->  
 [开放许可](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/CSVDialectFrictionlessData/LICENSE.md)  
 [文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-全局描述。**CSV方言描述符。为智能数据模型倡议而转换的原始无摩擦数据**。  
-版本：0.0.2  
+全局描述：**从原始无摩擦数据转换而来，用于智能数据模型计划**。  
+版本： 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-##属性列表  
+## 属性列表  
 
-<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
-- `alternateName[string]`: 这个项目的一个替代名称  - `caseSensitiveHeader[boolean]`: 对大小写敏感的标题。在源CSV文件中使用大小写并不总是一个有意的决定。例如，'CAT'和'Cat'是否应该被认为具有相同的含义。指定标题的大小写是否有意义  - `commentChar[string]`: 注释字符。指定任何以这个单字符字符串开始的行，如果没有前面的空白，将导致整个行被忽略。  - `csvddfVersion[number]`: CSV Dialect模式版本。一个数字表示CSV方言的模式版本。1.0版本被命名为CSV方言描述格式，并使用不同的字段名称  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `delimiter[string]`: 分隔符。用来作为字段分隔符的一个字符序列  - `description[string]`: 对这个项目的描述  - `doubleQuote[boolean]`: 双重引号。如果双引号被设置为 "true"，两个连续的引号必须被解释为一个。指定对字段内引号的处理  - `escapeChar[string]`: 转义字符。指定一个单字符的字符串，作为转义字符使用  - `header[boolean]`: 标题。指定文件是否包括标题行，总是作为文件的第一行。  - `id[*]`: 实体的唯一标识符  - `lineTerminator[string]`: 行终结者。指定必须用于终止行的字符序列。  - `name[string]`: 这个项目的名称。  - `nullSequence[string]`: 空序列。指明空序列，例如：\，然后是'N'。  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `quoteChar[string]`: 引用字符。指定一个单字符的字符串，作为引号字符使用  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `skipInitialSpace[boolean]`: 跳过初始空间。指定对紧随定界符之后的空白的解释。如果是假的，紧随分隔符之后的空白应被视为后续字段的一部分。  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `type[string]`: 它必须是CSVDialectFrictionlessData。NGSI实体类型  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
+- `alternateName[string]`: 该项目的替代名称  - `caseSensitiveHeader[boolean]`: 大小写敏感的标题。在 CSV 源文件中使用大小写并非总是有意为之。例如，"CAT "和 "Cat "的含义是否相同。指定标题的大小写是否有意义  - `commentChar[string]`: 注释字符。指定以该单字符字符串开头的任何行，如果前面没有空白，整行将被忽略  - `csvddfVersion[number]`: CSV Dialect 模式版本。表示 CSV Dialect 模式版本的数字。1.0 版被命名为 CSV 方言描述格式，并使用不同的字段名称  - `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `delimiter[string]`: 分隔符。用作字段分隔符的字符序列  - `description[string]`: 项目描述  - `doubleQuote[boolean]`: 双引号。如果双引号设置为 "true"，则两个连续引号必须解释为一个引号。指定字段内引号的处理方式  - `escapeChar[string]`: 转义字符。指定一个字符串作为转义字符  - `header[boolean]`: 标题。指定文件是否包含标题行，总是作为文件的第一行  - `id[*]`: 实体的唯一标识符  - `lineTerminator[string]`: 行结束符。指定终止行时必须使用的字符序列  - `name[string]`: 该项目的名称  - `nullSequence[string]`: 空序列。指定空序列，例如：\，然后是'N'。  - `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `quoteChar[string]`: 引号字符。指定一个字符串作为引号字符  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `skipInitialSpace[boolean]`: 跳过初始空格。指定对分隔符后空白的解释。如果为假，则分隔符后的空白应被视为后续字段的一部分  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `type[string]`: 必须是 CSVDialectFrictionlessData。NGSI 实体类型  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `delimiter`  - `doubleQuote`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-这个数据模型来自于原始的无摩擦数据，可以在https://frictionlessdata.io/。有几个小的变化。1)id和type已经成为强制性的 2)json模式的结构已经适应了智能数据模型的官方格式。参见贡献手册[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)。3)由于兼容性的原因，增加了一些额外的属性  
+该数据模型来自原始的无摩擦数据，可在 https://frictionlessdata.io/ 上找到。其中有几处小改动。1）id 和类型为必填项 2）json 模式的结构已调整为智能数据模型的官方格式。参见贡献手册 [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)。3) 出于兼容性考虑，增加了一些属性  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## 数据模型的属性描述  
-按字母顺序排列（点击查看详情）。  
+## 属性的数据模型描述  
+按字母顺序排列（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CSVDialectFrictionlessData:    
-  description: 'The CSV dialect descriptor.Converted for Smart Data Models initiative from original frictionless data'    
+  description: The CSV dialect descriptor.Converted for Smart Data Models initiative from original frictionless data    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -48,34 +48,34 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     csvddfVersion:    
-      description: 'CSV Dialect schema version. A number to indicate the schema version of CSV Dialect. Version 1.0 was named CSV Dialect Description Format and used different field names'    
+      description: CSV Dialect schema version. A number to indicate the schema version of CSV Dialect. Version 1.0 was named CSV Dialect Description Format and used different field names    
       type: number    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     delimiter:    
-      description: 'Delimiter. A character sequence to use as the field separator'    
+      description: Delimiter. A character sequence to use as the field separator    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -85,7 +85,7 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     escapeChar:    
-      description: 'Escape Character. Specifies a one-character string to use as the escape character'    
+      description: Escape Character. Specifies a one-character string to use as the escape character    
       type: string    
       x-ngsi:    
         type: Property    
@@ -95,25 +95,29 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &csvdialectfrictionlessdata_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     lineTerminator:    
-      description: 'Line Terminator. Specifies the character sequence that must be used to terminate rows'    
+      description: Line Terminator. Specifies the character sequence that must be used to terminate rows    
       type: string    
       x-ngsi:    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -123,20 +127,34 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *csvdialectfrictionlessdata_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     quoteChar:    
-      description: 'Quote Character. Specifies a one-character string to use as the quoting character'    
+      description: Quote Character. Specifies a one-character string to use as the quoting character    
       type: string    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -153,12 +171,12 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'It has to be CSVDialectFrictionlessData. NGSI entity type'    
+      description: It has to be CSVDialectFrictionlessData. NGSI entity type    
       enum:    
         - CSVDialectFrictionlessData    
       type: string    
@@ -171,7 +189,7 @@ CSVDialectFrictionlessData:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/CSVDialectFrictionlessData/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: SDG    
@@ -182,9 +200,9 @@ CSVDialectFrictionlessData:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## ＃＃＃＃有效载荷的例子  
-#### CSVDialectFrictionlessData NGSI-v2关键值示例  
-这里有一个CSVDialectFrictionlessData的例子，它以JSON-LD格式作为key-values。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+## 有效载荷示例  
+#### CSVDialectFrictionlessData NGSI-v2 密钥值示例  
+下面是以 JSON-LD 格式作为键值的 CSVDialectFrictionlessData 示例。当使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -217,8 +235,8 @@ CSVDialectFrictionlessData:
 }  
 ```  
 </details>  
-#### CSVDialectFrictionlessData NGSI-v2规范化示例  
-下面是一个JSON-LD格式的CSVDialectFrictionlessData的例子，是规范化的。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+#### CSVDialectFrictionlessData NGSI-v2 标准化示例  
+下面是一个 CSVDialectFrictionlessData 的示例，采用 JSON-LD 格式规范化。当不使用选项时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -313,8 +331,8 @@ CSVDialectFrictionlessData:
 }  
 ```  
 </details>  
-#### CSVDialectFrictionlessData NGSI-LD关键值示例  
-这里有一个CSVDialectFrictionlessData的例子，是JSON-LD格式的key-values。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### CSVDialectFrictionlessData NGSI-LD 键值 示例  
+下面是以 JSON-LD 格式作为键值的 CSVDialectFrictionlessData 示例。当使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -351,8 +369,8 @@ CSVDialectFrictionlessData:
 }  
 ```  
 </details>  
-#### CSVDialectFrictionlessData NGSI-LD规范化示例  
-下面是一个JSON-LD格式的CSVDialectFrictionlessData的例子，是规范化的。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### CSVDialectFrictionlessData NGSI-LD 归一化示例  
+下面是一个 CSVDialectFrictionlessData 的示例，采用 JSON-LD 格式并已规范化。在不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -460,7 +478,7 @@ CSVDialectFrictionlessData:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
+请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获取如何处理幅度单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
