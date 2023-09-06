@@ -7,7 +7,7 @@
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Descrizione globale: **Il descrittore del dialetto CSV.Convertito per l'iniziativa Smart Data Models dai dati originali frictionless**  
+Descrizione globale: **Descrittore del dialetto CSV.Convertito per l'iniziativa Smart Data Models dai dati originali frictionless**  
 versione: 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
@@ -15,7 +15,7 @@
 ## Elenco delle proprietà  
 
 <sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
-- `alternateName[string]`: Un nome alternativo per questa voce  - `caseSensitiveHeader[boolean]`: Intestazione sensibile alle maiuscole. L'uso delle maiuscole nei file CSV di origine non è sempre una decisione intenzionale. Ad esempio, se 'CAT' e 'Cat' devono essere considerati come aventi lo stesso significato. Specifica se le maiuscole delle intestazioni sono significative.  - `commentChar[string]`: Carattere di commento. Specifica che qualsiasi riga che inizia con questa stringa di un carattere, senza spazi bianchi precedenti, fa sì che l'intera riga venga ignorata.  - `csvddfVersion[number]`: Versione dello schema di CSV Dialect. Un numero che indica la versione dello schema di CSV Dialect. La versione 1.0 era denominata CSV Dialect Description Format e utilizzava nomi di campi diversi.  - `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `delimiter[string]`: Delimitatore. Una sequenza di caratteri da usare come separatore di campo.  - `description[string]`: Descrizione dell'articolo  - `doubleQuote[boolean]`: Doppie virgolette. Se Double Quote è impostato su true, due virgolette consecutive devono essere interpretate come una sola. Specifica la gestione delle virgolette all'interno dei campi  - `escapeChar[string]`: Carattere di escape. Specifica una stringa di un carattere da utilizzare come carattere di escape.  - `header[boolean]`: Intestazione. Specifica se il file include una riga di intestazione, sempre come prima riga del file.  - `id[*]`: Identificatore univoco dell'entità  - `lineTerminator[string]`: Terminatore di riga. Specifica la sequenza di caratteri da utilizzare per terminare le righe.  - `name[string]`: Il nome di questo elemento.  - `nullSequence[string]`: Sequenza nulla. Specifica la sequenza nulla, ad esempio, \ e poi 'N'.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `quoteChar[string]`: Carattere di citazione. Specifica una stringa di un carattere da usare come carattere di citazione.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `skipInitialSpace[boolean]`: Salta spazio iniziale. Specifica l'interpretazione degli spazi bianchi immediatamente successivi a un delimitatore. Se falso, gli spazi bianchi immediatamente dopo un delimitatore devono essere trattati come parte del campo successivo.  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Deve essere CSVDialectFrictionlessData. Tipo di entità NGSI  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: Un nome alternativo per questa voce  - `caseSensitiveHeader[boolean]`: Intestazione sensibile alle maiuscole. L'uso delle maiuscole nei file CSV di origine non è sempre una decisione intenzionale. Ad esempio, se 'CAT' e 'Cat' devono essere considerati come aventi lo stesso significato. Specifica se le maiuscole e le minuscole delle intestazioni sono significative.  - `commentChar[string]`: Carattere di commento. Specifica che qualsiasi riga che inizia con questa stringa di un carattere, senza spazi bianchi precedenti, fa sì che l'intera riga venga ignorata.  - `csvddfVersion[number]`: Versione dello schema di CSV Dialect. Un numero che indica la versione dello schema di CSV Dialect. La versione 1.0 era denominata CSV Dialect Description Format e utilizzava nomi di campi diversi.  - `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `delimiter[string]`: Delimitatore. Una sequenza di caratteri da usare come separatore di campo.  - `description[string]`: Descrizione dell'articolo  - `doubleQuote[boolean]`: Doppie virgolette. Se Double Quote è impostato su true, due virgolette consecutive devono essere interpretate come una sola. Specifica il trattamento delle virgolette all'interno dei campi  - `escapeChar[string]`: Carattere di escape. Specifica una stringa di un carattere da utilizzare come carattere di escape.  - `header[boolean]`: Intestazione. Specifica se il file include una riga di intestazione, sempre come prima riga del file.  - `id[*]`: Identificatore univoco dell'entità  - `lineTerminator[string]`: Terminatore di riga. Specifica la sequenza di caratteri da utilizzare per terminare le righe.  - `name[string]`: Il nome di questo elemento  - `nullSequence[string]`: Sequenza nulla. Specifica la sequenza nulla, ad esempio, \ e poi 'N'.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `quoteChar[string]`: Carattere di citazione. Specifica una stringa di un carattere da utilizzare come carattere di citazione.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `skipInitialSpace[boolean]`: Salta spazio iniziale. Specifica l'interpretazione degli spazi bianchi immediatamente successivi a un delimitatore. Se falso, gli spazi bianchi immediatamente dopo un delimitatore devono essere trattati come parte del campo successivo.  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Deve essere CSVDialectFrictionlessData. Tipo di entità NGSI  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
 - `delimiter`  - `doubleQuote`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,10 +30,10 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CSVDialectFrictionlessData:    
-  description: 'The CSV dialect descriptor.Converted for Smart Data Models initiative from original frictionless data'    
+  description: The CSV dialect descriptor.Converted for Smart Data Models initiative from original frictionless data    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -48,34 +48,34 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     csvddfVersion:    
-      description: 'CSV Dialect schema version. A number to indicate the schema version of CSV Dialect. Version 1.0 was named CSV Dialect Description Format and used different field names'    
+      description: CSV Dialect schema version. A number to indicate the schema version of CSV Dialect. Version 1.0 was named CSV Dialect Description Format and used different field names    
       type: number    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     delimiter:    
-      description: 'Delimiter. A character sequence to use as the field separator'    
+      description: Delimiter. A character sequence to use as the field separator    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -85,7 +85,7 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     escapeChar:    
-      description: 'Escape Character. Specifies a one-character string to use as the escape character'    
+      description: Escape Character. Specifies a one-character string to use as the escape character    
       type: string    
       x-ngsi:    
         type: Property    
@@ -95,25 +95,29 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &csvdialectfrictionlessdata_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     lineTerminator:    
-      description: 'Line Terminator. Specifies the character sequence that must be used to terminate rows'    
+      description: Line Terminator. Specifies the character sequence that must be used to terminate rows    
       type: string    
       x-ngsi:    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -123,20 +127,34 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *csvdialectfrictionlessdata_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     quoteChar:    
-      description: 'Quote Character. Specifies a one-character string to use as the quoting character'    
+      description: Quote Character. Specifies a one-character string to use as the quoting character    
       type: string    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -153,12 +171,12 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'It has to be CSVDialectFrictionlessData. NGSI entity type'    
+      description: It has to be CSVDialectFrictionlessData. NGSI entity type    
       enum:    
         - CSVDialectFrictionlessData    
       type: string    
@@ -171,7 +189,7 @@ CSVDialectFrictionlessData:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/CSVDialectFrictionlessData/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: SDG    
@@ -352,7 +370,7 @@ CSVDialectFrictionlessData:
 ```  
 </details>  
 #### CSVDialectFrictionlessData NGSI-LD normalizzato Esempio  
-Ecco un esempio di CSVDialectFrictionlessData in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di CSVDialectFrictionlessData in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
