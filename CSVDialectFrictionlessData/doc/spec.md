@@ -15,7 +15,7 @@
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `alternateName[string]`: An alternative name for this item  - `caseSensitiveHeader[boolean]`: Case Sensitive Header. Use of case in source CSV files is not always an intentional decision. For example, should 'CAT' and 'Cat' be considered to have the same meaning. Specifies if the case of headers is meaningful  - `commentChar[string]`: Comment Character. Specifies that any row beginning with this one-character string, without preceding whitespace, causes the entire line to be ignored  - `csvddfVersion[number]`: CSV Dialect schema version. A number to indicate the schema version of CSV Dialect. Version 1.0 was named CSV Dialect Description Format and used different field names  - `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `delimiter[string]`: Delimiter. A character sequence to use as the field separator  - `description[string]`: A description of this item  - `doubleQuote[boolean]`: Double Quote. If Double Quote is set to true, two consecutive quotes must be interpreted as one. Specifies the handling of quotes inside fields  - `escapeChar[string]`: Escape Character. Specifies a one-character string to use as the escape character  - `header[boolean]`: Header. Specifies if the file includes a header row, always as the first row in the file  - `id[*]`: Unique identifier of the entity  - `lineTerminator[string]`: Line Terminator. Specifies the character sequence that must be used to terminate rows  - `name[string]`: The name of this item.  - `nullSequence[string]`: Null Sequence. Specifies the null sequence, for example, \ and then 'N'  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `quoteChar[string]`: Quote Character. Specifies a one-character string to use as the quoting character  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `skipInitialSpace[boolean]`: Skip Initial Space. Specifies the interpretation of whitespace immediately following a delimiter. If false, whitespace immediately after a delimiter should be treated as part of the subsequent field  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: It has to be CSVDialectFrictionlessData. NGSI entity type  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: An alternative name for this item  - `caseSensitiveHeader[boolean]`: Case Sensitive Header. Use of case in source CSV files is not always an intentional decision. For example, should 'CAT' and 'Cat' be considered to have the same meaning. Specifies if the case of headers is meaningful  - `commentChar[string]`: Comment Character. Specifies that any row beginning with this one-character string, without preceding whitespace, causes the entire line to be ignored  - `csvddfVersion[number]`: CSV Dialect schema version. A number to indicate the schema version of CSV Dialect. Version 1.0 was named CSV Dialect Description Format and used different field names  - `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `delimiter[string]`: Delimiter. A character sequence to use as the field separator  - `description[string]`: A description of this item  - `doubleQuote[boolean]`: Double Quote. If Double Quote is set to true, two consecutive quotes must be interpreted as one. Specifies the handling of quotes inside fields  - `escapeChar[string]`: Escape Character. Specifies a one-character string to use as the escape character  - `header[boolean]`: Header. Specifies if the file includes a header row, always as the first row in the file  - `id[*]`: Unique identifier of the entity  - `lineTerminator[string]`: Line Terminator. Specifies the character sequence that must be used to terminate rows  - `name[string]`: The name of this item  - `nullSequence[string]`: Null Sequence. Specifies the null sequence, for example, \ and then 'N'  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `quoteChar[string]`: Quote Character. Specifies a one-character string to use as the quoting character  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `skipInitialSpace[boolean]`: Skip Initial Space. Specifies the interpretation of whitespace immediately following a delimiter. If false, whitespace immediately after a delimiter should be treated as part of the subsequent field  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `type[string]`: It has to be CSVDialectFrictionlessData. NGSI entity type  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `delimiter`  - `doubleQuote`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,10 +30,10 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CSVDialectFrictionlessData:    
-  description: 'The CSV dialect descriptor.Converted for Smart Data Models initiative from original frictionless data'    
+  description: The CSV dialect descriptor.Converted for Smart Data Models initiative from original frictionless data    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -48,34 +48,34 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     csvddfVersion:    
-      description: 'CSV Dialect schema version. A number to indicate the schema version of CSV Dialect. Version 1.0 was named CSV Dialect Description Format and used different field names'    
+      description: CSV Dialect schema version. A number to indicate the schema version of CSV Dialect. Version 1.0 was named CSV Dialect Description Format and used different field names    
       type: number    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     delimiter:    
-      description: 'Delimiter. A character sequence to use as the field separator'    
+      description: Delimiter. A character sequence to use as the field separator    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -85,7 +85,7 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     escapeChar:    
-      description: 'Escape Character. Specifies a one-character string to use as the escape character'    
+      description: Escape Character. Specifies a one-character string to use as the escape character    
       type: string    
       x-ngsi:    
         type: Property    
@@ -95,25 +95,29 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &csvdialectfrictionlessdata_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     lineTerminator:    
-      description: 'Line Terminator. Specifies the character sequence that must be used to terminate rows'    
+      description: Line Terminator. Specifies the character sequence that must be used to terminate rows    
       type: string    
       x-ngsi:    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -123,20 +127,34 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *csvdialectfrictionlessdata_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     quoteChar:    
-      description: 'Quote Character. Specifies a one-character string to use as the quoting character'    
+      description: Quote Character. Specifies a one-character string to use as the quoting character    
       type: string    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -153,12 +171,12 @@ CSVDialectFrictionlessData:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'It has to be CSVDialectFrictionlessData. NGSI entity type'    
+      description: It has to be CSVDialectFrictionlessData. NGSI entity type    
       enum:    
         - CSVDialectFrictionlessData    
       type: string    
@@ -171,7 +189,7 @@ CSVDialectFrictionlessData:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/CSVDialectFrictionlessData/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: SDG    
