@@ -1,30 +1,30 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-实体。表格式无摩擦数据（TableSchemaFrictionlessData  
-=======================================<!-- /10-Header -->  
+实体表模式无摩擦数据  
+==========<!-- /10-Header -->  
 <!-- 15-License -->  
 [开放许可](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/TableSchemaFrictionlessData/LICENSE.md)  
 [文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-全局描述。**该资源的表模式，符合表模式规范。为智能数据模型倡议而转换的原始无摩擦数据**。  
-版本：0.0.2  
+全局描述：**该资源的表模式，符合表模式规范。为智能数据模型计划从原始无摩擦数据转换而来**  
+版本： 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-##属性列表  
+## 属性列表  
 
-<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
-- `alternateName[string]`: 这个项目的一个替代名称  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `description[string]`: 对这个项目的描述  - `fields[array]`: 一个表模式字段对象的数组  - `foreignKeys[array]`:   - `id[*]`: 实体的唯一标识符  - `missingValues[array]`: 许多数据集都有缺失的数据值，要么是因为没有收集到某个值，要么是因为它从未存在过。缺失的值可以简单地通过值为空来表示，在其他情况下，可能使用了一个特殊的值，例如'-'、'NaN'、'0'、'-9999'等。"missingValues "属性提供了一种方法来表示这些值应被解释为等同于null。missingValues "是字符串，而不是特定字段的数据类型。这允许在铸造之前进行比较，并允许字段拥有不属于其类型的缺失值，例如，"数字 "字段的缺失值由"-"表示。对于非字符串类型的字段，"缺失值 "的默认值是空字符串""。对于字符串类型的字段，'missingValue'没有默认值（对于字符串字段，空字符串''是一个有效值，不需要表示空）。在源中遇到的值应被视为 "空"、"不存在 "或 "空白 "值  - `name[string]`: 这个项目的名称。  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `primaryKey[array]`: primaryKey中的字段名 "必须 "是唯一的，并且 "必须 "与相关表中的字段名相匹配。有一个具有单一值的数组是可以接受的，表明单一字段的值是主键。主键是一个字段名或字段名的数组，其值 "必须 "唯一地识别表中的每一行。  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `type[string]`: 它必须是TableSchemaFrictionlessData。NGSI实体类型  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
+- `alternateName[string]`: 该项目的替代名称  - `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `fields[array]`: 表模式字段对象数组  - `foreignKeys[array]`:   - `id[*]`: 实体的唯一标识符  - `missingValues[array]`: 许多数据集都会出现数据值缺失的情况，这可能是因为某个值没有被收集到或者从未存在过。在其他情况下，可能使用了特殊的值，如"-"、"NaN"、"0"、"-9999 "等。"missageValues "属性提供了一种方法来表示这些值应被解释为等同于空值。missingValues' 是字符串，而不是特定字段的数据类型。这样就可以在赋值前进行比较，并使字段的缺失值与其类型不符，例如 "数字 "字段的缺失值用"-"表示。对于字符串类型字段，"missingValue "没有默认值（对于字符串字段，空字符串"''是一个有效值，不必表示空）。在源中遇到的值应视为 "空"、"不存在 "或 "空白 "值  - `name[string]`: 该项目的名称  - `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `primaryKey[array]`: 主键中的字段名 "必须 "是唯一的，并且 "必须 "与相关表中的字段名匹配。单值数组也是可以接受的，它表示单个字段的值就是主键。主键是一个字段名或字段名数组，其值 "必须 "唯一标识表中的每一行  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `type[string]`: 必须是 TableSchemaFrictionlessData。NGSI 实体类型  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `fields`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-这个数据模型来自于原始的无摩擦数据，可以在https://frictionlessdata.io/。有几个变化。1)id和type已经成为强制性的，只要它们在NGSI标准中是强制性的 2)json模式的结构已经被调整为智能数据模型的官方格式。见贡献手册[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)  
+该数据模型来自原始的无摩擦数据，可在 https://frictionlessdata.io/ 上找到。其中有几处改动1）id 和类型已成为 NGSI 标准的必选项 2）json 模式的结构已调整为智能数据模型的官方格式。参见贡献手册 [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## 数据模型的属性描述  
-按字母顺序排列（点击查看详情）。  
+## 属性的数据模型描述  
+按字母顺序排列（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -33,34 +33,34 @@ TableSchemaFrictionlessData:
   description: 'A Table Schema for this resource, compliant with the Table Schema specification. Converted for Smart Data Models initiative from original frictionless data'    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     fields:    
-      description: 'An array of Table Schema Field objects'    
+      description: An array of Table Schema Field objects    
       items:    
         type: object    
       type: array    
@@ -74,16 +74,20 @@ TableSchemaFrictionlessData:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &tableschemafrictionlessdata_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     missingValues:    
@@ -94,15 +98,29 @@ TableSchemaFrictionlessData:
       x-ngsi:    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *tableschemafrictionlessdata_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -115,7 +133,7 @@ TableSchemaFrictionlessData:
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -127,12 +145,12 @@ TableSchemaFrictionlessData:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'it has to be TableSchemaFrictionlessData. NGSI entity type'    
+      description: it has to be TableSchemaFrictionlessData. NGSI entity type    
       type: string    
       x-ngsi:    
         type: Property    
@@ -142,7 +160,7 @@ TableSchemaFrictionlessData:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/TableSchemaFrictionlessData/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: SDG    
@@ -153,9 +171,9 @@ TableSchemaFrictionlessData:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## ＃＃＃＃有效载荷的例子  
-#### TableSchemaFrictionlessData NGSI-v2关键值示例  
-下面是一个以JSON-LD格式作为关键值的TableSchemaFrictionlessData的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+## 有效载荷示例  
+#### TableSchemaFrictionlessData NGSI-v2 键值示例  
+下面是一个以 JSON-LD 格式作为键值的 TableSchemaFrictionlessData 示例。当使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -180,8 +198,8 @@ TableSchemaFrictionlessData:
 }  
 ```  
 </details>  
-#### TableSchemaFrictionlessData NGSI-v2规范化示例  
-这里有一个JSON-LD格式的TableSchemaFrictionlessData的例子，是规范化的。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+#### TableSchemaFrictionlessData NGSI-v2 标准化示例  
+下面是一个规范化 JSON-LD 格式的 TableSchemaFrictionlessData 示例。当不使用选项时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -212,8 +230,8 @@ TableSchemaFrictionlessData:
 }  
 ```  
 </details>  
-#### TableSchemaFrictionlessData NGSI-LD关键值示例  
-这里是一个以JSON-LD格式作为key-values的TableSchemaFrictionlessData的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### TableSchemaFrictionlessData NGSI-LD 键值示例  
+下面是一个以 JSON-LD 格式作为键值的 TableSchemaFrictionlessData 示例。当使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -241,8 +259,8 @@ TableSchemaFrictionlessData:
 }  
 ```  
 </details>  
-#### TableSchemaFrictionlessData NGSI-LD规范化示例  
-这里有一个JSON-LD格式的TableSchemaFrictionlessData的例子，是规范化的。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### TableSchemaFrictionlessData NGSI-LD 标准化示例  
+下面是一个规范化 JSON-LD 格式的 TableSchemaFrictionlessData 示例。当不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -279,7 +297,7 @@ TableSchemaFrictionlessData:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
+请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获取如何处理幅度单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
