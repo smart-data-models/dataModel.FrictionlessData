@@ -3,37 +3,39 @@
 エンティティDataPackageFrictionlessData  
 =================================<!-- /10-Header -->  
 <!-- 15-License -->  
-[オープンライセンス](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/LICENSE.md)  
-[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[オープン・ライセンス](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/LICENSE.md)  
+[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルな記述です。**データパッケージは、データアクセスや配信のためのシンプルな仕様です。スマートデータモデル構想のために、オリジナルのフリクションレスデータから変換されました。  
-バージョン: 0.0.2  
+グローバルな説明**データパッケージは、データへのアクセスと配信のためのシンプルな仕様です。スマートデータモデル構想のために、オリジナルのフリクションレスデータから変換されました。  
+バージョン: 0.0.3  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## プロパティ一覧  
+## プロパティのリスト  
 
-<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `contributors[array]`: 投稿者.この記述子の寄稿者  - `created[string]`: 作成される。datetimeは、[RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6)に記述されているdatetimeの文字列フォーマットに準拠しなければならない。このディスクリプタが作成された日時。  - `description[string]`: 説明.テキストの説明文。Markdownを推奨  - `homepage[string]`: ホームページ.このデータパッケージに関連するウェブ上のホーム  - `id[string]`: IDです。データパッケージの一般的な利用形態は、システムやプラットフォームの範囲内でのパッケージングフォーマットである。このような場合、既存のパッケージを更新するような一般的なデータ操作のワークフローでは、パッケージの一意な識別子が望まれる。仕様のレベルでは、グローバルな一意性を検証することはできませんが、 `id` プロパティを使用するコンシューマは、識別子がグローバルに一意であることを保証しなければなりません (`MUST`) 。グローバルに一意な識別子のために予約されたプロパティです。一意である識別子の例としては、UUIDやDOIなどがあります。  - `image[string]`: 画像はイメージです。.このパッケージを表現するための画像  - `keywords[array]`: キーワード.このパッケージを説明するキーワードのリスト  - `licenses[array]`: ライセンスこのプロパティは法的拘束力を持たず、パッケージがここで定義された条件の下でライセンスされていることを保証するものではありません。このパッケージが公開されているライセンス(複数可)  - `name[string]`: 名前。これは理想的には、URLで使用可能な、人間が読みやすい名前である。名前は不変であるべきであり、親ディスクリプタが更新されたときに `SHOULD NOT` 変わることを意味する。識別子の文字列。小文字の `.`, `_`, `-` および `/` が使用可能である。  - `profile[string]`: プロファイル。すべてのPackageとResourceディスクリプタはプロファイルを持ちます。デフォルトのプロファイルは、何も宣言されていない場合、Packageでは `data-package`、Resourceでは `data-resource`である。このディスクリプタのプロファイル  - `resources[array]`: データリソース..データリソース](/data-resource/)仕様に準拠したデータリソースオブジェクトの `array` です。  - `sources[array]`: ソースはこちら.このリソースの生のソース  - `title[string]`: タイトル.人間が読みやすいタイトル  - `type[string]`: DataPackageFrictionlessDataでなければならない。NGSIエンティティタイプ  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
+- `contributors[array]`: 貢献者この記述子の貢献者  - `created[string]`: 作成される。datetimeは、[RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6)に記述されているdatetimeの文字列フォーマットに準拠しなければならない。この記述子が作成された日時。  - `description[string]`: 説明.テキストの説明.Markdownを推奨します。  - `homepage[string]`: ホームページ..このデータパッケージに関連するウェブ上のホームページ  - `id[string]`: ID。データパッケージの一般的な使用パターンは、システムやプラットフォームの範囲内でのパッケージングフォーマットである。このような場合、既存のパッケージを更新するような一般的なデータ操作のワークフローでは、パッケージの一意な識別子が望まれる。仕様のレベルでは、グローバルな一意性を検証することはできないが、`id` プロパティを使用するコンシューマは、識別子がグローバルに一意であることを保証しなければならない（MUST）。グローバルに一意である識別子のために予約されたプロパティである。一意である識別子の例としては、UUIDやDOIがある。  - `image[string]`: イメージ.このパッケージを表す画像  - `keywords[array]`: キーワード.このパッケージを説明するキーワードのリスト  - `licenses[array]`: ライセンスこのプロパティは法的拘束力を持たず、パッケージがここで定義された条項の下でライセンスされていることを保証するものではありません。このパッケージが公開されているライセンスは以下の通りです。  - `name[string]`: 名前。これは理想的にはurlで使用可能で、人間が読める名前である。名前 `SHOULD` は不変であるべきであり、親ディスクリプタが更新されたときに `SHOULD NOT` 変更されるべきではないことを意味する。識別子文字列。.`、`_`、`-`、`/` の小文字が使用できる。  - `profile[string]`: プロファイル。すべての Package と Resource 記述子はプロファイルを持ちます。デフォルトのプロファイルは、何も宣言されていない場合、Packageでは `data-package`、Resourceでは `data-resource` です。この記述子のプロファイル  - `resources[array]`: データリソース。それぞれが[Data Resource](/data-resource/)仕様に準拠している。  - `sources[array]`: 情報源この資料の生の情報源  - `title[string]`: タイトル.人間が読めるタイトル  - `type[string]`: DataPackageFrictionlessData でなければならない。NGSIエンティティタイプ  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-必要なプロパティ  
+必須プロパティ  
 - `id`  - `resources`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-このデータモデルは、https://frictionlessdata.io/ にあるオリジナルのfrictionlessデータに由来しています。いくつかの変更点があります。1) idとtypeが必須となった 2) jsonスキーマの構造が、Smart Data Modelsの公式フォーマットに適合するようになった。コントリビューションマニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。  
+このデータモデルは、https://frictionlessdata.io/ にあるオリジナルのフリクションレス・データから来ている。いくつかの変更点がある。1)idとtypeが必須になりました。 2)jsonスキーマの構造がスマートデータモデルの公式フォーマットに合わせられました。貢献マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
-アルファベット順に並びます（クリックで詳細へ）  
+アルファベット順（クリックで詳細表示）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 DataPackageFrictionlessData:    
-  description: 'Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data'    
+  description: Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data    
   properties:    
     contributors:    
-      description: 'Contributors. . The contributors to this descriptor'    
+      description: Contributors. The contributors to this descriptor    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -43,12 +45,12 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     description:    
-      description: 'Description. . A text description. Markdown is encouraged'    
+      description: Description. . A text description. Markdown is encouraged    
       type: string    
       x-ngsi:    
         type: Property    
     homepage:    
-      description: 'Home Page. . The home on the web that is related to this data package'    
+      description: Home Page. . The home on the web that is related to this data package    
       type: string    
       x-ngsi:    
         type: Property    
@@ -58,17 +60,21 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     image:    
-      description: 'Image. . A image to represent this package'    
+      description: Image. . A image to represent this package    
       type: string    
       x-ngsi:    
         type: Property    
     keywords:    
-      description: 'Keywords. . A list of keywords that describe this package'    
+      description: Keywords. . A list of keywords that describe this package    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     licenses:    
-      description: 'Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published'    
+      description: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -83,22 +89,26 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     resources:    
-      description: 'Data Resources. . An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification'    
+      description: 'Data Resources. An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification'    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     sources:    
-      description: 'Sources. . The raw sources for this resource'    
+      description: Sources. The raw sources for this resource    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     title:    
-      description: 'Title. . A human-readable title'    
+      description: Title. . A human-readable title    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'It has to be DataPackageFrictionlessData. NGSI entity type'    
+      description: It has to be DataPackageFrictionlessData. NGSI entity type    
       enum:    
         - DataPackageFrictionlessData    
       type: string    
@@ -110,11 +120,11 @@ DataPackageFrictionlessData:
     - resources    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: SDG    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -122,8 +132,8 @@ DataPackageFrictionlessData:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### DataPackageFrictionlessData NGSI-v2 key-value 例  
-ここでは、DataPackageFrictionlessDataをJSON-LD形式でkey-valuesとした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返す。  
+#### DataPackageFrictionlessData NGSI-v2 キー値の例  
+以下はDataPackageFrictionlessDataをJSON-LD形式でkey-valuesとした例である。これはNGSI-v2と互換性があり、`options=keyValues`を使用すると個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -186,7 +196,7 @@ DataPackageFrictionlessData:
 ```  
 </details>  
 #### DataPackageFrictionlessData NGSI-v2 正規化例  
-以下は、DataPackageFrictionlessDataをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化されたJSON-LD形式のDataPackageFrictionlessDataの例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -275,8 +285,8 @@ DataPackageFrictionlessData:
 }  
 ```  
 </details>  
-#### DataPackageFrictionlessData NGSI-LD key-value 例  
-DataPackageFrictionlessDataをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返される。  
+#### DataPackageFrictionlessData NGSI-LD キー値の例  
+以下はDataPackageFrictionlessDataをJSON-LD形式でkey-valuesとした例である。options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -342,7 +352,7 @@ DataPackageFrictionlessData:
 ```  
 </details>  
 #### DataPackageFrictionlessData NGSI-LD 正規化例  
-DataPackageFrictionlessDataをJSON-LD形式で正規化した例です。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化されたJSON-LD形式のDataPackageFrictionlessDataの例である。これは、オプションを使用しない場合はNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -437,7 +447,7 @@ DataPackageFrictionlessData:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
