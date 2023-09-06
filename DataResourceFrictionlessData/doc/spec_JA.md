@@ -3,85 +3,120 @@
 エンティティDataResourceFrictionlessData  
 ==================================<!-- /10-Header -->  
 <!-- 15-License -->  
-[オープンライセンス](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md)  
-[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[オープン・ライセンス](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md)  
+[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルな説明**データリソース.スマートデータモデル構想のために、オリジナルのフリクションレスデータから変換されたもの**。  
-バージョン: 0.0.2  
+グローバルな説明**データリソース.元のフリクションレスデータからスマートデータモデルイニシアチブのために変換された**。  
+バージョン: 0.0.3  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## プロパティ一覧  
+## プロパティのリスト  
 
-<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `bytes[integer]`: バイト。このリソースのサイズ（バイト単位  - `data[array]`: データこのリソースのインラインデータ  - `description[string]`: 説明文。テキストの説明文です。Markdownを推奨します。  - `encoding[string]`: エンコードこのリソースのファイルエンコーディング  - `format[string]`: フォーマット。'csv', 'xls', 'json' は一般的なフォーマットの例である。このリソースのファイル形式  - `hash[string]`: ハッシュ。このリソースのMD5ハッシュ。他のハッシュアルゴリズムを{algorithm}:{hash}の形式で指定します。  - `homepage[string]`: ホームページです。このデータパッケージに関連するウェブ上のホーム  - `id[*]`: エンティティの一意な識別子  - `licenses[array]`: ライセンスこのプロパティは法的拘束力を持たず、パッケージがここで定義された条件の下でライセンスされていることを保証するものではありません。リソースが公開されているライセンス(複数可)  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `mediatype[string]`: メディアタイプ。このリソースのメディアタイプ。IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)にリストされている有効なメディアタイプであれば、どれでも可能です。  - `name[string]`: 名前。これは、理想的には、URLで使用可能な、人間が読める名前である。名前は不変であるべきで、親ディスクリプタが更新されたときに変更されるべきではありません（SHOULD NOT）。識別子の文字列。小文字の'.'、'_'、'-'、'/'が使用可能です。  - `path[array]`: パスpath' で参照される各データソースの再参照値は、そのリソースが記述するデータのネイティブな再参照表現に相応したものでなければならない(MUST)。例えば、*Tabular* データリソースでは、'path' の再参照値は配列でなければならない (MUST)ことを意味する。このリソースのデータへの参照で、文字列としてのパス、または文字列としてのパスの配列のいずれかである。  - `profile[string]`: プロファイル。すべてのPackageとResource記述子はプロファイルを持ちます。プロファイルが宣言されていない場合、デフォルトのプロファイルは、Packageの場合は'data-package'、Resourceの場合は'data-resource'です。このディスクリプタのプロファイル  - `schema[object]`: スキーマこのリソースのスキーマ  - `sources[array]`: ソースはこちら.このリソースの生のソース  - `title[string]`: タイトル。人間が読みやすいタイトル  - `type[string]`: NGSI エンティティタイプ。DataResourceFrictionlessDataである必要があります。  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 番地がある地域と、その地域に含まれる地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: その地域がある地域、またその国がある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区とは行政区画の一種で、国によっては地方自治体によって管理されている。    
+	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `bytes[number]`: バイト。このリソースのサイズ（バイト  - `data[array]`: データこのリソースのインラインデータ  - `description[string]`: 説明テキストの説明。Markdownを推奨します。  - `encoding[string]`: エンコーディング。このリソースのファイルエンコーディング  - `format[string]`: フォーマット。csv'、'xls'、'json'が一般的なフォーマットの例です。このリソースのファイル形式  - `hash[string]`: ハッシュ。このリソースのMD5ハッシュ。他のハッシュアルゴリズムを {algorithm}:{hash} 形式で示します。  - `homepage[string]`: ホームページこのデータパッケージに関連するウェブ上のホームページ。  - `id[*]`: エンティティの一意識別子  - `licenses[array]`: ライセンスこのプロパティは法的拘束力を持たず、パッケージがここで定義された条件でライセンスされていることを保証するものではありません。リソースが公開されているライセンス  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `mediatype[string]`: メディアタイプ。このリソースのメディアタイプ。IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)にリストされている有効なメディアタイプであれば何でもよい。  - `name[string]`: 名前。これは、理想的にはurlで使用可能で、人間が読める名前である。名前は'SHOULD'不変であるべきで、つまり親ディスクリプタが更新されたときに'SHOULD NOT'変更されるべきではありません。識別子文字列。小文字の'.'、'_'、'-'、'/'が許される。  - `path[array]`: パス。path' で参照される各データソースの再参照値は、そのリソースが記述するデータのネイティブな再参照表現に見合ったものでなければならない（MUST）。例えば、*Tabular* Data Resourceの場合、'path'の再参照値は配列でなければならない（MUST）。文字列としてのパス、または文字列としてのパスの配列として、このリソースのデータへの参照。  - `profile[string]`: プロファイル。すべてのPackageとResource記述子はプロファイルを持ちます。何も宣言されていない場合のデフォルトのプロファイルは、Packageでは'data-package'、Resourceでは'data-resource'です。この記述子のプロファイル  - `schema[object]`: スキーマ。このリソースのスキーマ  - `sources[array]`: 情報源.このリソースの生のソース  - `title[string]`: タイトル人間が読めるタイトル  - `type[string]`: NGSIエンティティタイプ。これは DataResourceFrictionlessData でなければならない。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-必要なプロパティ  
+必須プロパティ  
 - `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-このデータモデルは、https://frictionlessdata.io/ にあるオリジナルのfrictionlessデータから来ています。いくつかの変更点があります。1) NGSI-LD標準の要求に従い、idとtypeを必須としました。 2) jsonスキーマの構造を、スマートデータモデルの公式フォーマットに合わせました。寄稿マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照してください。互換性を持たせるために、dataプロパティとsourceプロパティはオブジェクトの配列として定義されています。また、型も含まれるようになりました。  
+このデータモデルは、https://frictionlessdata.io/ にあるオリジナルのフリクションレス・データから来ている。いくつかの変更がある。1)NGSI-LD標準が要求しているように、idとtypeが必須になりました。 2)jsonスキーマの構造がスマート・データ・モデルの公式フォーマットに合わせられました。貢献マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照。互換性を持たせるために、データ・プロパティとソース・プロパティはオブジェクトの配列として定義されています。また、型も含まれています。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
-アルファベット順に並びます（クリックで詳細へ）  
+アルファベット順（クリックで詳細表示）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 DataResourceFrictionlessData:    
-  description: 'Data Resource.Converted for Smart Data Models initiative from original frictionless data'    
+  description: Data Resource.Converted for Smart Data Models initiative from original frictionless data    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     bytes:    
-      description: 'Bytes. The size of this resource in bytes'    
-      type: integer    
+      description: Bytes. The size of this resource in bytes    
+      type: number    
       x-ngsi:    
         type: Property    
     data:    
-      description: 'Data. Inline data for this resource'    
+      description: Data. Inline data for this resource    
       items:    
         type: object    
       type: array    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'Description. A text description. Markdown is encouraged'    
+      description: Description. A text description. Markdown is encouraged    
       type: string    
       x-ngsi:    
         type: Property    
     encoding:    
-      description: 'Encoding. The file encoding of this resource'    
+      description: Encoding. The file encoding of this resource    
       type: string    
       x-ngsi:    
         type: Property    
@@ -97,25 +132,29 @@ DataResourceFrictionlessData:
       x-ngsi:    
         type: Property    
     homepage:    
-      description: 'Home Page. The home on the web that is related to this data package'    
+      description: Home Page. The home on the web that is related to this data package    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     licenses:    
-      description: 'Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published'    
+      description: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published    
       items:    
         properties:    
           name:    
@@ -132,7 +171,7 @@ DataResourceFrictionlessData:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -151,9 +190,11 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -175,9 +216,11 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -201,9 +244,11 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -224,9 +269,11 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -250,9 +297,11 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -278,8 +327,10 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     mediatype:    
@@ -306,12 +357,12 @@ DataResourceFrictionlessData:
       x-ngsi:    
         type: Property    
     schema:    
-      description: 'Schema. A schema for this resource'    
+      description: Schema. A schema for this resource    
       type: object    
       x-ngsi:    
         type: Property    
     sources:    
-      description: 'Sources. . The raw sources for this resource'    
+      description: Sources. . The raw sources for this resource    
       items:    
         properties:    
           email:    
@@ -326,12 +377,12 @@ DataResourceFrictionlessData:
       x-ngsi:    
         type: Property    
     title:    
-      description: 'Title. A human-readable title'    
+      description: Title. A human-readable title    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be DataResourceFrictionlessData'    
+      description: NGSI Entity type. It has to be DataResourceFrictionlessData    
       enum:    
         - DataResourceFrictionlessData    
       type: string    
@@ -343,11 +394,11 @@ DataResourceFrictionlessData:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: SDG    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -355,8 +406,8 @@ DataResourceFrictionlessData:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### DataResourceFrictionlessData NGSI-v2 key-value の例  
-ここでは、DataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした例を示す。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
+#### DataResourceFrictionlessData NGSI-v2 キー値の例  
+以下はDataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした例である。これはNGSI-v2と互換性があり、`options=keyValues`を使用すると個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -409,7 +460,7 @@ DataResourceFrictionlessData:
 ```  
 </details>  
 #### DataResourceFrictionlessData NGSI-v2 正規化例  
-以下は、DataResourceFrictionlessDataをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返す。  
+以下は、正規化されたJSON-LD形式のDataResourceFrictionlessDataの例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -505,8 +556,8 @@ DataResourceFrictionlessData:
 }  
 ```  
 </details>  
-#### DataResourceFrictionlessData NGSI-LD key-value の例  
-ここでは、DataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
+#### DataResourceFrictionlessData NGSI-LD キー値の例  
+以下はDataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした例である。options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -562,7 +613,7 @@ DataResourceFrictionlessData:
 ```  
 </details>  
 #### DataResourceFrictionlessData NGSI-LD 正規化例  
-以下は、DataResourceFrictionlessDataをJSON-LD形式で正規化した場合の例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化されたJSON-LD形式のDataResourceFrictionlessDataの例である。これは、オプションを使用しない場合はNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -665,7 +716,7 @@ DataResourceFrictionlessData:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
