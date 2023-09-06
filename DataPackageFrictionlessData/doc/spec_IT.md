@@ -8,19 +8,19 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Descrizione globale: **Pacchetto di dati è una semplice specifica per l'accesso e la consegna dei dati.Convertito per l'iniziativa Smart Data Models da dati originali senza attrito**  
-versione: 0.0.2  
+versione: 0.0.3  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
 <sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
-- `contributors[array]`: Collaboratori. . I collaboratori di questo descrittore  - `created[string]`: Creato. Il datetime deve essere conforme ai formati di stringa per il datetime descritti in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6). Il datetime in cui è stato creato questo descrittore  - `description[string]`: Descrizione. . Una descrizione testuale. Si consiglia l'uso di Markdown  - `homepage[string]`: Pagina iniziale. . La pagina web relativa a questo pacchetto di dati.  - `id[string]`: ID. Un modello di utilizzo comune dei pacchetti di dati è il formato di impacchettamento all'interno di un sistema o di una piattaforma. In questi casi, si desidera un identificatore univoco per un pacchetto per i flussi di lavoro comuni di gestione dei dati, come l'aggiornamento di un pacchetto esistente. Sebbene a livello di specifica non sia possibile convalidare l'unicità globale, i consumatori che utilizzano la proprietà `id` devono garantire che gli identificatori siano unici a livello globale. Proprietà riservata agli identificatori globalmente unici. Esempi di identificatori unici sono gli UUID e i DOI.  - `image[string]`: Immagine. . Un'immagine per rappresentare questo pacchetto  - `keywords[array]`: Parole chiave. . Un elenco di parole chiave che descrivono questo pacchetto  - `licenses[array]`: Licenze. Questa proprietà non è legalmente vincolante e non garantisce che il pacchetto sia concesso in licenza secondo i termini qui definiti. La licenza (o le licenze) con cui questo pacchetto è pubblicato  - `name[string]`: Nome. Idealmente si tratta di un nome utilizzabile via url e leggibile dall'uomo. Il nome `DOVREBBE' essere invariante, cioè NON dovrebbe cambiare quando il descrittore padre viene aggiornato. Una stringa identificativa. Sono ammessi i caratteri minuscoli con `.`, `_`, `-` e `/`.  - `profile[string]`: Profilo. Ogni descrittore di pacchetto e risorsa ha un profilo. Il profilo predefinito, se non viene dichiarato, è `data-package` per i pacchetti e `data-resource` per le risorse. Il profilo di questo descrittore  - `resources[array]`: Risorse dati. . Un `array` di oggetti Data Resource, ciascuno conforme alla specifica [Data Resource](/data-resource/).  - `sources[array]`: Fonti. . Le fonti grezze per questa risorsa  - `title[string]`: Titolo. . Un titolo leggibile dall'uomo  - `type[string]`: Deve essere DataPackageFrictionlessData. Tipo di entità NGSI  <!-- /30-PropertiesList -->  
+- `contributors[array]`: Collaboratori. I collaboratori di questo descrittore  - `created[string]`: Creato. Il datetime deve essere conforme ai formati di stringa per il datetime descritti in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6). Il datetime in cui è stato creato questo descrittore  - `description[string]`: Descrizione. . Una descrizione testuale. Si consiglia l'uso di Markdown  - `homepage[string]`: Pagina iniziale. . La pagina web relativa a questo pacchetto di dati.  - `id[string]`: ID. Un modello di utilizzo comune dei pacchetti di dati è il formato di impacchettamento all'interno di un sistema o di una piattaforma. In questi casi, si desidera un identificatore univoco per un pacchetto per i flussi di lavoro comuni di gestione dei dati, come l'aggiornamento di un pacchetto esistente. Sebbene a livello di specifica non sia possibile convalidare l'unicità globale, i consumatori che utilizzano la proprietà `id` devono garantire che gli identificatori siano unici a livello globale. Proprietà riservata agli identificatori globalmente unici. Esempi di identificatori unici sono gli UUID e i DOI.  - `image[string]`: Immagine. . Un'immagine per rappresentare questo pacchetto  - `keywords[array]`: Parole chiave. . Un elenco di parole chiave che descrivono questo pacchetto  - `licenses[array]`: Licenze. Questa proprietà non è legalmente vincolante e non garantisce che il pacchetto sia concesso in licenza secondo i termini qui definiti. La licenza (o le licenze) con cui questo pacchetto è pubblicato  - `name[string]`: Nome. Idealmente si tratta di un nome utilizzabile via url e leggibile dall'uomo. Il nome `DOVREBBE' essere invariante, cioè NON dovrebbe cambiare quando il descrittore padre viene aggiornato. Una stringa identificativa. Sono ammessi i caratteri minuscoli con `.`, `_`, `-` e `/`.  - `profile[string]`: Profilo. Ogni descrittore di pacchetto e risorsa ha un profilo. Il profilo predefinito, se non viene dichiarato, è `data-package` per i pacchetti e `data-resource` per le risorse. Il profilo di questo descrittore  - `resources[array]`: Risorse di dati. Un `array` di oggetti Data Resource, ciascuno conforme alla specifica [Data Resource](/data-resource/).  - `sources[array]`: Fonti. Le fonti grezze per questa risorsa  - `title[string]`: Titolo. . Un titolo leggibile dall'uomo  - `type[string]`: Deve essere DataPackageFrictionlessData. Tipo di entità NGSI  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
 - `id`  - `resources`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Questo modello di dati deriva dai dati originali di frictionless che si possono trovare su https://frictionlessdata.io/. Ci sono un paio di modifiche. 1) id e tipo sono stati resi obbligatori 2) la struttura dello schema json è stata adattata al formato ufficiale degli Smart Data Models. Vedere il manuale del contributo [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)  
+Questo modello di dati proviene dai dati originali di frictionless che si possono trovare su https://frictionlessdata.io/. Ci sono un paio di modifiche. 1) id e tipo sono stati resi obbligatori 2) la struttura dello schema json è stata adattata al formato ufficiale degli Smart Data Models. Vedere il manuale del contributo [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Modello di dati descrizione delle proprietà  
@@ -30,10 +30,12 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 DataPackageFrictionlessData:    
-  description: 'Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data'    
+  description: Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data    
   properties:    
     contributors:    
-      description: 'Contributors. . The contributors to this descriptor'    
+      description: Contributors. The contributors to this descriptor    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -43,12 +45,12 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     description:    
-      description: 'Description. . A text description. Markdown is encouraged'    
+      description: Description. . A text description. Markdown is encouraged    
       type: string    
       x-ngsi:    
         type: Property    
     homepage:    
-      description: 'Home Page. . The home on the web that is related to this data package'    
+      description: Home Page. . The home on the web that is related to this data package    
       type: string    
       x-ngsi:    
         type: Property    
@@ -58,17 +60,21 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     image:    
-      description: 'Image. . A image to represent this package'    
+      description: Image. . A image to represent this package    
       type: string    
       x-ngsi:    
         type: Property    
     keywords:    
-      description: 'Keywords. . A list of keywords that describe this package'    
+      description: Keywords. . A list of keywords that describe this package    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     licenses:    
-      description: 'Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published'    
+      description: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -83,22 +89,26 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     resources:    
-      description: 'Data Resources. . An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification'    
+      description: 'Data Resources. An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification'    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     sources:    
-      description: 'Sources. . The raw sources for this resource'    
+      description: Sources. The raw sources for this resource    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     title:    
-      description: 'Title. . A human-readable title'    
+      description: Title. . A human-readable title    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'It has to be DataPackageFrictionlessData. NGSI entity type'    
+      description: It has to be DataPackageFrictionlessData. NGSI entity type    
       enum:    
         - DataPackageFrictionlessData    
       type: string    
@@ -110,11 +120,11 @@ DataPackageFrictionlessData:
     - resources    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: SDG    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
