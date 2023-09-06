@@ -7,33 +7,35 @@
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Descripción global: **El paquete de datos es una especificación sencilla para el acceso y la entrega de datos.Convertido para la iniciativa Smart Data Models a partir de los datos originales sin fricción**  
-versión: 0.0.2  
+Descripción general: **Convertido para la iniciativa Smart Data Models a partir de datos originales sin fricción**.  
+versión: 0.0.3  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
-- `contributors[array]`: Colaboradores. . Los colaboradores de este descriptor  - `created[string]`: Creado. La hora de la fecha debe ajustarse a los formatos de cadena para la hora de la fecha como se describe en [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6). La fecha en la que se creó este descriptor  - `description[string]`: Descripción. . Una descripción de texto. Se recomienda el uso de Markdown  - `homepage[string]`: Página de inicio. . El hogar en la web que está relacionado con este paquete de datos  - `id[string]`: ID. Un patrón de uso común para los paquetes de datos es como formato de empaquetado dentro de los límites de un sistema o plataforma. En estos casos, se desea un identificador único para un paquete para los flujos de trabajo comunes de manejo de datos, como la actualización de un paquete existente. Mientras que a nivel de la especificación, la unicidad global no puede ser validada, los consumidores que utilizan la propiedad `id` `DEBEN` asegurar que los identificadores son globalmente únicos. Una propiedad reservada para los identificadores únicos a nivel mundial. Ejemplos de identificadores que son únicos son los UUID y los DOI.  - `image[string]`: Imagen. . Una imagen para representar este paquete  - `keywords[array]`: Palabras clave. . Una lista de palabras clave que describen este paquete  - `licenses[array]`: Licencias. Esta propiedad no es legalmente vinculante y no garantiza que el paquete tenga una licencia en los términos aquí definidos. La(s) licencia(s) bajo las que se publica este paquete  - `name[string]`: Nombre. Lo ideal es que sea un nombre legible por humanos y utilizable en la red. El nombre `DEBE` ser invariable, lo que significa que `NO` debe cambiar cuando se actualiza su descriptor principal. Una cadena de identificación. Se permiten caracteres en minúsculas con `.`, `_`, `-` y `/`.  - `profile[string]`: Perfil. Cada descriptor de Paquete y Recurso tiene un perfil. El perfil por defecto, si no se declara ninguno, es `data-package` para Package y `data-resource` para Resource. El perfil de este descriptor  - `resources[array]`: Recursos de datos. . Un `array` de objetos de Recursos de Datos, cada uno de ellos conforme a la especificación [Data Resource](/data-resource/)  - `sources[array]`: Fuentes. . Las fuentes brutas de este recurso  - `title[string]`: Título. . Un título legible para el ser humano  - `type[string]`: Tiene que ser DataPackageFrictionlessData. Tipo de entidad NGSI  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>.  
+- `contributors[array]`: Colaboradores. Los colaboradores de este descriptor  - `created[string]`: Creado. La fecha y hora debe ajustarse a los formatos de cadena para datetime descritos en [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6). Fecha de creación del descriptor  - `description[string]`: Descripción. . Una descripción de texto. Se recomienda Markdown  - `homepage[string]`: Página de inicio. . La página web relacionada con este paquete de datos  - `id[string]`: ID. Un patrón de uso común para los paquetes de datos es como formato de empaquetado dentro de los límites de un sistema o plataforma. En estos casos, se desea un identificador único para un paquete para flujos de trabajo comunes de manejo de datos, como la actualización de un paquete existente. Aunque a nivel de especificación no se puede validar la unicidad global, los consumidores que utilicen la propiedad `id` `DEBEN` garantizar que los identificadores son globalmente únicos. Propiedad reservada a los identificadores únicos a nivel mundial. Ejemplos de identificadores únicos son los UUID y los DOI.  - `image[string]`: Imagen. . Una imagen para representar este paquete  - `keywords[array]`: Palabras clave. . Una lista de palabras clave que describen este paquete  - `licenses[array]`: Licencias. Esta propiedad no es legalmente vinculante y no garantiza que el paquete tenga licencia en los términos aquí definidos. La(s) licencia(s) bajo las que se publica este paquete  - `name[string]`: Nombre. Lo ideal es que sea un nombre legible por humanos y que se pueda utilizar en la url. El nombre `DEBERÍA` ser invariable, lo que significa que `NO` debería cambiar cuando se actualiza su descriptor padre. Una cadena identificadora. Se permiten caracteres en minúsculas con `.`, `_`, `-` y `/`.  - `profile[string]`: Perfil. Cada descriptor de Paquete y Recurso tiene un perfil. El perfil por defecto, si no se declara ninguno, es `data-package` para Package y `data-resource` para Resource. El perfil de este descriptor  - `resources[array]`: Recursos de datos. Un `array` de objetos Data Resource, cada uno de ellos conforme a la especificación [Data Resource](/data-resource/).  - `sources[array]`: Fuentes. Las fuentes brutas de este recurso  - `title[string]`: Título. . Un título legible  - `type[string]`: Tiene que ser DataPackageFrictionlessData. Tipo de entidad NGSI  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `id`  - `resources`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Este modelo de datos procede de los datos originales sin fricción que se pueden encontrar en https://frictionlessdata.io/. Hay un par de cambios. 1) el id y el tipo se han hecho obligatorios 2)la estructura del esquema json se ha adaptado al formato oficial de los modelos de datos inteligentes. Véase el manual de contribución [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)  
+Este modelo de datos procede de los datos originales sin fricción que pueden encontrarse en https://frictionlessdata.io/. Hay un par de cambios 1) el id y el tipo se han hecho obligatorios 2)la estructura del esquema json se ha adaptado al formato oficial de los Smart Data Models. Véase el manual de contribución [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+## Descripción de las propiedades del modelo de datos  
+Ordenados alfabéticamente (pulse para más detalles)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 DataPackageFrictionlessData:    
-  description: 'Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data'    
+  description: Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data    
   properties:    
     contributors:    
-      description: 'Contributors. . The contributors to this descriptor'    
+      description: Contributors. The contributors to this descriptor    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -43,12 +45,12 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     description:    
-      description: 'Description. . A text description. Markdown is encouraged'    
+      description: Description. . A text description. Markdown is encouraged    
       type: string    
       x-ngsi:    
         type: Property    
     homepage:    
-      description: 'Home Page. . The home on the web that is related to this data package'    
+      description: Home Page. . The home on the web that is related to this data package    
       type: string    
       x-ngsi:    
         type: Property    
@@ -58,17 +60,21 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     image:    
-      description: 'Image. . A image to represent this package'    
+      description: Image. . A image to represent this package    
       type: string    
       x-ngsi:    
         type: Property    
     keywords:    
-      description: 'Keywords. . A list of keywords that describe this package'    
+      description: Keywords. . A list of keywords that describe this package    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     licenses:    
-      description: 'Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published'    
+      description: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -83,22 +89,26 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     resources:    
-      description: 'Data Resources. . An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification'    
+      description: 'Data Resources. An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification'    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     sources:    
-      description: 'Sources. . The raw sources for this resource'    
+      description: Sources. The raw sources for this resource    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     title:    
-      description: 'Title. . A human-readable title'    
+      description: Title. . A human-readable title    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'It has to be DataPackageFrictionlessData. NGSI entity type'    
+      description: It has to be DataPackageFrictionlessData. NGSI entity type    
       enum:    
         - DataPackageFrictionlessData    
       type: string    
@@ -110,11 +120,11 @@ DataPackageFrictionlessData:
     - resources    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: SDG    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -123,7 +133,7 @@ DataPackageFrictionlessData:
 <!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### DataPackageFrictionlessData NGSI-v2 key-values Ejemplo  
-Aquí hay un ejemplo de un DataPackageFrictionlessData en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de un DataPackageFrictionlessData en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -186,7 +196,7 @@ DataPackageFrictionlessData:
 ```  
 </details>  
 #### DataPackageFrictionlessData NGSI-v2 normalizado Ejemplo  
-Este es un ejemplo de un DataPackageFrictionlessData en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un DataPackageFrictionlessData en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -276,7 +286,7 @@ DataPackageFrictionlessData:
 ```  
 </details>  
 #### DataPackageFrictionlessData NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un DataPackageFrictionlessData en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un DataPackageFrictionlessData en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -342,7 +352,7 @@ DataPackageFrictionlessData:
 ```  
 </details>  
 #### DataPackageFrictionlessData NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de un DataPackageFrictionlessData en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un DataPackageFrictionlessData en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -437,7 +447,7 @@ DataPackageFrictionlessData:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
