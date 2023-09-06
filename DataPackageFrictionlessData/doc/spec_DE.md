@@ -7,15 +7,15 @@
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Globale Beschreibung: **Datenpaket ist eine einfache Spezifikation für den Zugang zu und die Bereitstellung von Daten, die für die Initiative Smart Data Models aus den ursprünglichen friktionsfreien Daten umgewandelt wurde**  
-Version: 0.0.2  
+Globale Beschreibung: **Datenpaket ist eine einfache Spezifikation für den Zugriff auf und die Bereitstellung von Daten, die für die Initiative Smart Data Models aus den ursprünglichen friktionsfreien Daten umgewandelt wurde**  
+Version: 0.0.3  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `contributors[array]`: Mitwirkende. . Die Mitwirkenden an diesem Deskriptor  - `created[string]`: Erstellt. Die Datetime muss den in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6) beschriebenen String-Formaten für datetime entsprechen. Der Zeitpunkt, zu dem dieser Deskriptor erstellt wurde  - `description[string]`: Beschreibung. . Eine Textbeschreibung. Markdown wird empfohlen  - `homepage[string]`: Home Page. . Die Homepage im Web, die sich auf dieses Datenpaket bezieht  - `id[string]`: ID. Ein gängiges Verwendungsmuster für Datenpakete ist die Verwendung als Paketierungsformat innerhalb der Grenzen eines Systems oder einer Plattform. In diesen Fällen ist ein eindeutiger Identifikator für ein Paket für allgemeine Datenverarbeitungsabläufe, wie z. B. die Aktualisierung eines bestehenden Pakets, erforderlich. Während auf der Ebene der Spezifikation die globale Eindeutigkeit nicht validiert werden kann, müssen Verbraucher, die die Eigenschaft `id` verwenden, sicherstellen, dass die Bezeichner global eindeutig sind. Eine Eigenschaft, die für global eindeutige Bezeichner reserviert ist. Beispiele für eindeutige Bezeichner sind UUIDs und DOIs.  - `image[string]`: Bild. . Ein Bild zur Darstellung dieses Pakets  - `keywords[array]`: Schlüsselwörter. . Eine Liste von Schlüsselwörtern, die dieses Paket beschreiben  - `licenses[array]`: Lizenzen. Diese Eigenschaft ist nicht rechtsverbindlich und garantiert nicht, dass das Paket unter den hier definierten Bedingungen lizenziert ist. Die Lizenz(en), unter denen dieses Paket veröffentlicht wird  - `name[string]`: Name. Dies ist idealerweise ein url-verwendbarer und von Menschen lesbarer Name. Der Name `SOLLTE` invariant sein, d.h. er `SOLLTE` sich NICHT ändern, wenn der übergeordnete Deskriptor aktualisiert wird. Ein Bezeichner-String. Kleinbuchstaben mit `.`, `_`, `-` und `/` sind erlaubt.  - `profile[string]`: Profil. Jeder Package- und Resource-Deskriptor hat ein Profil. Das Standardprofil, wenn keines deklariert ist, ist `data-package` für Package und `data-resource` für Resource. Das Profil für diesen Deskriptor  - `resources[array]`: Daten-Ressourcen. . Ein "Array" von Datenressourcen-Objekten, die jeweils der [Datenressource](/data-resource/)-Spezifikation entsprechen  - `sources[array]`: Quellen. . Die Rohquellen für diese Ressource  - `title[string]`: Titel. . Ein von Menschen lesbarer Titel  - `type[string]`: Es muss DataPackageFrictionlessData sein. NGSI-Entitätstyp  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `contributors[array]`: Mitwirkende. Die Mitwirkenden an diesem Deskriptor  - `created[string]`: Erstellt. Die Datetime muss den in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6) beschriebenen String-Formaten für datetime entsprechen. Der Zeitpunkt, zu dem dieser Deskriptor erstellt wurde  - `description[string]`: Beschreibung. . Eine Textbeschreibung. Markdown wird empfohlen  - `homepage[string]`: Home Page. . Die Homepage im Web, die sich auf dieses Datenpaket bezieht  - `id[string]`: ID. Ein gängiges Verwendungsmuster für Datenpakete ist die Verwendung als Paketierungsformat innerhalb der Grenzen eines Systems oder einer Plattform. In diesen Fällen ist ein eindeutiger Identifikator für ein Paket für allgemeine Datenverarbeitungsabläufe, wie z. B. die Aktualisierung eines bestehenden Pakets, erwünscht. Während auf der Ebene der Spezifikation die globale Eindeutigkeit nicht validiert werden kann, müssen Verbraucher, die die Eigenschaft `id` verwenden, sicherstellen, dass die Bezeichner global eindeutig sind. Eine Eigenschaft, die für global eindeutige Bezeichner reserviert ist. Beispiele für eindeutige Bezeichner sind UUIDs und DOIs.  - `image[string]`: Bild. . Ein Bild zur Darstellung dieses Pakets  - `keywords[array]`: Schlüsselwörter. . Eine Liste von Schlüsselwörtern, die dieses Paket beschreiben  - `licenses[array]`: Lizenzen. Diese Eigenschaft ist nicht rechtsverbindlich und garantiert nicht, dass das Paket unter den hier definierten Bedingungen lizenziert ist. Die Lizenz(en), unter denen dieses Paket veröffentlicht wird  - `name[string]`: Name. Dies ist idealerweise ein url-verwendbarer und von Menschen lesbarer Name. Der Name `SOLLTE` invariant sein, d.h. er `SOLLTE` sich NICHT ändern, wenn der übergeordnete Deskriptor aktualisiert wird. Ein Bezeichner-String. Kleinbuchstaben mit `.`, `_`, `-` und `/` sind erlaubt.  - `profile[string]`: Profil. Jeder Package- und Resource-Deskriptor hat ein Profil. Das Standardprofil, wenn keines deklariert ist, ist `data-package` für Package und `data-resource` für Resource. Das Profil für diesen Deskriptor  - `resources[array]`: Daten-Ressourcen. Ein "Array" von Datenressourcen-Objekten, die jeweils der Spezifikation [Datenressource](/data-resource/) entsprechen  - `sources[array]`: Quellen. Die Rohquellen für diese Ressource  - `title[string]`: Titel. . Ein von Menschen lesbarer Titel  - `type[string]`: Es muss DataPackageFrictionlessData sein. NGSI-Entitätstyp  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `id`  - `resources`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,10 +30,12 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 DataPackageFrictionlessData:    
-  description: 'Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data'    
+  description: Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data    
   properties:    
     contributors:    
-      description: 'Contributors. . The contributors to this descriptor'    
+      description: Contributors. The contributors to this descriptor    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -43,12 +45,12 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     description:    
-      description: 'Description. . A text description. Markdown is encouraged'    
+      description: Description. . A text description. Markdown is encouraged    
       type: string    
       x-ngsi:    
         type: Property    
     homepage:    
-      description: 'Home Page. . The home on the web that is related to this data package'    
+      description: Home Page. . The home on the web that is related to this data package    
       type: string    
       x-ngsi:    
         type: Property    
@@ -58,17 +60,21 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     image:    
-      description: 'Image. . A image to represent this package'    
+      description: Image. . A image to represent this package    
       type: string    
       x-ngsi:    
         type: Property    
     keywords:    
-      description: 'Keywords. . A list of keywords that describe this package'    
+      description: Keywords. . A list of keywords that describe this package    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     licenses:    
-      description: 'Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published'    
+      description: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -83,22 +89,26 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     resources:    
-      description: 'Data Resources. . An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification'    
+      description: 'Data Resources. An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification'    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     sources:    
-      description: 'Sources. . The raw sources for this resource'    
+      description: Sources. The raw sources for this resource    
+      items:    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
     title:    
-      description: 'Title. . A human-readable title'    
+      description: Title. . A human-readable title    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'It has to be DataPackageFrictionlessData. NGSI entity type'    
+      description: It has to be DataPackageFrictionlessData. NGSI entity type    
       enum:    
         - DataPackageFrictionlessData    
       type: string    
@@ -110,11 +120,11 @@ DataPackageFrictionlessData:
     - resources    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: SDG    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
