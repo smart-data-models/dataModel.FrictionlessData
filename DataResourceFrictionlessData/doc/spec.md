@@ -8,14 +8,21 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Global description: **Data Resource.Converted for Smart Data Models initiative from original frictionless data**  
-version: 0.0.2  
+version: 0.0.3  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `bytes[integer]`: Bytes. The size of this resource in bytes  - `data[array]`: Data. Inline data for this resource  - `description[string]`: Description. A text description. Markdown is encouraged  - `encoding[string]`: Encoding. The file encoding of this resource  - `format[string]`: Format. 'csv', 'xls', 'json' are examples of common formats. The file format of this resource  - `hash[string]`: Hash. The MD5 hash of this resource. Indicate other hashing algorithms with the {algorithm}:{hash} format  - `homepage[string]`: Home Page. The home on the web that is related to this data package  - `id[*]`: Unique identifier of the entity  - `licenses[array]`: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `mediatype[string]`: Media Type. The media type of this resource. Can be any valid media type listed with [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)  - `name[string]`: Name. This is ideally a url-usable and human-readable name. Name 'SHOULD' be invariant, meaning it 'SHOULD NOT' change when its parent descriptor is updated. An identifier string. Lower case characters with '.', '_', '-' and '/' are allowed  - `path[array]`: Path. The dereferenced value of each referenced data source in 'path' 'MUST' be commensurate with a native, dereferenced representation of the data the resource describes. For example, in a *Tabular* Data Resource, this means that the dereferenced value of 'path' 'MUST' be an array. A reference to the data for this resource, as either a path as a string, or an array of paths as strings. of valid URIs  - `profile[string]`: Profile. Every Package and Resource descriptor has a profile. The default profile, if none is declared, is 'data-package' for Package and 'data-resource' for Resource. The profile of this descriptor  - `schema[object]`: Schema. A schema for this resource  - `sources[array]`: Sources. . The raw sources for this resource  - `title[string]`: Title. A human-readable title  - `type[string]`: NGSI Entity type. It has to be DataResourceFrictionlessData  <!-- /30-PropertiesList -->  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government    
+	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `bytes[number]`: Bytes. The size of this resource in bytes  - `data[array]`: Data. Inline data for this resource  - `description[string]`: Description. A text description. Markdown is encouraged  - `encoding[string]`: Encoding. The file encoding of this resource  - `format[string]`: Format. 'csv', 'xls', 'json' are examples of common formats. The file format of this resource  - `hash[string]`: Hash. The MD5 hash of this resource. Indicate other hashing algorithms with the {algorithm}:{hash} format  - `homepage[string]`: Home Page. The home on the web that is related to this data package  - `id[*]`: Unique identifier of the entity  - `licenses[array]`: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `mediatype[string]`: Media Type. The media type of this resource. Can be any valid media type listed with [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)  - `name[string]`: Name. This is ideally a url-usable and human-readable name. Name 'SHOULD' be invariant, meaning it 'SHOULD NOT' change when its parent descriptor is updated. An identifier string. Lower case characters with '.', '_', '-' and '/' are allowed  - `path[array]`: Path. The dereferenced value of each referenced data source in 'path' 'MUST' be commensurate with a native, dereferenced representation of the data the resource describes. For example, in a *Tabular* Data Resource, this means that the dereferenced value of 'path' 'MUST' be an array. A reference to the data for this resource, as either a path as a string, or an array of paths as strings. of valid URIs  - `profile[string]`: Profile. Every Package and Resource descriptor has a profile. The default profile, if none is declared, is 'data-package' for Package and 'data-resource' for Resource. The profile of this descriptor  - `schema[object]`: Schema. A schema for this resource  - `sources[array]`: Sources. . The raw sources for this resource  - `title[string]`: Title. A human-readable title  - `type[string]`: NGSI Entity type. It has to be DataResourceFrictionlessData  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,58 +37,86 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 DataResourceFrictionlessData:    
-  description: 'Data Resource.Converted for Smart Data Models initiative from original frictionless data'    
+  description: Data Resource.Converted for Smart Data Models initiative from original frictionless data    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     bytes:    
-      description: 'Bytes. The size of this resource in bytes'    
-      type: integer    
+      description: Bytes. The size of this resource in bytes    
+      type: number    
       x-ngsi:    
         type: Property    
     data:    
-      description: 'Data. Inline data for this resource'    
+      description: Data. Inline data for this resource    
       items:    
         type: object    
       type: array    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'Description. A text description. Markdown is encouraged'    
+      description: Description. A text description. Markdown is encouraged    
       type: string    
       x-ngsi:    
         type: Property    
     encoding:    
-      description: 'Encoding. The file encoding of this resource'    
+      description: Encoding. The file encoding of this resource    
       type: string    
       x-ngsi:    
         type: Property    
@@ -97,25 +132,29 @@ DataResourceFrictionlessData:
       x-ngsi:    
         type: Property    
     homepage:    
-      description: 'Home Page. The home on the web that is related to this data package'    
+      description: Home Page. The home on the web that is related to this data package    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     licenses:    
-      description: 'Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published'    
+      description: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published    
       items:    
         properties:    
           name:    
@@ -132,7 +171,7 @@ DataResourceFrictionlessData:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -151,9 +190,11 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -175,9 +216,11 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -201,9 +244,11 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -224,9 +269,11 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -250,9 +297,11 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -278,8 +327,10 @@ DataResourceFrictionlessData:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     mediatype:    
@@ -306,12 +357,12 @@ DataResourceFrictionlessData:
       x-ngsi:    
         type: Property    
     schema:    
-      description: 'Schema. A schema for this resource'    
+      description: Schema. A schema for this resource    
       type: object    
       x-ngsi:    
         type: Property    
     sources:    
-      description: 'Sources. . The raw sources for this resource'    
+      description: Sources. . The raw sources for this resource    
       items:    
         properties:    
           email:    
@@ -326,12 +377,12 @@ DataResourceFrictionlessData:
       x-ngsi:    
         type: Property    
     title:    
-      description: 'Title. A human-readable title'    
+      description: Title. A human-readable title    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be DataResourceFrictionlessData'    
+      description: NGSI Entity type. It has to be DataResourceFrictionlessData    
       enum:    
         - DataResourceFrictionlessData    
       type: string    
@@ -343,11 +394,11 @@ DataResourceFrictionlessData:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: SDG    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
