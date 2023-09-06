@@ -7,23 +7,23 @@
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Description globale : **Un schéma de table pour cette ressource, conforme à la spécification Table Schema. Converti pour l'initiative Smart Data Models à partir des données originales de frictionless**.  
+Description globale : **Un schéma de table pour cette ressource, conforme à la spécification Table Schema. Converti pour l'initiative Smart Data Models à partir des données originales frictionless**.  
 version : 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
-- `alternateName[string]`: Un nom alternatif pour cet élément  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `fields[array]`: Un tableau d'objets de champs de schéma de table  - `foreignKeys[array]`:   - `id[*]`: Identifiant unique de l'entité  - `missingValues[array]`: De nombreux ensembles de données arrivent avec des valeurs manquantes, soit parce qu'une valeur n'a pas été collectée, soit parce qu'elle n'a jamais existé. Les valeurs manquantes peuvent être indiquées simplement par le fait que la valeur est vide ; dans d'autres cas, une valeur spéciale peut avoir été utilisée, par exemple '-', 'NaN', '0', '-9999', etc. La propriété 'missingValues' permet d'indiquer que ces valeurs doivent être interprétées comme équivalentes à null. La propriété 'missingValues' permet d'indiquer que ces valeurs doivent être interprétées comme équivalentes à null. Les 'missingValues' sont des chaînes de caractères plutôt que le type de données du champ en question. Cela permet d'effectuer une comparaison avant l'encodage et de faire en sorte que les champs aient des valeurs manquantes qui ne correspondent pas à leur type, par exemple un champ "nombre" dont les valeurs manquantes sont indiquées par "-". La valeur par défaut de "missingValue" pour un champ de type chaîne de caractères est la chaîne vide ''. Pour les champs de type chaîne de caractères, il n'y a pas de valeur par défaut pour "missingValue" (pour les champs de type chaîne de caractères, la chaîne vide '' est une valeur valide et ne doit pas nécessairement indiquer null). Valeurs qui, lorsqu'elles sont rencontrées dans la source, doivent être considérées comme des valeurs "nulles", "non présentes" ou "vides".  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `primaryKey[array]`: Le nom du champ dans la clé primaire "DOIT" être unique et "DOIT" correspondre à un nom de champ dans la table associée. Il est acceptable d'avoir un tableau avec une seule valeur, indiquant que la valeur d'un seul champ est la clé primaire. Une clé primaire est un nom de champ ou un tableau de noms de champs, dont les valeurs "DOIVENT" identifier de manière unique chaque ligne de la table.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type[string]`: il doit être TableSchemaFrictionlessData. Type d'entité NGSI  <!-- /30-PropertiesList -->  
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `alternateName[string]`: Un nom alternatif pour ce poste  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `description[string]`: Une description de l'article  - `fields[array]`: Un tableau d'objets de champs de schéma de table  - `foreignKeys[array]`:   - `id[*]`: Identifiant unique de l'entité  - `missingValues[array]`: De nombreux ensembles de données sont livrés avec des valeurs manquantes, soit parce qu'une valeur n'a pas été collectée, soit parce qu'elle n'a jamais existé. Les valeurs manquantes peuvent être indiquées simplement par le fait que la valeur est vide ; dans d'autres cas, une valeur spéciale peut avoir été utilisée, par exemple "-", "NaN", "0", "-9999", etc. Les valeurs manquantes sont des chaînes de caractères et non le type de données du champ concerné. Cela permet d'effectuer des comparaisons avant le classement et de faire en sorte que les champs aient des valeurs manquantes qui ne correspondent pas à leur type, par exemple un champ de type "nombre" dont les valeurs manquantes sont indiquées par "-". Pour les champs de type chaîne, il n'y a pas de valeur par défaut pour "valeur manquante" (pour les champs de type chaîne, la chaîne vide '' est une valeur valide et n'a pas besoin d'indiquer null). Valeurs qui, lorsqu'elles sont rencontrées dans la source, doivent être considérées comme des valeurs "nulles", "absentes" ou "vides".  - `name[string]`: Le nom de cet élément  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `primaryKey[array]`: Le nom du champ dans la clé primaire "DOIT" être unique et "DOIT" correspondre à un nom de champ dans la table associée. Il est acceptable d'avoir un tableau avec une seule valeur, indiquant que la valeur d'un seul champ est la clé primaire. Une clé primaire est un nom de champ ou un tableau de noms de champs dont les valeurs "DOIVENT" identifier de manière unique chaque ligne de la table.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `type[string]`: il doit s'agir de TableSchemaFrictionlessData. Type d'entité NGSI  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
 - `fields`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Ce modèle de données provient des données originales de frictionless que l'on peut trouver sur https://frictionlessdata.io/. Il y a plusieurs changements. 1) l'id et le type ont été rendus obligatoires dans la mesure où ils sont obligatoires pour la norme NGSI 2) la structure du schéma json a été adaptée au format officiel des modèles de données intelligents. Voir le manuel de contribution [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)  
+Ce modèle de données provient des données frictionless originales que l'on peut trouver à l'adresse https://frictionlessdata.io/. Il y a plusieurs changements. 1) l'id et le type ont été rendus obligatoires dans la mesure où ils sont obligatoires pour la norme NGSI 2) la structure du schéma json a été adaptée au format officiel des Smart Data Models. Voir le manuel de contribution [https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Description des propriétés du modèle de données  
+## Modèle de données description des propriétés  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
@@ -33,34 +33,34 @@ TableSchemaFrictionlessData:
   description: 'A Table Schema for this resource, compliant with the Table Schema specification. Converted for Smart Data Models initiative from original frictionless data'    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     fields:    
-      description: 'An array of Table Schema Field objects'    
+      description: An array of Table Schema Field objects    
       items:    
         type: object    
       type: array    
@@ -74,16 +74,20 @@ TableSchemaFrictionlessData:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &tableschemafrictionlessdata_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     missingValues:    
@@ -94,15 +98,29 @@ TableSchemaFrictionlessData:
       x-ngsi:    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *tableschemafrictionlessdata_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -115,7 +133,7 @@ TableSchemaFrictionlessData:
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -127,12 +145,12 @@ TableSchemaFrictionlessData:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'it has to be TableSchemaFrictionlessData. NGSI entity type'    
+      description: it has to be TableSchemaFrictionlessData. NGSI entity type    
       type: string    
       x-ngsi:    
         type: Property    
@@ -142,7 +160,7 @@ TableSchemaFrictionlessData:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/TableSchemaFrictionlessData/LICENSE.md    
   x-model-schema: ""    
   x-model-tags: SDG    
@@ -154,8 +172,8 @@ TableSchemaFrictionlessData:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## Exemples de charges utiles  
-#### TableSchemaFrictionlessData Valeurs-clés NGSI-v2 Exemple  
-Voici un exemple de TableSchemaFrictionlessData au format JSON-LD comme valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### TableSchemaFrictionlessData Valeurs clés NGSI-v2 Exemple  
+Voici un exemple de TableSchemaFrictionlessData au format JSON-LD en tant que valeurs clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -181,7 +199,7 @@ TableSchemaFrictionlessData:
 ```  
 </details>  
 #### TableSchemaFrictionlessData NGSI-v2 normalisé Exemple  
-Voici un exemple de TableSchemaFrictionlessData au format JSON-LD tel que normalisé. Cette méthode est compatible avec la norme NGSI-v2 lorsqu'elle n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple de TableSchemaFrictionlessData au format JSON-LD tel que normalisé. Ce format est compatible avec les NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -212,8 +230,8 @@ TableSchemaFrictionlessData:
 }  
 ```  
 </details>  
-#### TableSchemaFrictionlessData Valeurs-clés NGSI-LD Exemple  
-Voici un exemple de TableSchemaFrictionlessData au format JSON-LD comme valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### TableSchemaFrictionlessData Valeurs clés NGSI-LD Exemple  
+Voici un exemple de TableSchemaFrictionlessData au format JSON-LD en tant que valeurs clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -279,7 +297,7 @@ TableSchemaFrictionlessData:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+Voir [FAQ 10] (https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse à la question de savoir comment traiter les unités de magnitude.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
