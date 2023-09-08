@@ -10,10 +10,18 @@
         "addressRegion": "https://smartdatamodels.org/addressRegion",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "bytes": "https://smartdatamodels.org/dataModel.FrictionlessData/bytes",
         "caseSensitiveHeader": "https://smartdatamodels.org/dataModel.FrictionlessData/caseSensitiveHeader",
         "commentChar": "https://smartdatamodels.org/dataModel.FrictionlessData/commentChar",
         "contributors": "https://smartdatamodels.org/dataModel.FrictionlessData/contributors",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "created": "https://smartdatamodels.org/dataModel.FrictionlessData/created",
         "csvddfVersion": "https://smartdatamodels.org/dataModel.FrictionlessData/csvddfVersion",
         "data": "ngsi-ld:data",
@@ -24,6 +32,7 @@
         "description": "http://purl.org/dc/terms/description",
         "district": "https://smartdatamodels.org/district",
         "doubleQuote": "https://smartdatamodels.org/dataModel.FrictionlessData/doubleQuote",
+        "email": "https://smartdatamodels.org/email",
         "encoding": "https://smartdatamodels.org/dataModel.FrictionlessData/encoding",
         "escapeChar": "https://smartdatamodels.org/dataModel.FrictionlessData/escapeChar",
         "fields": "https://smartdatamodels.org/dataModel.FrictionlessData/fields",
