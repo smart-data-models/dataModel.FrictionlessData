@@ -3,7 +3,7 @@
   "description": "Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data",
   "$schemaVersion": "0.0.3",
   "$schema": "http://json-schema.org/schema",
-  "id": "https://smart-data-models.github.io/dataModel.FrictionlessData/DataPackageFrictionlessData/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.FrictionlessData/DataPackageFrictionlessData/schema.json",
   "type": "object",
   "modelTags": "SDG",
   "properties": {

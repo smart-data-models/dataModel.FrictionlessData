@@ -3,7 +3,7 @@
   "description": "A Table Schema for this resource, compliant with the Table Schema specification. Converted for Smart Data Models initiative from original frictionless data",
   "$schemaVersion": "0.0.2",
   "$schema": "http://json-schema.org/schema",
-  "id": "https://smart-data-models.github.io/dataModel.FrictionlessData/TableSchemaFrictionlessData/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.FrictionlessData/TableSchemaFrictionlessData/schema.json",
   "type": "object",
   "modelTags": "SDG",
   "allOf": [
