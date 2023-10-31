@@ -58,13 +58,30 @@
     },
     "image": {
       "type": "string",
-      "description": "Property. Image. . A image to represent this package"
+      "description": "Property. Image. A image to represent this package"
     },
     "licenses": {
       "type": "array",
       "description": "Property. Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published",
       "items": {
-        "type": "string"
+        "type": "object",
+        "description": "Property. A license for this descriptor",
+        "properties": {
+            "name": {
+                "type": "string",
+                "description": "Property. MUST be an Open Definition license identifier, see http://licenses.opendefinition.org/",
+                "pattern": "^([-a-zA-Z0-9._])+$"
+            },
+            "path": {
+                "type": "string",
+                "description": "Property. A fully qualified URL, or a POSIX file path",
+                "pattern": "^(?=^[^.\/~])(^((?!\\.{2}).)*$).*$"
+            },
+            "title": {
+                "type": "string",
+                "description": "Property. A human-readable title"
+            }
+        }
       }
     },
     "resources": {
