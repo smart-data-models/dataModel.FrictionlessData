@@ -60,7 +60,7 @@ DataPackageFrictionlessData:
       x-ngsi:    
         type: Property    
     image:    
-      description: Image. . A image to represent this package    
+      description: Image. A image to represent this package    
       type: string    
       x-ngsi:    
         type: Property    
@@ -74,7 +74,28 @@ DataPackageFrictionlessData:
     licenses:    
       description: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published    
       items:    
-        type: string    
+        description: A license for this descriptor    
+        properties:    
+          name:    
+            description: 'MUST be an Open Definition license identifier, see http://licenses.opendefinition.org/'    
+            pattern: ^([-a-zA-Z0-9._])+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          path:    
+            description: 'A fully qualified URL, or a POSIX file path'    
+            pattern: ^(?=^[^./~])(^((?!\.{2}).)*$).*$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          title:    
+            description: A human-readable title    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        type: object    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -122,7 +143,7 @@ DataPackageFrictionlessData:
   x-derived-from: ""    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataPackageFrictionlessData/LICENSE.md    
-  x-model-schema: ""    
+  x-model-schema: https://smart-data-models.github.io/dataModel.FrictionlessData/DataPackageFrictionlessData/schema.json    
   x-model-tags: SDG    
   x-version: 0.0.3    
 ```  
