@@ -81,14 +81,59 @@ DataPackageFrictionlessData:
     resources:
       description: 'Data Resources. An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification'
       items:
-        type: string
+        description: A license for this descriptor
+        properties:
+          name:
+            description: 'MUST be an Open Definition license identifier, see http://licenses.opendefinition.org/'
+            pattern: ^([-a-zA-Z0-9._])+$
+            type: string
+            x-ngsi:
+              type: Property
+          path:
+            description: 'A fully qualified URL, or a POSIX file path'
+            pattern: ^(?=^[^./~])(^((?!\.{2}).)*$).*$
+            type: string
+            x-ngsi:
+              type: Property
+          profile:
+            description: The profile of this descriptor.
+            type: string
+            x-ngsi:
+              type: Property
+        type: object
+        x-ngsi:
+          type: Property
+      minItems: 1
       type: array
       x-ngsi:
         type: Property
     sources:
       description: Sources. The raw sources for this resource
       items:
-        type: string
+        description: A license for this descriptor
+        properties:
+          email:
+            description: An email address
+            format: email
+            type: string
+            x-ngsi:
+              type: Property
+          path:
+            description: 'A fully qualified URL, or a POSIX file path'
+            pattern: ^(?=^[^./~])(^((?!\.{2}).)*$).*$
+            type: string
+            x-ngsi:
+              type: Property
+          title:
+            description: A human-readable title
+            type: string
+            x-ngsi:
+              type: Property
+        required:
+          - title
+        type: object
+        x-ngsi:
+          type: Property
       type: array
       x-ngsi:
         type: Property
