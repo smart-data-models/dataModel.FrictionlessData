@@ -87,15 +87,53 @@
     "resources": {
       "type": "array",
       "description": "Property. Data Resources. An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification",
+      "minItems": 1,
       "items": {
-        "type": "string"
+        "type": "object",
+        "description": "Property. A license for this descriptor",
+        "properties": {
+            "name": {
+                "type": "string",
+                "description": "Property. MUST be an Open Definition license identifier, see http://licenses.opendefinition.org/",
+                "pattern": "^([-a-zA-Z0-9._])+$"
+            },
+            "path": {
+                "type": "string",
+                "description": "Property. A fully qualified URL, or a POSIX file path",
+                "pattern": "^(?=^[^.\/~])(^((?!\\.{2}).)*$).*$"
+            },
+            "profile": {
+                "type": "string",
+                "description": "Property. The profile of this descriptor."
+            }
+        }
       }
     },
     "sources": {
       "type": "array",
       "description": "Property. Sources. The raw sources for this resource",
       "items": {
-        "type": "string"
+        "type": "object",
+        "description": "Property. A license for this descriptor",
+        "properties": {
+            "email": {
+                "type": "string",
+                "description": "Property. An email address",
+                "format": "email"
+            },
+            "path": {
+                "type": "string",
+                "description": "Property. A fully qualified URL, or a POSIX file path",
+                "pattern": "^(?=^[^.\/~])(^((?!\\.{2}).)*$).*$"
+            },
+            "title": {
+                "type": "string",
+                "description": "Property. A human-readable title"
+            }
+        },
+        "required": [
+          "title"
+        ]
       }
     }
   },
