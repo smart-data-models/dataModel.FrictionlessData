@@ -2,11 +2,11 @@
   "id": "urn:ngsi-ld:dataresource:AECS:1234",
   "type": "DataResourceFrictionlessData",
   "bytes": {
-    "type": "number",
+    "type": "Number",
     "value": 2082
   },
   "data": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {},
       {}
@@ -33,7 +33,7 @@
     "value": "https://smartdatamodels.org"
   },
   "licenses": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "name": "CC-BY",
@@ -56,7 +56,7 @@
     "value": "solar-system"
   },
   "path": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "http://example.com/solar-system.csv"
     ]
@@ -66,11 +66,11 @@
     "value": "tabular-data-package"
   },
   "schema": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {}
   },
   "sources": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "title": "Venus",
