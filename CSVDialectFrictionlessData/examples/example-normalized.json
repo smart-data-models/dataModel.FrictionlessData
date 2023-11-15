@@ -30,21 +30,21 @@
     "value": ""
   },
   "owner": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:CSVDialect:items:YPBX:70706198",
       "urn:ngsi-ld:CSVDialect:items:MABG:25535507"
     ]
   },
   "seeAlso": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:CSVDialect:items:YNLD:15120048",
       "urn:ngsi-ld:CSVDialect:items:EFIZ:80683325"
     ]
   },
   "csvddfVersion": {
-    "type": "number",
+    "type": "Number",
     "value": 1.2
   },
   "delimiter": {
@@ -52,7 +52,7 @@
     "value": "%3B"
   },
   "doubleQuote": {
-    "type": "boolean",
+    "type": "Boolean",
     "value": true
   },
   "lineTerminator": {
@@ -72,11 +72,11 @@
     "value": "\\\\"
   },
   "skipInitialSpace": {
-    "type": "boolean",
+    "type": "Boolean",
     "value": false
   },
   "header": {
-    "type": "boolean",
+    "type": "Boolean",
     "value": false
   },
   "commentChar": {
@@ -84,9 +84,7 @@
     "value": "#"
   },
   "caseSensitiveHeader": {
-    "type": "boolean",
+    "type": "Boolean",
     "value": true
   }
 }
-
-
