@@ -29,8 +29,7 @@
     "http://example.com/solar-system.csv"
   ],
   "profile": "tabular-data-package",
-  "schema": {
-  },
+  "schema": {},
   "sources": [
     {
       "title": "Venus",
