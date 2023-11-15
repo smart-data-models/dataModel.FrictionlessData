@@ -2,7 +2,7 @@
   "id": "urn:ngsi-ld:TableSchemaFrictionlessData:XVFE:0034",
   "type": "TableSchemaFrictionlessData",
   "fields": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "name": "first_name",
@@ -18,7 +18,7 @@
     ]
   },
   "primaryKey": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "name"
     ]
