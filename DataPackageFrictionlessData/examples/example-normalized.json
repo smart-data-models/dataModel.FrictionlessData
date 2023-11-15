@@ -2,23 +2,23 @@
   "id": "uri:ngsi-ld:datapackage:001",
   "type": "DataPackageFrictionlessData",
   "name": {
-    "type": "string",
+    "type": "Text",
     "value": "cpi"
   },
   "title": {
-    "type": "string",
+    "type": "Text",
     "value": "Annual Consumer Price Index (CPI)"
   },
   "description": {
-    "type": "string",
+    "type": "Text",
     "value": "Annual Consumer Price Index (CPI) for most countries in the world. Reference year is 2005."
   },
   "profile": {
-    "type": "string",
+    "type": "Text",
     "value": "tabular-data-package"
   },
   "licenses": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "name": "CC-BY-4.0",
@@ -28,7 +28,7 @@
     ]
   },
   "keywords": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "CPI",
       "World",
@@ -38,11 +38,11 @@
     ]
   },
   "version": {
-    "type": "string",
+    "type": "Text",
     "value": "2.0.0"
   },
   "sources": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "title": "The World Bank",
@@ -51,7 +51,7 @@
     ]
   },
   "resources": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "path": "data/cpi.csv",
