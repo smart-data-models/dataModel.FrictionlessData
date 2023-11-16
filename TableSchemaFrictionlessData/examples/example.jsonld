@@ -1,23 +1,23 @@
 {
-    "id": "urn:ngsi-ld:TableSchemaFrictionlessData:XVFE:0034",
-    "type": "TableSchemaFrictionlessData",
-    "fields": [
-        {
-            "name": "first_name",
-            "type": "string",
-            "constraints": {
-                "required": true
-            }
-        },
-        {
-            "name": "age",
-            "type": "integer"
-        }
-    ],
-    "primaryKey": [
-        "name"
-    ],
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:TableSchemaFrictionlessData:XVFE:0034",
+  "type": "TableSchemaFrictionlessData",
+  "fields": [
+    {
+      "name": "first_name",
+      "type": "string",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "age",
+      "type": "integer"
+    }
+  ],
+  "primaryKey": [
+    "name"
+  ],
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"
+  ]
 }
