@@ -1,414 +1,412 @@
-<!-- 10-Header -->  
-[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-エンティティDataResourceFrictionlessData  
-==================================<!-- /10-Header -->  
-<!-- 15-License -->  
-[オープン・ライセンス](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md)  
-[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-<!-- /15-License -->  
-<!-- 20-Description -->  
-グローバルな説明**データリソース.元のフリクションレスデータからスマートデータモデルイニシアチブのために変換された**。  
-バージョン: 0.0.3  
-<!-- /20-Description -->  
-<!-- 30-PropertiesList -->  
-
-## プロパティのリスト  
-
-<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 番地がある地域と、その地域に含まれる地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: その地域がある地域、またその国がある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: 地区とは行政区画の一種で、国によっては地方自治体によって管理されている。    
-	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `bytes[number]`: バイト。このリソースのサイズ（バイト  - `data[array]`: データこのリソースのインラインデータ  - `description[string]`: 説明テキストの説明。Markdownを推奨します。  - `encoding[string]`: エンコーディング。このリソースのファイルエンコーディング  - `format[string]`: フォーマット。csv'、'xls'、'json'が一般的なフォーマットの例です。このリソースのファイル形式  - `hash[string]`: ハッシュ。このリソースのMD5ハッシュ。他のハッシュアルゴリズムを {algorithm}:{hash} 形式で示します。  - `homepage[string]`: ホームページこのデータパッケージに関連するウェブ上のホームページ。  - `id[*]`: エンティティの一意識別子  - `licenses[array]`: ライセンスこのプロパティは法的拘束力を持たず、パッケージがここで定義された条件でライセンスされていることを保証するものではありません。リソースが公開されているライセンス  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `mediatype[string]`: メディアタイプ。このリソースのメディアタイプ。IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)にリストされている有効なメディアタイプであれば何でもよい。  - `name[string]`: 名前。これは、理想的にはurlで使用可能で、人間が読める名前である。名前は'SHOULD'不変であるべきで、つまり親ディスクリプタが更新されたときに'SHOULD NOT'変更されるべきではありません。識別子文字列。小文字の'.'、'_'、'-'、'/'が許される。  - `path[array]`: パス。path' で参照される各データソースの再参照値は、そのリソースが記述するデータのネイティブな再参照表現に見合ったものでなければならない（MUST）。例えば、*Tabular* Data Resourceの場合、'path'の再参照値は配列でなければならない（MUST）。文字列としてのパス、または文字列としてのパスの配列として、このリソースのデータへの参照。  - `profile[string]`: プロファイル。すべてのPackageとResource記述子はプロファイルを持ちます。何も宣言されていない場合のデフォルトのプロファイルは、Packageでは'data-package'、Resourceでは'data-resource'です。この記述子のプロファイル  - `schema[object]`: スキーマ。このリソースのスキーマ  - `sources[array]`: 情報源.このリソースの生のソース  - `title[string]`: タイトル人間が読めるタイトル  - `type[string]`: NGSIエンティティタイプ。これは DataResourceFrictionlessData でなければならない。  <!-- /30-PropertiesList -->  
-<!-- 35-RequiredProperties -->  
-必須プロパティ  
-- `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
-このデータモデルは、https://frictionlessdata.io/ にあるオリジナルのフリクションレス・データから来ている。いくつかの変更がある。1)NGSI-LD標準が要求しているように、idとtypeが必須になりました。 2)jsonスキーマの構造がスマート・データ・モデルの公式フォーマットに合わせられました。貢献マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照。互換性を持たせるために、データ・プロパティとソース・プロパティはオブジェクトの配列として定義されています。また、型も含まれています。  
-<!-- /40-RequiredProperties -->  
-<!-- 50-DataModelHeader -->  
-## プロパティのデータモデル記述  
-アルファベット順（クリックで詳細表示）  
-<!-- /50-DataModelHeader -->  
-<!-- 60-ModelYaml -->  
-<details><summary><strong>full yaml details</strong></summary>    
-```yaml  
-DataResourceFrictionlessData:    
-  description: Data Resource.Converted for Smart Data Models initiative from original frictionless data    
-  properties:    
-    address:    
-      description: The mailing address    
-      properties:    
-        addressCountry:    
-          description: 'The country. For example, Spain'    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/addressCountry    
-            type: Property    
-        addressLocality:    
-          description: 'The locality in which the street address is, and which is in the region'    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/addressLocality    
-            type: Property    
-        addressRegion:    
-          description: 'The region in which the locality is, and which is in the country'    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/addressRegion    
-            type: Property    
-        district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
-          type: string    
-          x-ngsi:    
-            type: Property    
-        postOfficeBoxNumber:    
-          description: 'The post office box number for PO box addresses. For example, 03578'    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/postOfficeBoxNumber    
-            type: Property    
-        postalCode:    
-          description: 'The postal code. For example, 24004'    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/https://schema.org/postalCode    
-            type: Property    
-        streetAddress:    
-          description: The street address    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/streetAddress    
-            type: Property    
-        streetNr:    
-          description: Number identifying a specific property on a public street    
-          type: string    
-          x-ngsi:    
-            type: Property    
-      type: object    
-      x-ngsi:    
-        model: https://schema.org/address    
-        type: Property    
-    areaServed:    
-      description: The geographic area where a service or offered item is provided    
-      type: string    
-      x-ngsi:    
-        model: https://schema.org/Text    
-        type: Property    
-    bytes:    
-      description: Bytes. The size of this resource in bytes    
-      type: number    
-      x-ngsi:    
-        type: Property    
-    data:    
-      description: Data. Inline data for this resource    
-      items:    
-        type: object    
-      type: array    
-      x-ngsi:    
-        type: Property    
-    description:    
-      description: Description. A text description. Markdown is encouraged    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    encoding:    
-      description: Encoding. The file encoding of this resource    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    format:    
-      description: 'Format. ''csv'', ''xls'', ''json'' are examples of common formats. The file format of this resource'    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    hash:    
-      description: 'Hash. The MD5 hash of this resource. Indicate other hashing algorithms with the {algorithm}:{hash} format'    
-      pattern: ^([^:]+:[a-fA-F0-9]+|[a-fA-F0-9]{32}|)$    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    homepage:    
-      description: Home Page. The home on the web that is related to this data package    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    id:    
-      anyOf:    
-        - description: Identifier format of any NGSI entity    
-          maxLength: 256    
-          minLength: 1    
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-          type: string    
-          x-ngsi:    
-            type: Property    
-        - description: Identifier format of any NGSI entity    
-          format: uri    
-          type: string    
-          x-ngsi:    
-            type: Property    
-      description: Unique identifier of the entity    
-      x-ngsi:    
-        type: Property    
-    licenses:    
-      description: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published    
-      items:    
-        properties:    
-          name:    
-            type: string    
-          path:    
-            type: string    
-          title:    
-            type: string    
-        type: object    
-      minItems: 1    
-      type: array    
-      x-ngsi:    
-        type: Property    
-    location:    
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-      oneOf:    
-        - description: Geojson reference to the item. Point    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                type: number    
-              minItems: 2    
-              type: array    
-            type:    
-              enum:    
-                - Point    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON Point    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-        - description: Geojson reference to the item. LineString    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  type: number    
-                minItems: 2    
-                type: array    
-              minItems: 2    
-              type: array    
-            type:    
-              enum:    
-                - LineString    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON LineString    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-        - description: Geojson reference to the item. Polygon    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  items:    
-                    type: number    
-                  minItems: 2    
-                  type: array    
-                minItems: 4    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - Polygon    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON Polygon    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-        - description: Geojson reference to the item. MultiPoint    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  type: number    
-                minItems: 2    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - MultiPoint    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON MultiPoint    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-        - description: Geojson reference to the item. MultiLineString    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  items:    
-                    type: number    
-                  minItems: 2    
-                  type: array    
-                minItems: 2    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - MultiLineString    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON MultiLineString    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-        - description: Geojson reference to the item. MultiLineString    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  items:    
-                    items:    
-                      type: number    
-                    minItems: 2    
-                    type: array    
-                  minItems: 4    
-                  type: array    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - MultiPolygon    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON MultiPolygon    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-      x-ngsi:    
-        type: GeoProperty    
-    mediatype:    
-      description: 'Media Type. The media type of this resource. Can be any valid media type listed with [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)'    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    name:    
-      description: 'Name. This is ideally a url-usable and human-readable name. Name ''SHOULD'' be invariant, meaning it ''SHOULD NOT'' change when its parent descriptor is updated. An identifier string. Lower case characters with ''.'', ''_'', ''-'' and ''/'' are allowed'    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    path:    
-      description: 'Path. The dereferenced value of each referenced data source in ''path'' ''MUST'' be commensurate with a native, dereferenced representation of the data the resource describes. For example, in a *Tabular* Data Resource, this means that the dereferenced value of ''path'' ''MUST'' be an array. A reference to the data for this resource, as either a path as a string, or an array of paths as strings. of valid URIs'    
-      items:    
-        type: string    
-      minItems: 1    
-      type: array    
-      x-ngsi:    
-        type: Property    
-    profile:    
-      description: 'Profile. Every Package and Resource descriptor has a profile. The default profile, if none is declared, is ''data-package'' for Package and ''data-resource'' for Resource. The profile of this descriptor'    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    schema:    
-      description: Schema. A schema for this resource    
-      type: object    
-      x-ngsi:    
-        type: Property    
-    sources:    
-      description: Sources. . The raw sources for this resource    
-      items:    
-        properties:    
-          email:    
-            format: idn-email    
-            type: string    
-          path:    
-            type: string    
-          title:    
-            type: string    
-        type: object    
-      type: array    
-      x-ngsi:    
-        type: Property    
-    title:    
-      description: Title. A human-readable title    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    type:    
-      description: NGSI Entity type. It has to be DataResourceFrictionlessData    
-      enum:    
-        - DataResourceFrictionlessData    
-      type: string    
-      x-ngsi:    
-        type: Property    
-  required:    
-    - name    
-    - id    
-    - type    
-  type: object    
-  x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
-  x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md    
-  x-model-schema: ""    
-  x-model-tags: SDG    
-  x-version: 0.0.3    
-```  
-</details>    
-<!-- /60-ModelYaml -->  
-<!-- 70-MiddleNotes -->  
-<!-- /70-MiddleNotes -->  
-<!-- 80-Examples -->  
-## ペイロードの例  
-#### DataResourceFrictionlessData NGSI-v2 キー値の例  
-以下はDataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした例である。これはNGSI-v2と互換性があり、`options=keyValues`を使用すると個々のエンティティのコンテキストデータを返す。  
-<details><summary><strong>show/hide example</strong></summary>    
+<!-- 10-Header -->    
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)    
+エンティティDataResourceFrictionlessData    
+==================================<!-- /10-Header -->    
+<!-- 15-License -->    
+[オープン・ライセンス](https://github.com/smart-data-models//dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md)    
+[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)    
+<!-- /15-License -->    
+<!-- 20-Description -->    
+グローバルな説明**データリソース.元のフリクションレスデータからスマートデータモデルイニシアチブのために変換された**。    
+バージョン: 0.0.3    
+<!-- /20-Description -->    
+<!-- 30-PropertiesList -->    
+## プロパティのリスト    
+<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。    
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)    
+	- `addressLocality[string]`: 番地がある地域と、その地域に含まれる地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    
+	- `addressRegion[string]`: その地域がある地域、またその国がある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    
+	- `district[string]`: 地区とは行政区画の一種で、国によっては地方自治体によって管理されている。      
+	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    
+	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    
+	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    
+- `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `bytes[number]`: バイト。このリソースのサイズ（バイト  - `data[array]`: データこのリソースのインラインデータ  - `description[string]`: 説明テキストの説明。Markdownを推奨します。  - `encoding[string]`: エンコーディング。このリソースのファイルエンコーディング  - `format[string]`: フォーマット。csv'、'xls'、'json'が一般的なフォーマットの例です。このリソースのファイル形式  - `hash[string]`: ハッシュ。このリソースのMD5ハッシュ。他のハッシュアルゴリズムを {algorithm}:{hash} 形式で示します。  - `homepage[string]`: ホームページこのデータパッケージに関連するウェブ上のホームページ。  - `id[*]`: エンティティの一意識別子  - `licenses[array]`: ライセンスこのプロパティは法的拘束力を持たず、パッケージがここで定義された条件でライセンスされていることを保証するものではありません。リソースが公開されているライセンス  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `mediatype[string]`: メディアタイプ。このリソースのメディアタイプ。IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)にリストされている有効なメディアタイプであれば何でもよい。  - `name[string]`: 名前。これは、理想的にはurlで使用可能で、人間が読める名前である。名前は'SHOULD'不変であるべきで、つまり親ディスクリプタが更新されたときに'SHOULD NOT'変更されるべきではありません。識別子文字列。小文字の'.'、'_'、'-'、'/'が許される。  - `path[array]`: パス。path' で参照される各データソースの再参照値は、そのリソースが記述するデータのネイティブな再参照表現に見合ったものでなければならない（MUST）。例えば、*Tabular* Data Resourceの場合、'path'の再参照値は配列でなければならない（MUST）。文字列としてのパス、または文字列としてのパスの配列として、このリソースのデータへの参照。  - `profile[string]`: プロファイル。すべてのPackageとResource記述子はプロファイルを持ちます。何も宣言されていない場合のデフォルトのプロファイルは、Packageでは'data-package'、Resourceでは'data-resource'です。この記述子のプロファイル  - `schema[object]`: スキーマ。このリソースのスキーマ  - `sources[array]`: 情報源.このリソースの生のソース  - `title[string]`: タイトル人間が読めるタイトル  - `type[string]`: NGSIエンティティタイプ。これは DataResourceFrictionlessData でなければならない。  <!-- /30-PropertiesList -->    
+<!-- 35-RequiredProperties -->    
+必須プロパティ    
+- `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->    
+<!-- 40-RequiredProperties -->    
+このデータモデルは、https://frictionlessdata.io/ にあるオリジナルのフリクションレス・データから来ている。いくつかの変更がある。1)NGSI-LD標準が要求しているように、idとtypeが必須になりました。 2)jsonスキーマの構造がスマート・データ・モデルの公式フォーマットに合わせられました。貢献マニュアル[https://bit.ly/contribution_manual](https://bit.ly/contribution_manual)を参照。互換性を持たせるために、データ・プロパティとソース・プロパティはオブジェクトの配列として定義されています。また、型も含まれています。    
+<!-- /40-RequiredProperties -->    
+<!-- 50-DataModelHeader -->    
+## プロパティのデータモデル記述    
+アルファベット順（クリックで詳細表示）    
+<!-- /50-DataModelHeader -->    
+<!-- 60-ModelYaml -->    
+<details><summary><strong>full yaml details</strong></summary>      
+```yaml    
+DataResourceFrictionlessData:      
+  description: Data Resource.Converted for Smart Data Models initiative from original frictionless data      
+  properties:      
+    address:      
+      description: The mailing address      
+      properties:      
+        addressCountry:      
+          description: 'The country. For example, Spain'      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/addressCountry      
+            type: Property      
+        addressLocality:      
+          description: 'The locality in which the street address is, and which is in the region'      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/addressLocality      
+            type: Property      
+        addressRegion:      
+          description: 'The region in which the locality is, and which is in the country'      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/addressRegion      
+            type: Property      
+        district:      
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'      
+          type: string      
+          x-ngsi:      
+            type: Property      
+        postOfficeBoxNumber:      
+          description: 'The post office box number for PO box addresses. For example, 03578'      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/postOfficeBoxNumber      
+            type: Property      
+        postalCode:      
+          description: 'The postal code. For example, 24004'      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/https://schema.org/postalCode      
+            type: Property      
+        streetAddress:      
+          description: The street address      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/streetAddress      
+            type: Property      
+        streetNr:      
+          description: Number identifying a specific property on a public street      
+          type: string      
+          x-ngsi:      
+            type: Property      
+      type: object      
+      x-ngsi:      
+        model: https://schema.org/address      
+        type: Property      
+    areaServed:      
+      description: The geographic area where a service or offered item is provided      
+      type: string      
+      x-ngsi:      
+        model: https://schema.org/Text      
+        type: Property      
+    bytes:      
+      description: Bytes. The size of this resource in bytes      
+      type: number      
+      x-ngsi:      
+        type: Property      
+    data:      
+      description: Data. Inline data for this resource      
+      items:      
+        type: object      
+      type: array      
+      x-ngsi:      
+        type: Property      
+    description:      
+      description: Description. A text description. Markdown is encouraged      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    encoding:      
+      description: Encoding. The file encoding of this resource      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    format:      
+      description: 'Format. ''csv'', ''xls'', ''json'' are examples of common formats. The file format of this resource'      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    hash:      
+      description: 'Hash. The MD5 hash of this resource. Indicate other hashing algorithms with the {algorithm}:{hash} format'      
+      pattern: ^([^:]+:[a-fA-F0-9]+|[a-fA-F0-9]{32}|)$      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    homepage:      
+      description: Home Page. The home on the web that is related to this data package      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    id:      
+      anyOf:      
+        - description: Identifier format of any NGSI entity      
+          maxLength: 256      
+          minLength: 1      
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$      
+          type: string      
+          x-ngsi:      
+            type: Property      
+        - description: Identifier format of any NGSI entity      
+          format: uri      
+          type: string      
+          x-ngsi:      
+            type: Property      
+      description: Unique identifier of the entity      
+      x-ngsi:      
+        type: Property      
+    licenses:      
+      description: Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published      
+      items:      
+        properties:      
+          name:      
+            type: string      
+          path:      
+            type: string      
+          title:      
+            type: string      
+        type: object      
+      minItems: 1      
+      type: array      
+      x-ngsi:      
+        type: Property      
+    location:      
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'      
+      oneOf:      
+        - description: Geojson reference to the item. Point      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                type: number      
+              minItems: 2      
+              type: array      
+            type:      
+              enum:      
+                - Point      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON Point      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+        - description: Geojson reference to the item. LineString      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                items:      
+                  type: number      
+                minItems: 2      
+                type: array      
+              minItems: 2      
+              type: array      
+            type:      
+              enum:      
+                - LineString      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON LineString      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+        - description: Geojson reference to the item. Polygon      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                items:      
+                  items:      
+                    type: number      
+                  minItems: 2      
+                  type: array      
+                minItems: 4      
+                type: array      
+              type: array      
+            type:      
+              enum:      
+                - Polygon      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON Polygon      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+        - description: Geojson reference to the item. MultiPoint      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                items:      
+                  type: number      
+                minItems: 2      
+                type: array      
+              type: array      
+            type:      
+              enum:      
+                - MultiPoint      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON MultiPoint      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+        - description: Geojson reference to the item. MultiLineString      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                items:      
+                  items:      
+                    type: number      
+                  minItems: 2      
+                  type: array      
+                minItems: 2      
+                type: array      
+              type: array      
+            type:      
+              enum:      
+                - MultiLineString      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON MultiLineString      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+        - description: Geojson reference to the item. MultiLineString      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                items:      
+                  items:      
+                    items:      
+                      type: number      
+                    minItems: 2      
+                    type: array      
+                  minItems: 4      
+                  type: array      
+                type: array      
+              type: array      
+            type:      
+              enum:      
+                - MultiPolygon      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON MultiPolygon      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+      x-ngsi:      
+        type: GeoProperty      
+    mediatype:      
+      description: 'Media Type. The media type of this resource. Can be any valid media type listed with [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)'      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    name:      
+      description: 'Name. This is ideally a url-usable and human-readable name. Name ''SHOULD'' be invariant, meaning it ''SHOULD NOT'' change when its parent descriptor is updated. An identifier string. Lower case characters with ''.'', ''_'', ''-'' and ''/'' are allowed'      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    path:      
+      description: 'Path. The dereferenced value of each referenced data source in ''path'' ''MUST'' be commensurate with a native, dereferenced representation of the data the resource describes. For example, in a *Tabular* Data Resource, this means that the dereferenced value of ''path'' ''MUST'' be an array. A reference to the data for this resource, as either a path as a string, or an array of paths as strings. of valid URIs'      
+      items:      
+        type: string      
+      minItems: 1      
+      type: array      
+      x-ngsi:      
+        type: Property      
+    profile:      
+      description: 'Profile. Every Package and Resource descriptor has a profile. The default profile, if none is declared, is ''data-package'' for Package and ''data-resource'' for Resource. The profile of this descriptor'      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    schema:      
+      description: Schema. A schema for this resource      
+      type: object      
+      x-ngsi:      
+        type: Property      
+    sources:      
+      description: Sources. . The raw sources for this resource      
+      items:      
+        properties:      
+          email:      
+            format: idn-email      
+            type: string      
+          path:      
+            type: string      
+          title:      
+            type: string      
+        type: object      
+      type: array      
+      x-ngsi:      
+        type: Property      
+    title:      
+      description: Title. A human-readable title      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    type:      
+      description: NGSI Entity type. It has to be DataResourceFrictionlessData      
+      enum:      
+        - DataResourceFrictionlessData      
+      type: string      
+      x-ngsi:      
+        type: Property      
+  required:      
+    - name      
+    - id      
+    - type      
+  type: object      
+  x-derived-from: ""      
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'      
+  x-license-url: https://github.com/smart-data-models/dataModel.FrictionlessData/blob/master/DataResourceFrictionlessData/LICENSE.md      
+  x-model-schema: ""      
+  x-model-tags: SDG      
+  x-version: 0.0.3      
+```    
+</details>      
+<!-- /60-ModelYaml -->    
+<!-- 70-MiddleNotes -->    
+<!-- /70-MiddleNotes -->    
+<!-- 80-Examples -->    
+## ペイロードの例    
+#### DataResourceFrictionlessData NGSI-v2 キー値の例    
+以下はDataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした例である。これはNGSI-v2と互換性があり、`options=keyValues`を使用すると個々のエンティティのコンテキストデータを返す。    
+<details><summary><strong>show/hide example</strong></summary>      
 ```json  
 {  
   "id": "urn:ngsi-ld:dataresource:AECS:1234",  
@@ -441,8 +439,7 @@ DataResourceFrictionlessData:
     "http://example.com/solar-system.csv"  
   ],  
   "profile": "tabular-data-package",  
-  "schema": {  
-  },  
+  "schema": {},  
   "sources": [  
     {  
       "title": "Venus",  
@@ -458,20 +455,20 @@ DataResourceFrictionlessData:
   "title": "The Solar System"  
 }  
 ```  
-</details>  
-#### DataResourceFrictionlessData NGSI-v2 正規化例  
-以下は、正規化されたJSON-LD形式のDataResourceFrictionlessDataの例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
-<details><summary><strong>show/hide example</strong></summary>    
+</details>    
+#### DataResourceFrictionlessData NGSI-v2 正規化例    
+以下は、正規化されたJSON-LD形式のDataResourceFrictionlessDataの例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。    
+<details><summary><strong>show/hide example</strong></summary>      
 ```json  
 {  
   "id": "urn:ngsi-ld:dataresource:AECS:1234",  
   "type": "DataResourceFrictionlessData",  
   "bytes": {  
-    "type": "number",  
+    "type": "Number",  
     "value": 2082  
   },  
   "data": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       {},  
       {}  
@@ -498,7 +495,7 @@ DataResourceFrictionlessData:
     "value": "https://smartdatamodels.org"  
   },  
   "licenses": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       {  
         "name": "CC-BY",  
@@ -521,7 +518,7 @@ DataResourceFrictionlessData:
     "value": "solar-system"  
   },  
   "path": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "http://example.com/solar-system.csv"  
     ]  
@@ -531,11 +528,11 @@ DataResourceFrictionlessData:
     "value": "tabular-data-package"  
   },  
   "schema": {  
-    "type": "object",  
+    "type": "StructuredValue",  
     "value": {}  
   },  
   "sources": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       {  
         "title": "Venus",  
@@ -555,66 +552,66 @@ DataResourceFrictionlessData:
   }  
 }  
 ```  
-</details>  
-#### DataResourceFrictionlessData NGSI-LD キー値の例  
-以下はDataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした例である。options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
-<details><summary><strong>show/hide example</strong></summary>    
+</details>    
+#### DataResourceFrictionlessData NGSI-LD キー値の例    
+以下はDataResourceFrictionlessDataをJSON-LD形式でkey-valuesとした例である。options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。    
+<details><summary><strong>show/hide example</strong></summary>      
 ```json  
 {  
-    "id": "urn:ngsi-ld:dataresource:AECS:1234",  
-    "type": "DataResourceFrictionlessData",  
-    "bytes": 2082,  
-    "data": [  
-        {},  
-        {}  
-    ],  
-    "description": "My favourite data about the solar system.",  
-    "encoding": "utf-8",  
-    "format": "csv",  
-    "hash": "SHA256:5262f12512590031bbcc9a430452bfd75c2791ad6771320bb4b5728bfb78c4d0",  
-    "homepage": "https://smartdatamodels.org",  
-    "licenses": [  
-        {  
-            "name": "CC-BY",  
-            "title": "creative commons attribution",  
-            "path": "https://creativecommons.org/licenses/by/4.0/deed.en"  
-        },  
-        {  
-            "name": "odc-pddl-1.0",  
-            "path": "http://opendatacommons.org/licenses/pddl/",  
-            "title": "Open Data Commons Public Domain Dedication and License v1.0"  
-        }  
-    ],  
-    "mediatype": "text/csv",  
-    "name": "solar-system",  
-    "path": [  
-        "http://example.com/solar-system.csv"  
-    ],  
-    "profile": "tabular-data-package",  
-    "schema": {},  
-    "sources": [  
-        {  
-            "title": "Venus",  
-            "path": "https://smartdatamodels.org/venus",  
-            "email": "venus@smartdatamodels.org"  
-        },  
-        {  
-            "title": "Jupiter",  
-            "path": "https://smartdatamodels.org/jupiter",  
-            "email": "jupiter@smartdatamodels.org"  
-        }  
-    ],  
-    "title": "The Solar System",  
-    "@context": [  
-        "https://smartdatamodels.org/context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:dataresource:AECS:1234",  
+  "type": "DataResourceFrictionlessData",  
+  "bytes": 2082,  
+  "data": [  
+    {},  
+    {}  
+  ],  
+  "description": "My favourite data about the solar system.",  
+  "encoding": "utf-8",  
+  "format": "csv",  
+  "hash": "SHA256:5262f12512590031bbcc9a430452bfd75c2791ad6771320bb4b5728bfb78c4d0",  
+  "homepage": "https://smartdatamodels.org",  
+  "licenses": [  
+    {  
+      "name": "CC-BY",  
+      "title": "creative commons attribution",  
+      "path": "https://creativecommons.org/licenses/by/4.0/deed.en"  
+    },  
+    {  
+      "name": "odc-pddl-1.0",  
+      "path": "http://opendatacommons.org/licenses/pddl/",  
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"  
+    }  
+  ],  
+  "mediatype": "text/csv",  
+  "name": "solar-system",  
+  "path": [  
+    "http://example.com/solar-system.csv"  
+  ],  
+  "profile": "tabular-data-package",  
+  "schema": {},  
+  "sources": [  
+    {  
+      "title": "Venus",  
+      "path": "https://smartdatamodels.org/venus",  
+      "email": "venus@smartdatamodels.org"  
+    },  
+    {  
+      "title": "Jupiter",  
+      "path": "https://smartdatamodels.org/jupiter",  
+      "email": "jupiter@smartdatamodels.org"  
+    }  
+  ],  
+  "title": "The Solar System",  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"  
+  ]  
 }  
 ```  
-</details>  
-#### DataResourceFrictionlessData NGSI-LD 正規化例  
-以下は、正規化されたJSON-LD形式のDataResourceFrictionlessDataの例である。これは、オプションを使用しない場合はNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
-<details><summary><strong>show/hide example</strong></summary>    
+</details>    
+#### DataResourceFrictionlessData NGSI-LD 正規化例    
+以下は、正規化されたJSON-LD形式のDataResourceFrictionlessDataの例である。これは、オプションを使用しない場合はNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。    
+<details><summary><strong>show/hide example</strong></summary>      
 ```json  
 {  
     "id": "urn:ngsi-ld:dataresource:AECS:1234",  
@@ -712,12 +709,12 @@ DataResourceFrictionlessData:
     ]  
 }  
 ```  
-</details><!-- /80-Examples -->  
-<!-- 90-FooterNotes -->  
-<!-- /90-FooterNotes -->  
-<!-- 95-Units -->  
-マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
-<!-- /95-Units -->  
-<!-- 97-LastFooter -->  
----  
-[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
+</details><!-- /80-Examples -->    
+<!-- 90-FooterNotes -->    
+<!-- /90-FooterNotes -->    
+<!-- 95-Units -->    
+マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。    
+<!-- /95-Units -->    
+<!-- 97-LastFooter -->    
+---    
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->    
