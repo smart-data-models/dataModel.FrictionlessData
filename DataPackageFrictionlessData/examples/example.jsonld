@@ -53,7 +53,6 @@
     }
   ],
   "title": "Annual Consumer Price Index (CPI)",
-  "version": "2.0.0",
   "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"
   ]
