@@ -37,10 +37,6 @@
       "The World Bank"
     ]
   },
-  "version": {
-    "type": "Text",
-    "value": "2.0.0"
-  },
   "sources": {
     "type": "StructuredValue",
     "value": [
