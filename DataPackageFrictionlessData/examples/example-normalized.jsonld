@@ -77,10 +77,6 @@
         "type": "Property",
         "value": "Annual Consumer Price Index (CPI)"
     },
-    "version": {
-        "type": "Property",
-        "value": "2.0.0"
-    },
     "@context": [
         "https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"
     ]
