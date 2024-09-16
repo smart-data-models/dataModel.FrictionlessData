@@ -1,145 +1,145 @@
 {
-  "title": "Smart Data Models - Data Package",
-  "description": "Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data",
-  "$schemaVersion": "0.0.3",
-  "$schema": "http://json-schema.org/schema",
-  "$id": "https://smart-data-models.github.io/dataModel.FrictionlessData/DataPackageFrictionlessData/schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schemaVersion": "0.3.4",
+  "modelTags": "IUDX",
+  "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
+  "title": "Weather Observed schema - Smart Data Models",
+  "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
   "type": "object",
-  "modelTags": "SDG",
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": [
-        "DataPackageFrictionlessData"
-      ],
-      "description": "Property. It has to be DataPackageFrictionlessData. NGSI entity type"
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
-    "profile": {
-      "type": "string",
-      "description": "Property. Profile. Every Package and Resource descriptor has a profile. The default profile, if none is declared, is `data-package` for Package and `data-resource` for Resource. The profile of this descriptor"
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
-    "name": {
-      "type": "string",
-      "description": "Property. Name. This is ideally a url-usable and human-readable name. Name `SHOULD` be invariant, meaning it `SHOULD NOT` change when its parent descriptor is updated. An identifier string. Lower case characters with `.`, `_`, `-` and `/` are allowed"
+    {
+      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
     },
-    "id": {
-      "type": "string",
-      "description": "Property. ID. A common usage pattern for Data Packages is as a packaging format within the bounds of a system or platform. In these cases, a unique identifier for a package is desired for common data handling workflows, such as updating an existing package. While at the level of the specification, global uniqueness cannot be validated, consumers using the `id` property `MUST` ensure identifiers are globally unique. A property reserved for globally unique identifiers. Examples of identifiers that are unique include UUIDs and DOIs"
-    },
-    "title": {
-      "type": "string",
-      "description": "Property. Title. . A human-readable title"
-    },
-    "description": {
-      "type": "string",
-      "description": "Property. Description. . A text description. Markdown is encouraged"
-    },
-    "homepage": {
-      "type": "string",
-      "description": "Property. Home Page. . The home on the web that is related to this data package"
-    },
-    "created": {
-      "type": "string",
-      "description": "Property. Created. The datetime must conform to the string formats for datetime as described in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6). The datetime on which this descriptor was created"
-    },
-    "contributors": {
-      "type": "array",
-      "description": "Property. Contributors. The contributors to this descriptor",
-      "items": {
-        "type": "string"
-      }
-    },
-    "keywords": {
-      "type": "array",
-      "description": "Property. Keywords. . A list of keywords that describe this package",
-      "items": {
-        "type": "string"
-      }
-    },
-    "image": {
-      "type": "string",
-      "description": "Property. Image. A image to represent this package"
-    },
-    "licenses": {
-      "type": "array",
-      "description": "Property. Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which this package is published",
-      "items": {
-        "type": "object",
-        "description": "Property. A license for this descriptor",
-        "properties": {
-            "name": {
-                "type": "string",
-                "description": "Property. MUST be an Open Definition license identifier, see http://licenses.opendefinition.org/",
-                "pattern": "^([-a-zA-Z0-9._])+$"
-            },
-            "path": {
-                "type": "string",
-                "description": "Property. A fully qualified URL, or a POSIX file path",
-                "pattern": "^(?=^[^.\/~])(^((?!\\.{2}).)*$).*$"
-            },
-            "title": {
-                "type": "string",
-                "description": "Property. A human-readable title"
-            }
-        }
-      }
-    },
-    "resources": {
-      "type": "array",
-      "description": "Property. Data Resources. An `array` of Data Resource objects, each compliant with the [Data Resource](/data-resource/) specification",
-      "minItems": 1,
-      "items": {
-        "type": "object",
-        "description": "Property. A license for this descriptor",
-        "properties": {
-            "name": {
-                "type": "string",
-                "description": "Property. MUST be an Open Definition license identifier, see http://licenses.opendefinition.org/",
-                "pattern": "^([-a-zA-Z0-9._])+$"
-            },
-            "path": {
-                "type": "string",
-                "description": "Property. A fully qualified URL, or a POSIX file path",
-                "pattern": "^(?=^[^.\/~])(^((?!\\.{2}).)*$).*$"
-            },
-            "profile": {
-                "type": "string",
-                "description": "Property. The profile of this descriptor."
-            }
-        }
-      }
-    },
-    "sources": {
-      "type": "array",
-      "description": "Property. Sources. The raw sources for this resource",
-      "items": {
-        "type": "object",
-        "description": "Property. A license for this descriptor",
-        "properties": {
-            "email": {
-                "type": "string",
-                "description": "Property. An email address",
-                "format": "email"
-            },
-            "path": {
-                "type": "string",
-                "description": "Property. A fully qualified URL, or a POSIX file path",
-                "pattern": "^(?=^[^.\/~])(^((?!\\.{2}).)*$).*$"
-            },
-            "title": {
-                "type": "string",
-                "description": "Property. A human-readable title"
-            }
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "WeatherObserved"
+          ],
+          "description": "Property. NGSI Entity type. It has to be WeatherObserved"
         },
-        "required": [
-          "title"
-        ]
+        "dateObserved": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
+        },
+        "precipitation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
+        },
+        "solarRadiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
+        },
+        "directIrradiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:'w/m2'"
+        },
+        "diffuseIrradiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:'w/m2'"
+        },
+        "pressureTendency": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "falling",
+                "raising",
+                "steady"
+              ]
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "description": "Property. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms"
+        },
+        "dewPoint": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor"
+        },
+        "refDevice": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation"
+        },
+        "streamGauge": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
+        },
+        "snowHeight": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:'centimeters'"
+        },
+        "uVIndexMax": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored"
+        },
+        "aqiMajorPollutant": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Major pollutant in the Air Quality Index (AQI)"
+        },
+        "aqiMajorPollutantForecast": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future"
+        },
+        "airTemperatureForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted value of air temperature over a certain duration in future"
+        },
+        "precipitationForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted rainfall over a certain duration in future"
+        },
+        "airQualityIndex": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Air quality index is a number used to report the quality of the air on any given day"
+        },
+        "relativeHumidityForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
+        },
+        "airQualityIndexForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future"
+        },
+        "airTemperatureTSA": {
+          "type": "object",
+          "description": "Property. Air temperature time series aggregation",
+          "$ref": "https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json#/definitions/TimeSeriesAggregation"
+        }
       }
     }
-  },
+  ],
   "required": [
     "id",
     "type",
-    "resources"
+    "dateObserved",
+    "location"
   ]
 }
