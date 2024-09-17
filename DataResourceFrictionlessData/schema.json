@@ -1,145 +1,131 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.3.4",
-  "modelTags": "IUDX",
-  "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
-  "title": "Weather Observed schema - Smart Data Models",
-  "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
+  "title": "Smart Data Models - Data Resource",
+  "description": "Data Resource.Converted for Smart Data Models initiative from original frictionless data",
+  "$schemaVersion": "0.0.3",
+  "$schema": "http://json-schema.org/schema",
+  "$id": "https://smart-data-models.github.io/dataModel.FrictionlessData/DataResourceFrictionlessData/schema.json",
   "type": "object",
+  "modelTags": "SDG",
   "allOf": [
     {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
     },
     {
       "properties": {
         "type": {
           "type": "string",
+          "description": "Property. NGSI Entity type. It has to be DataResourceFrictionlessData",
           "enum": [
-            "WeatherObserved"
-          ],
-          "description": "Property. NGSI Entity type. It has to be WeatherObserved"
+            "DataResourceFrictionlessData"
+          ]
         },
-        "dateObserved": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
+        "id": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
-        "precipitation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
-        },
-        "solarRadiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
-        },
-        "directIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:'w/m2'"
-        },
-        "diffuseIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:'w/m2'"
-        },
-        "pressureTendency": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "falling",
-                "raising",
-                "steady"
-              ]
-            },
-            {
-              "type": "number"
-            }
-          ],
-          "description": "Property. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms"
-        },
-        "dewPoint": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor"
-        },
-        "refDevice": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation"
-        },
-        "streamGauge": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
-        },
-        "snowHeight": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:'centimeters'"
-        },
-        "uVIndexMax": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored"
-        },
-        "aqiMajorPollutant": {
+        "profile": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Major pollutant in the Air Quality Index (AQI)"
+          "description": "Property. Profile. Every Package and Resource descriptor has a profile. The default profile, if none is declared, is 'data-package' for Package and 'data-resource' for Resource. The profile of this descriptor"
         },
-        "aqiMajorPollutantForecast": {
+        "name": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future"
+          "description": "Property. Name. This is ideally a url-usable and human-readable name. Name 'SHOULD' be invariant, meaning it 'SHOULD NOT' change when its parent descriptor is updated. An identifier string. Lower case characters with '.', '_', '-' and '/' are allowed"
         },
-        "airTemperatureForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted value of air temperature over a certain duration in future"
+        "path": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          },
+          "description": "Property. Path. The dereferenced value of each referenced data source in 'path' 'MUST' be commensurate with a native, dereferenced representation of the data the resource describes. For example, in a *Tabular* Data Resource, this means that the dereferenced value of 'path' 'MUST' be an array. A reference to the data for this resource, as either a path as a string, or an array of paths as strings. of valid URIs"
         },
-        "precipitationForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted rainfall over a certain duration in future"
+        "data": {
+          "type": "array",
+          "description": "Property. Data. Inline data for this resource",
+          "items": {
+            "type": "object"
+          }
         },
-        "airQualityIndex": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Air quality index is a number used to report the quality of the air on any given day"
-        },
-        "relativeHumidityForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
-        },
-        "airQualityIndexForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future"
-        },
-        "airTemperatureTSA": {
+        "schema": {
           "type": "object",
-          "description": "Property. Air temperature time series aggregation",
-          "$ref": "https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json#/definitions/TimeSeriesAggregation"
+          "description": "Property. Schema. A schema for this resource"
+        },
+        "title": {
+          "type": "string",
+          "description": "Property. Title. A human-readable title"
+        },
+        "description": {
+          "type": "string",
+          "description": "Property. Description. A text description. Markdown is encouraged"
+        },
+        "homepage": {
+          "type": "string",
+          "description": "Property. Home Page. The home on the web that is related to this data package"
+        },
+        "sources": {
+          "type": "array",
+          "description": "Property. Sources. . The raw sources for this resource",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string",
+                "format": "idn-email"
+              }
+            }
+          }
+        },
+        "licenses": {
+          "type": "array",
+          "description": "Property. Licenses. This property is not legally binding and does not guarantee that the package is licensed under the terms defined herein. The license(s) under which the resource is published",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "format": {
+          "type": "string",
+          "description": "Property. Format. 'csv', 'xls', 'json' are examples of common formats. The file format of this resource"
+        },
+        "mediatype": {
+          "type": "string",
+          "description": "Property. Media Type. The media type of this resource. Can be any valid media type listed with [IANA](https://www.iana.org/assignments/media-types/media-types.xhtml)"
+        },
+        "encoding": {
+          "type": "string",
+          "description": "Property. Encoding. The file encoding of this resource"
+        },
+        "bytes": {
+          "type": "integer",
+          "description": "Property. Bytes. The size of this resource in bytes"
+        },
+        "hash": {
+          "type": "string",
+          "pattern": "^([^:]+:[a-fA-F0-9]+|[a-fA-F0-9]{32}|)$",
+          "description": "Property. Hash. The MD5 hash of this resource. Indicate other hashing algorithms with the {algorithm}:{hash} format"
         }
       }
     }
   ],
   "required": [
+    "name",
     "id",
-    "type",
-    "dateObserved",
-    "location"
+    "type"
   ]
 }
