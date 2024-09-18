@@ -2,7 +2,7 @@
   "title": "Smart Data Models - CSV Dialect",
   "description": "The CSV dialect descriptor.Converted for Smart Data Models initiative from original frictionless data",
   "$schemaVersion": "0.0.2",
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://smart-data-models.github.io/dataModel.FrictionlessData/CSVDialectFrictionlessData/schema.json",
   "type": "object",
   "modelTags": "SDG",
