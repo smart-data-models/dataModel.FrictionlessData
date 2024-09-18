@@ -2,7 +2,7 @@
   "title": "Smart Data Models - Data Package",
   "description": "Data Package is a simple specification for data access and delivery.Converted for Smart Data Models initiative from original frictionless data",
   "$schemaVersion": "0.0.3",
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://smart-data-models.github.io/dataModel.FrictionlessData/DataPackageFrictionlessData/schema.json",
   "type": "object",
   "modelTags": "SDG",
@@ -67,20 +67,20 @@
         "type": "object",
         "description": "Property. A license for this descriptor",
         "properties": {
-            "name": {
-                "type": "string",
-                "description": "Property. MUST be an Open Definition license identifier, see http://licenses.opendefinition.org/",
-                "pattern": "^([-a-zA-Z0-9._])+$"
-            },
-            "path": {
-                "type": "string",
-                "description": "Property. A fully qualified URL, or a POSIX file path",
-                "pattern": "^(?=^[^.\/~])(^((?!\\.{2}).)*$).*$"
-            },
-            "title": {
-                "type": "string",
-                "description": "Property. A human-readable title"
-            }
+          "name": {
+            "type": "string",
+            "description": "Property. MUST be an Open Definition license identifier, see http://licenses.opendefinition.org/",
+            "pattern": "^([-a-zA-Z0-9._])+$"
+          },
+          "path": {
+            "type": "string",
+            "description": "Property. A fully qualified URL, or a POSIX file path",
+            "pattern": "^(?=^[^./~])(^((?!\\.{2}).)*$).*$"
+          },
+          "title": {
+            "type": "string",
+            "description": "Property. A human-readable title"
+          }
         }
       }
     },
@@ -92,20 +92,20 @@
         "type": "object",
         "description": "Property. A license for this descriptor",
         "properties": {
-            "name": {
-                "type": "string",
-                "description": "Property. MUST be an Open Definition license identifier, see http://licenses.opendefinition.org/",
-                "pattern": "^([-a-zA-Z0-9._])+$"
-            },
-            "path": {
-                "type": "string",
-                "description": "Property. A fully qualified URL, or a POSIX file path",
-                "pattern": "^(?=^[^.\/~])(^((?!\\.{2}).)*$).*$"
-            },
-            "profile": {
-                "type": "string",
-                "description": "Property. The profile of this descriptor."
-            }
+          "name": {
+            "type": "string",
+            "description": "Property. MUST be an Open Definition license identifier, see http://licenses.opendefinition.org/",
+            "pattern": "^([-a-zA-Z0-9._])+$"
+          },
+          "path": {
+            "type": "string",
+            "description": "Property. A fully qualified URL, or a POSIX file path",
+            "pattern": "^(?=^[^./~])(^((?!\\.{2}).)*$).*$"
+          },
+          "profile": {
+            "type": "string",
+            "description": "Property. The profile of this descriptor."
+          }
         }
       }
     },
@@ -116,20 +116,20 @@
         "type": "object",
         "description": "Property. A license for this descriptor",
         "properties": {
-            "email": {
-                "type": "string",
-                "description": "Property. An email address",
-                "format": "email"
-            },
-            "path": {
-                "type": "string",
-                "description": "Property. A fully qualified URL, or a POSIX file path",
-                "pattern": "^(?=^[^.\/~])(^((?!\\.{2}).)*$).*$"
-            },
-            "title": {
-                "type": "string",
-                "description": "Property. A human-readable title"
-            }
+          "email": {
+            "type": "string",
+            "description": "Property. An email address",
+            "format": "email"
+          },
+          "path": {
+            "type": "string",
+            "description": "Property. A fully qualified URL, or a POSIX file path",
+            "pattern": "^(?=^[^./~])(^((?!\\.{2}).)*$).*$"
+          },
+          "title": {
+            "type": "string",
+            "description": "Property. A human-readable title"
+          }
         },
         "required": [
           "title"
